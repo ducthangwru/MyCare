@@ -20,7 +20,7 @@ namespace MyCare
             DevExpress.UserSkins.BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
-            Application.Run(new Form1());
+            Application.Run(new FormMain());
         }
     }
 }

@@ -15,9 +15,9 @@ using DevExpress.UserSkins;
 
 namespace MyCare
 {
-    public partial class Form1 : XtraForm
+    public partial class FormMain : XtraForm
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             InitSkinGallery();
@@ -26,6 +26,11 @@ namespace MyCare
         void InitSkinGallery()
         {
             SkinHelper.InitSkinGallery(rgbiSkins, true);
+        }
+
+        private void bbQlyKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

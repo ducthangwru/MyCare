@@ -66,7 +66,11 @@
     <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="log4net">
+      <HintPath>E:\Ksmart_QuanTri_ServerApp\Bin\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -78,16 +82,18 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCareDataAccess\Utils\SqlDataHelper.cs" />
+    <Compile Include="MyCareDataAccess\Utils\Utils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -100,6 +106,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,6 +128,244 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\^90661D88A824BCAED90CD255227A2AF19B4EB9B845F83EB6D2^pimgpsh_fullsize_distr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\807541_edit_512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11111111111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2222222222222222222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add to call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrator Male-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\answer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\answer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Briefcase-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase-icon-100x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CauHoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChienDich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear Symbol-20 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CupMay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decline1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit File-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\End Call-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-1498825_640 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconcoucgoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-transactions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\join.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\join16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line-chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Rounded Right-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo Lachong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo Lachong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logolh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoRong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NgheXen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rg_decline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ringingbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seach20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secrecy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sutcase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThuGon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TraLoiThay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usesicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VoiceMail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VoiceMail1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voicemail-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voicemail-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MyCareDataAccess\DataAcess\" />
+    <Folder Include="MyCareDataAccess\Object\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
