@@ -88,6 +88,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCareDataAccess\DataAcess\LichSuNhapXuatKhoDB.cs" />
     <Compile Include="MyCareDataAccess\Utils\SqlDataHelper.cs" />
     <Compile Include="MyCareDataAccess\Utils\Utils.cs" />
     <Compile Include="Program.cs" />
@@ -106,7 +107,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -364,7 +367,6 @@
     <None Include="Resources\Voicemail-icon1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MyCareDataAccess\DataAcess\" />
     <Folder Include="MyCareDataAccess\Object\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyCare.MyCareDataAccess.Utils
 {
-    class SqlDataHelper
+    public class SqlDataHelper
     {
         // <summary>
         /// ConnectionString connection to SQL Server 2008
@@ -18,7 +18,7 @@ namespace MyCare.MyCareDataAccess.Utils
         /// 
         string strConnection = "";
         log4net.ILog log = log4net.LogManager.GetLogger(typeof(SqlDataHelper));
-        Configuration _config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+        //Configuration _config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         public SqlDataHelper()
         {
             this.strConnection = GetConnectionString();
@@ -35,7 +35,7 @@ namespace MyCare.MyCareDataAccess.Utils
 
             // return "Server=" + sv + ";Database=" + db + ";User ID=" + uid + ";Password=" + pwd + ";Max Pool Size = 150;";
             // string ConnectionString = WebConfigurationManager.AppSettings["ConnectionString"];
-            string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"].ToString();
+            string ConnectionString = "Data Source=DESKTOP-TVC0PFL;Initial Catalog=MyCare;Integrated Security=True";
             return ConnectionString;
 
         }

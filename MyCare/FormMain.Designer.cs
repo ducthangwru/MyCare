@@ -48,15 +48,17 @@
             this.tabHoatDongGanDay = new DevExpress.XtraTab.XtraTabPage();
             this.gridHoatDongGanDay = new DevExpress.XtraGrid.GridControl();
             this.gridViewHoatDongGanDay = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.clID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clThaoTac = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clThanhTien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayTao = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenTaiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenThaoTac = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TongTien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clXem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btXem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.TenDanhMuc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenThuoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer(this.components);
@@ -267,6 +269,7 @@
             this.tabHoatDongGanDay.Name = "tabHoatDongGanDay";
             this.tabHoatDongGanDay.Size = new System.Drawing.Size(890, 516);
             this.tabHoatDongGanDay.Text = "Hoạt động gần đây";
+            this.tabHoatDongGanDay.Click += new System.EventHandler(this.tabHoatDongGanDay_Click);
             // 
             // gridHoatDongGanDay
             // 
@@ -287,74 +290,90 @@
             // gridViewHoatDongGanDay
             // 
             this.gridViewHoatDongGanDay.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.clID,
-            this.clThoiGian,
-            this.clNhanVien,
-            this.clThaoTac,
-            this.clSoLuong,
-            this.clThanhTien,
-            this.clGhiChu,
-            this.clXem});
+            this.ID,
+            this.NgayTao,
+            this.TenTaiKhoan,
+            this.TenThaoTac,
+            this.SoLuong,
+            this.TongTien,
+            this.GhiChu,
+            this.clXem,
+            this.TenDanhMuc,
+            this.TenThuoc});
             this.gridViewHoatDongGanDay.GridControl = this.gridHoatDongGanDay;
             this.gridViewHoatDongGanDay.Name = "gridViewHoatDongGanDay";
             // 
-            // clID
+            // ID
             // 
-            this.clID.Caption = "ID";
-            this.clID.Name = "clID";
-            this.clID.Width = 20;
+            this.ID.Caption = "ID";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
+            this.ID.OptionsColumn.AllowEdit = false;
+            this.ID.Width = 20;
             // 
-            // clThoiGian
+            // NgayTao
             // 
-            this.clThoiGian.Caption = "Thời gian";
-            this.clThoiGian.Name = "clThoiGian";
-            this.clThoiGian.Visible = true;
-            this.clThoiGian.VisibleIndex = 0;
+            this.NgayTao.Caption = "Thời gian";
+            this.NgayTao.FieldName = "NgayTao";
+            this.NgayTao.Name = "NgayTao";
+            this.NgayTao.OptionsColumn.AllowEdit = false;
+            this.NgayTao.Visible = true;
+            this.NgayTao.VisibleIndex = 0;
             // 
-            // clNhanVien
+            // TenTaiKhoan
             // 
-            this.clNhanVien.Caption = "Nhân viên";
-            this.clNhanVien.Name = "clNhanVien";
-            this.clNhanVien.Visible = true;
-            this.clNhanVien.VisibleIndex = 1;
+            this.TenTaiKhoan.Caption = "Nhân viên";
+            this.TenTaiKhoan.FieldName = "TenTaiKhoan";
+            this.TenTaiKhoan.Name = "TenTaiKhoan";
+            this.TenTaiKhoan.OptionsColumn.AllowEdit = false;
+            this.TenTaiKhoan.Visible = true;
+            this.TenTaiKhoan.VisibleIndex = 1;
             // 
-            // clThaoTac
+            // TenThaoTac
             // 
-            this.clThaoTac.Caption = "Thao tác";
-            this.clThaoTac.Name = "clThaoTac";
-            this.clThaoTac.OptionsColumn.AllowEdit = false;
-            this.clThaoTac.Visible = true;
-            this.clThaoTac.VisibleIndex = 2;
+            this.TenThaoTac.Caption = "Thao tác";
+            this.TenThaoTac.FieldName = "TenThaoTac";
+            this.TenThaoTac.Name = "TenThaoTac";
+            this.TenThaoTac.OptionsColumn.AllowEdit = false;
+            this.TenThaoTac.Visible = true;
+            this.TenThaoTac.VisibleIndex = 4;
             // 
-            // clSoLuong
+            // SoLuong
             // 
-            this.clSoLuong.Caption = "Số lượng";
-            this.clSoLuong.Name = "clSoLuong";
-            this.clSoLuong.Visible = true;
-            this.clSoLuong.VisibleIndex = 3;
+            this.SoLuong.Caption = "Số lượng";
+            this.SoLuong.FieldName = "SoLuong";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.OptionsColumn.AllowEdit = false;
+            this.SoLuong.Visible = true;
+            this.SoLuong.VisibleIndex = 5;
             // 
-            // clThanhTien
+            // TongTien
             // 
-            this.clThanhTien.Caption = "Thành tiền";
-            this.clThanhTien.Name = "clThanhTien";
-            this.clThanhTien.Visible = true;
-            this.clThanhTien.VisibleIndex = 5;
+            this.TongTien.Caption = "Thành tiền";
+            this.TongTien.FieldName = "TongTien";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.OptionsColumn.AllowEdit = false;
+            this.TongTien.Visible = true;
+            this.TongTien.VisibleIndex = 7;
             // 
-            // clGhiChu
+            // GhiChu
             // 
-            this.clGhiChu.Caption = "Ghi chú";
-            this.clGhiChu.Name = "clGhiChu";
-            this.clGhiChu.Visible = true;
-            this.clGhiChu.VisibleIndex = 4;
+            this.GhiChu.Caption = "Ghi chú";
+            this.GhiChu.FieldName = "GhiChu";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.OptionsColumn.AllowEdit = false;
+            this.GhiChu.Visible = true;
+            this.GhiChu.VisibleIndex = 6;
             // 
             // clXem
             // 
             this.clXem.Caption = "Xem chi tiết";
             this.clXem.ColumnEdit = this.btXem;
             this.clXem.Name = "clXem";
+            this.clXem.OptionsColumn.AllowEdit = false;
             this.clXem.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.clXem.Visible = true;
-            this.clXem.VisibleIndex = 6;
+            this.clXem.VisibleIndex = 8;
             // 
             // btXem
             // 
@@ -364,6 +383,24 @@
             this.btXem.ContextImage = global::MyCare.Properties.Resources.join;
             this.btXem.Name = "btXem";
             this.btXem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // TenDanhMuc
+            // 
+            this.TenDanhMuc.Caption = "Danh mục";
+            this.TenDanhMuc.FieldName = "TenDanhMuc";
+            this.TenDanhMuc.Name = "TenDanhMuc";
+            this.TenDanhMuc.OptionsColumn.AllowEdit = false;
+            this.TenDanhMuc.Visible = true;
+            this.TenDanhMuc.VisibleIndex = 2;
+            // 
+            // TenThuoc
+            // 
+            this.TenThuoc.Caption = "Thuốc";
+            this.TenThuoc.FieldName = "TenThuoc";
+            this.TenThuoc.Name = "TenThuoc";
+            this.TenThuoc.OptionsColumn.AllowEdit = false;
+            this.TenThuoc.Visible = true;
+            this.TenThuoc.VisibleIndex = 3;
             // 
             // ribbonControl
             // 
@@ -858,11 +895,11 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(4, 3);
+            this.gridControl1.Location = new System.Drawing.Point(3, 3);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.ribbonControl;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(883, 510);
+            this.gridControl1.Size = new System.Drawing.Size(884, 510);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -981,16 +1018,18 @@
         private DevExpress.XtraTab.XtraTabPage tabKho;
         private DevExpress.XtraGrid.GridControl gridHoatDongGanDay;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewHoatDongGanDay;
-        private DevExpress.XtraGrid.Columns.GridColumn clThaoTac;
-        private DevExpress.XtraGrid.Columns.GridColumn clID;
+        private DevExpress.XtraGrid.Columns.GridColumn TenThaoTac;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn clXem;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btXem;
-        private DevExpress.XtraGrid.Columns.GridColumn clThoiGian;
-        private DevExpress.XtraGrid.Columns.GridColumn clNhanVien;
-        private DevExpress.XtraGrid.Columns.GridColumn clSoLuong;
-        private DevExpress.XtraGrid.Columns.GridColumn clThanhTien;
-        private DevExpress.XtraGrid.Columns.GridColumn clGhiChu;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayTao;
+        private DevExpress.XtraGrid.Columns.GridColumn TenTaiKhoan;
+        private DevExpress.XtraGrid.Columns.GridColumn SoLuong;
+        private DevExpress.XtraGrid.Columns.GridColumn TongTien;
+        private DevExpress.XtraGrid.Columns.GridColumn GhiChu;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn TenDanhMuc;
+        private DevExpress.XtraGrid.Columns.GridColumn TenThuoc;
     }
 }

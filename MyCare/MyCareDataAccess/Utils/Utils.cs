@@ -8,9 +8,8 @@ namespace MyCare.MyCareDataAccess.Utils
 {
     public class Utils
     {
-        public Utils instance = new Utils();
+        public static Utils instance = new Utils();
         private Utils() {}
-
-        private SqlDataHelper db = new SqlDataHelper();
+        public static SqlDataHelper db = new SqlDataHelper();
     }
 }
