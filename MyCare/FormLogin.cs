@@ -20,8 +20,10 @@ namespace MyCare
 
         private void btnDangNhap_Click(object sender, System.EventArgs e)
         {
+            this.Hide();
             FormMain frmMain = new FormMain();
             frmMain.ShowDialog();
+            
         }
     }
 }

@@ -129,7 +129,7 @@
     <value>0, 0</value>
   </data>
   <data name="barDockControlTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 0</value>
+    <value>520, 0</value>
   </data>
   <data name="&gt;&gt;barDockControlTop.Name" xml:space="preserve">
     <value>barDockControlTop</value>
@@ -147,10 +147,10 @@
     <value>Bottom</value>
   </data>
   <data name="barDockControlBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 370</value>
+    <value>0, 273</value>
   </data>
   <data name="barDockControlBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 0</value>
+    <value>520, 0</value>
   </data>
   <data name="&gt;&gt;barDockControlBottom.Name" xml:space="preserve">
     <value>barDockControlBottom</value>
@@ -171,7 +171,7 @@
     <value>0, 0</value>
   </data>
   <data name="barDockControlLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 370</value>
+    <value>0, 273</value>
   </data>
   <data name="&gt;&gt;barDockControlLeft.Name" xml:space="preserve">
     <value>barDockControlLeft</value>
@@ -189,10 +189,10 @@
     <value>Right</value>
   </data>
   <data name="barDockControlRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>552, 0</value>
+    <value>520, 0</value>
   </data>
   <data name="barDockControlRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 370</value>
+    <value>0, 273</value>
   </data>
   <data name="&gt;&gt;barDockControlRight.Name" xml:space="preserve">
     <value>barDockControlRight</value>
@@ -209,15 +209,18 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>52</value>
+  </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>552, 382</value>
+    <value>520, 285</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbGhiNhoMK.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="cbGhiNhoMK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 213</value>
+    <value>176, 183</value>
   </data>
   <data name="cbGhiNhoMK.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 17</value>
@@ -241,7 +244,7 @@
     <value>0</value>
   </data>
   <data name="lbMatKhau.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 157</value>
+    <value>176, 127</value>
   </data>
   <data name="lbMatKhau.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 13</value>
@@ -265,7 +268,7 @@
     <value>1</value>
   </data>
   <data name="lbTaiKhoan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 95</value>
+    <value>176, 75</value>
   </data>
   <data name="lbTaiKhoan.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 13</value>
@@ -289,7 +292,7 @@
     <value>2</value>
   </data>
   <data name="btnDangNhap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 247</value>
+    <value>204, 217</value>
   </data>
   <data name="btnDangNhap.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 23</value>
@@ -313,7 +316,7 @@
     <value>3</value>
   </data>
   <data name="tePassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 177</value>
+    <value>176, 147</value>
   </data>
   <data name="tePassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 20</value>
@@ -334,7 +337,7 @@
     <value>4</value>
   </data>
   <data name="teUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 126</value>
+    <value>176, 96</value>
   </data>
   <data name="teUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 20</value>

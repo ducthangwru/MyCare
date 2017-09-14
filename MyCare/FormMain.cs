@@ -46,5 +46,12 @@ namespace MyCare
         {
             gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(2);
         }
+
+        private void iBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormTransaction frmTransaction = new FormTransaction();
+            frmTransaction.ShowDialog();
+        }
     }
 }

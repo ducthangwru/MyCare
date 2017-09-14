@@ -35,7 +35,7 @@ namespace MyCare.MyCareDataAccess.Utils
 
             // return "Server=" + sv + ";Database=" + db + ";User ID=" + uid + ";Password=" + pwd + ";Max Pool Size = 150;";
             // string ConnectionString = WebConfigurationManager.AppSettings["ConnectionString"];
-            string ConnectionString = "Data Source=DESKTOP-TVC0PFL;Initial Catalog=MyCare;Integrated Security=True";
+            string ConnectionString = "Data Source=JUNGB-PC;Initial Catalog=MyCare;Integrated Security=True";
             return ConnectionString;
 
         }

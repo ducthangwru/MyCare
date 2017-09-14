@@ -521,6 +521,7 @@
             this.iBanHang.LargeImageIndex = 0;
             this.iBanHang.LargeWidth = 75;
             this.iBanHang.Name = "iBanHang";
+            this.iBanHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iBanHang_ItemClick);
             // 
             // iQuanly
             // 
