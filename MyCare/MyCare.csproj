@@ -101,6 +101,8 @@
     </Compile>
     <Compile Include="MyCareDataAccess\DataAcess\KhoThuocDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\LichSuNhapXuatKhoDB.cs" />
+    <Compile Include="MyCareDataAccess\DataAcess\TaiKhoanDB.cs" />
+    <Compile Include="MyCareDataAccess\Utils\Config.cs" />
     <Compile Include="MyCareDataAccess\Utils\SqlDataHelper.cs" />
     <Compile Include="MyCareDataAccess\Utils\Utils.cs" />
     <Compile Include="Program.cs" />
