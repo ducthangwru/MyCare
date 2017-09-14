@@ -197,12 +197,15 @@ namespace MyCare
             resources.ApplyResources(this.teUsername, "teUsername");
             this.teUsername.MenuManager = this.xafBarManager;
             this.teUsername.Name = "teUsername";
+            this.teUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.teUsername_KeyDown);
             // 
             // tePassword
             // 
             resources.ApplyResources(this.tePassword, "tePassword");
             this.tePassword.MenuManager = this.xafBarManager;
             this.tePassword.Name = "tePassword";
+            this.tePassword.Properties.UseSystemPasswordChar = true;
+            this.tePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tePassword_KeyDown);
             // 
             // btnDangNhap
             // 
