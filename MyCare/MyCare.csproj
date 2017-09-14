@@ -99,6 +99,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCareDataAccess\DataAcess\KhoThuocDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\LichSuNhapXuatKhoDB.cs" />
     <Compile Include="MyCareDataAccess\Utils\SqlDataHelper.cs" />
     <Compile Include="MyCareDataAccess\Utils\Utils.cs" />

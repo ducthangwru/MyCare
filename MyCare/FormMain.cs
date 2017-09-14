@@ -40,6 +40,10 @@ namespace MyCare
             {
                 gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(2);
             }
+            else if(tabMain.SelectedTabPageIndex == 1)
+            {
+                gridKhoThuoc.DataSource = KhoThuocDB.DanhSachKhoThuoc(2);
+            }
         }
 
         private void FormMain_Load(object sender, EventArgs e)
