@@ -204,6 +204,7 @@ namespace MyCare
             resources.ApplyResources(this.tePassword, "tePassword");
             this.tePassword.MenuManager = this.xafBarManager;
             this.tePassword.Name = "tePassword";
+            this.tePassword.Properties.UseSystemPasswordChar = true;
             this.tePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tePassword_KeyDown);
             // 
             // btnDangNhap
