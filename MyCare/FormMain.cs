@@ -33,7 +33,16 @@ namespace MyCare
 
         }
 
-        private void tabHoatDongGanDay_Click(object sender, EventArgs e)
+            
+        private void tabMain_Click(object sender, EventArgs e)
+        {
+            if(tabMain.SelectedTabPageIndex == 0)
+            {
+                gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(2);
+            }
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
         {
             gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(2);
         }

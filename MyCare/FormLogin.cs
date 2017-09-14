@@ -1,20 +1,27 @@
-﻿using System;
+﻿using DevExpress;
+using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Win;
+using DevExpress.ExpressApp.Win.Templates;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using DevExpress.ExpressApp.Templates;
+using DevExpress.ExpressApp.Win.Core;
+using DevExpress.ExpressApp.Win.Layout;
+using DevExpress.ExpressApp.Win.Templates.ActionContainers;
+using DevExpress.XtraEditors;
 
 namespace MyCare
 {
-    public partial class frmLogin : Form
+    public partial class FormLogin : XtraForm
     {
-        public frmLogin()
+        public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnDangNhap_Click(object sender, System.EventArgs e)
+        {
+            FormMain frmMain = new FormMain();
+            frmMain.ShowDialog();
         }
     }
 }
