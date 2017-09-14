@@ -33,9 +33,9 @@ namespace MyCare
 
         }
 
-        private void tabHoatDongGanDay_Click(object sender, EventArgs e)
-        {
-            gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(2);
-        }
+        //private void tabHoatDongGanDay_Click(object sender, EventArgs e)
+        //{
+        //    gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(2);
+        //}
     }
 }
