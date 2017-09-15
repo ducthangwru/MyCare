@@ -113,11 +113,11 @@
             this.clDanhMuc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clTenThuoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clSoLuongCon = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clDonVi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clGia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clTacDung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.clTacDung = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clDonVi = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -723,6 +723,7 @@
             this.iExit.LargeImageIndex = 6;
             this.iExit.LargeWidth = 75;
             this.iExit.Name = "iExit";
+            this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
             // 
             // popupControlContainer1
             // 
@@ -944,42 +945,74 @@
             this.clTacDung});
             this.gridViewKhoThuoc.GridControl = this.gridKhoThuoc;
             this.gridViewKhoThuoc.Name = "gridViewKhoThuoc";
+            this.gridViewKhoThuoc.OptionsCustomization.AllowColumnMoving = false;
+            this.gridViewKhoThuoc.OptionsCustomization.AllowColumnResizing = false;
             // 
             // clDanhMuc
             // 
             this.clDanhMuc.Caption = "Danh Mục";
             this.clDanhMuc.FieldName = "TenDanhMuc";
             this.clDanhMuc.Name = "clDanhMuc";
+            this.clDanhMuc.OptionsColumn.AllowMove = false;
+            this.clDanhMuc.OptionsColumn.AllowSize = false;
             this.clDanhMuc.Visible = true;
             this.clDanhMuc.VisibleIndex = 0;
-            this.clDanhMuc.Width = 145;
+            this.clDanhMuc.Width = 115;
             // 
             // clTenThuoc
             // 
             this.clTenThuoc.Caption = "Thuốc";
             this.clTenThuoc.FieldName = "TenThuoc";
             this.clTenThuoc.Name = "clTenThuoc";
+            this.clTenThuoc.OptionsColumn.AllowMove = false;
+            this.clTenThuoc.OptionsColumn.AllowSize = false;
             this.clTenThuoc.Visible = true;
             this.clTenThuoc.VisibleIndex = 1;
-            this.clTenThuoc.Width = 178;
+            this.clTenThuoc.Width = 135;
             // 
             // clSoLuongCon
             // 
             this.clSoLuongCon.Caption = "Số lượng còn";
             this.clSoLuongCon.FieldName = "SLCon";
             this.clSoLuongCon.Name = "clSoLuongCon";
+            this.clSoLuongCon.OptionsColumn.AllowMove = false;
+            this.clSoLuongCon.OptionsColumn.AllowSize = false;
             this.clSoLuongCon.Visible = true;
             this.clSoLuongCon.VisibleIndex = 2;
-            this.clSoLuongCon.Width = 113;
+            this.clSoLuongCon.Width = 79;
+            // 
+            // clDonVi
+            // 
+            this.clDonVi.Caption = "Đơn vị";
+            this.clDonVi.FieldName = "TenDonVi";
+            this.clDonVi.Name = "clDonVi";
+            this.clDonVi.OptionsColumn.AllowMove = false;
+            this.clDonVi.OptionsColumn.AllowSize = false;
+            this.clDonVi.Visible = true;
+            this.clDonVi.VisibleIndex = 5;
+            this.clDonVi.Width = 96;
             // 
             // clGia
             // 
             this.clGia.Caption = "Giá";
             this.clGia.FieldName = "Gia";
             this.clGia.Name = "clGia";
+            this.clGia.OptionsColumn.AllowMove = false;
+            this.clGia.OptionsColumn.AllowSize = false;
             this.clGia.Visible = true;
             this.clGia.VisibleIndex = 3;
-            this.clGia.Width = 103;
+            this.clGia.Width = 72;
+            // 
+            // clTacDung
+            // 
+            this.clTacDung.Caption = "Tác dụng";
+            this.clTacDung.FieldName = "NoiDung";
+            this.clTacDung.Name = "clTacDung";
+            this.clTacDung.OptionsColumn.AllowMove = false;
+            this.clTacDung.OptionsColumn.AllowSize = false;
+            this.clTacDung.Visible = true;
+            this.clTacDung.VisibleIndex = 4;
+            this.clTacDung.Width = 199;
             // 
             // gridControl1
             // 
@@ -997,24 +1030,6 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // clTacDung
-            // 
-            this.clTacDung.Caption = "Tác dụng";
-            this.clTacDung.FieldName = "NoiDung";
-            this.clTacDung.Name = "clTacDung";
-            this.clTacDung.Visible = true;
-            this.clTacDung.VisibleIndex = 4;
-            this.clTacDung.Width = 234;
-            // 
-            // clDonVi
-            // 
-            this.clDonVi.Caption = "Đơn vị";
-            this.clDonVi.FieldName = "TenDonVi";
-            this.clDonVi.Name = "clDonVi";
-            this.clDonVi.Visible = true;
-            this.clDonVi.VisibleIndex = 5;
-            this.clDonVi.Width = 98;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1028,6 +1043,7 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý kho";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).EndInit();
             this.splitContainerControl.ResumeLayout(false);
