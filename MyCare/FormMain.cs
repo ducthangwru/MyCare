@@ -12,6 +12,7 @@ using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 using DevExpress.UserSkins;
 using MyCare.MyCareDataAccess.DataAcess;
+using MyCare.MyCareDataAccess.Utils;
 
 namespace MyCare
 {
@@ -38,11 +39,11 @@ namespace MyCare
         {
             if(tabMain.SelectedTabPageIndex == 0)
             {
-                gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(2);
+                gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien);
             }
             else if(tabMain.SelectedTabPageIndex == 1)
             {
-                gridKhoThuoc.DataSource = KhoThuocDB.DanhSachKhoThuoc(2);
+                gridKhoThuoc.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien);
             }
         }
 
@@ -61,12 +62,13 @@ namespace MyCare
 
         private void iExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            TaiKhoanDB.LuuLichSuDangNhap(Config.IDNhanVien, 2);
+            this.Close();
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            TaiKhoanDB.LuuLichSuDangNhap(Config.IDNhanVien, 2);
         }
     }
 }

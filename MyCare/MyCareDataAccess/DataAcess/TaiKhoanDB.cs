@@ -32,5 +32,16 @@ namespace MyCare.MyCareDataAccess.DataAcess
 
             return false;
         }
+
+        public static bool LuuLichSuDangNhap(int idtaikhoan, int type)
+        {
+            SqlParameter[] param = new SqlParameter[]
+              {
+                    new SqlParameter("@idtaikhoan", idtaikhoan),
+                    new SqlParameter("@type", type)
+              };
+
+            return db.ExecuteNonQuery("sp_MyCareDesktop_ThemLichSuDangNhap", param) > 0;
+        }
     }
 }
