@@ -148,7 +148,9 @@
             // 
             // splitContainerControl
             // 
-            this.splitContainerControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainerControl.Location = new System.Drawing.Point(0, 141);
             this.splitContainerControl.Name = "splitContainerControl";
             this.splitContainerControl.Padding = new System.Windows.Forms.Padding(6);
@@ -264,6 +266,9 @@
             // 
             // tabMain
             // 
+            this.tabMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabMain.Location = new System.Drawing.Point(1, 0);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedTabPage = this.tabHoatDongGanDay;
@@ -283,6 +288,9 @@
             // 
             // gridHoatDongGanDay
             // 
+            this.gridHoatDongGanDay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             gridLevelNode1.RelationName = "Level1";
             this.gridHoatDongGanDay.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
@@ -292,7 +300,7 @@
             this.gridHoatDongGanDay.Name = "gridHoatDongGanDay";
             this.gridHoatDongGanDay.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btXem});
-            this.gridHoatDongGanDay.Size = new System.Drawing.Size(884, 510);
+            this.gridHoatDongGanDay.Size = new System.Drawing.Size(887, 510);
             this.gridHoatDongGanDay.TabIndex = 0;
             this.gridHoatDongGanDay.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewHoatDongGanDay});
@@ -431,8 +439,11 @@
             // 
             // ribbonControl
             // 
+            this.ribbonControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ribbonControl.ApplicationButtonDropDownControl = this.appMenu;
             this.ribbonControl.ApplicationButtonText = null;
+            this.ribbonControl.Dock = System.Windows.Forms.DockStyle.None;
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Images = this.ribbonImageCollection;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
