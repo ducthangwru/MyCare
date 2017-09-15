@@ -396,6 +396,57 @@
   <ItemGroup>
     <Folder Include="MyCareDataAccess\Object\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon-png-27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-1-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2qw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_rounded_right-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58950.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58950_2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

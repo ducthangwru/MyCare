@@ -147,7 +147,7 @@
     <value>Bottom</value>
   </data>
   <data name="barDockControlBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 273</value>
+    <value>0, 252</value>
   </data>
   <data name="barDockControlBottom.Size" type="System.Drawing.Size, System.Drawing">
     <value>520, 0</value>
@@ -171,7 +171,7 @@
     <value>0, 0</value>
   </data>
   <data name="barDockControlLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 273</value>
+    <value>0, 252</value>
   </data>
   <data name="&gt;&gt;barDockControlLeft.Name" xml:space="preserve">
     <value>barDockControlLeft</value>
@@ -192,7 +192,7 @@
     <value>520, 0</value>
   </data>
   <data name="barDockControlRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 273</value>
+    <value>0, 252</value>
   </data>
   <data name="&gt;&gt;barDockControlRight.Name" xml:space="preserve">
     <value>barDockControlRight</value>
@@ -209,42 +209,42 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>52</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>520, 285</value>
+    <value>520, 264</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 43</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 170</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cbGhiNhoMK.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbGhiNhoMK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 183</value>
-  </data>
-  <data name="cbGhiNhoMK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 17</value>
-  </data>
-  <data name="cbGhiNhoMK.TabIndex" type="System.Int32, mscorlib">
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="cbGhiNhoMK.Text" xml:space="preserve">
-    <value>Ghi nhớ mật khẩu</value>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
   </data>
-  <data name="&gt;&gt;cbGhiNhoMK.Name" xml:space="preserve">
-    <value>cbGhiNhoMK</value>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cbGhiNhoMK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbGhiNhoMK.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;cbGhiNhoMK.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="lbMatKhau.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 127</value>
+    <value>278, 110</value>
   </data>
   <data name="lbMatKhau.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 13</value>
@@ -268,7 +268,7 @@
     <value>1</value>
   </data>
   <data name="lbTaiKhoan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 75</value>
+    <value>278, 58</value>
   </data>
   <data name="lbTaiKhoan.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 13</value>
@@ -292,13 +292,13 @@
     <value>2</value>
   </data>
   <data name="btnDangNhap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 217</value>
+    <value>326, 170</value>
   </data>
   <data name="btnDangNhap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 23</value>
+    <value>99, 27</value>
   </data>
   <data name="btnDangNhap.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="btnDangNhap.Text" xml:space="preserve">
     <value>Đăng nhập</value>
@@ -316,13 +316,13 @@
     <value>3</value>
   </data>
   <data name="tePassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 147</value>
+    <value>278, 129</value>
   </data>
   <data name="tePassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 20</value>
+    <value>189, 20</value>
   </data>
   <data name="tePassword.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;tePassword.Name" xml:space="preserve">
     <value>tePassword</value>
@@ -337,13 +337,13 @@
     <value>4</value>
   </data>
   <data name="teUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 96</value>
+    <value>278, 78</value>
   </data>
   <data name="teUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 20</value>
+    <value>189, 20</value>
   </data>
   <data name="teUsername.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;teUsername.Name" xml:space="preserve">
     <value>teUsername</value>

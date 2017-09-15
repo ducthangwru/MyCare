@@ -45,6 +45,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -78,6 +79,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -93,7 +95,10 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.AutoSize = true;
             this.groupControl1.Controls.Add(this.simpleButton4);
             this.groupControl1.Controls.Add(this.simpleButton3);
             this.groupControl1.Controls.Add(this.simpleButton2);
@@ -104,9 +109,9 @@
             this.groupControl1.Controls.Add(this.textEdit2);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.textEdit1);
-            this.groupControl1.Location = new System.Drawing.Point(573, 96);
+            this.groupControl1.Location = new System.Drawing.Point(575, 91);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(563, 222);
+            this.groupControl1.Size = new System.Drawing.Size(561, 237);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin khách hàng";
             // 
@@ -189,19 +194,28 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.AutoSize = true;
             this.groupControl2.Controls.Add(this.gridControl1);
-            this.groupControl2.Location = new System.Drawing.Point(2, 96);
+            this.groupControl2.Location = new System.Drawing.Point(2, 91);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(565, 222);
+            this.groupControl2.Size = new System.Drawing.Size(565, 237);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "Danh sách mặt hàng ";
             // 
             // gridControl1
             // 
+            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.Location = new System.Drawing.Point(0, 23);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(565, 194);
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemSpinEdit1});
+            this.gridControl1.Size = new System.Drawing.Size(558, 189);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -218,6 +232,8 @@
             this.gridColumn6});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm...";
             // 
             // gridColumn1
             // 
@@ -225,7 +241,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 30;
+            this.gridColumn1.Width = 38;
             // 
             // gridColumn2
             // 
@@ -233,23 +249,33 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 145;
+            this.gridColumn2.Width = 154;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Số lượng";
+            this.gridColumn3.ColumnEdit = this.repositoryItemSpinEdit1;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 50;
+            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.Width = 92;
+            // 
+            // repositoryItemSpinEdit1
+            // 
+            this.repositoryItemSpinEdit1.AutoHeight = false;
+            this.repositoryItemSpinEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemSpinEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryItemSpinEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1";
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Đơn vị";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 40;
+            this.gridColumn4.VisibleIndex = 2;
+            this.gridColumn4.Width = 110;
             // 
             // gridColumn5
             // 
@@ -257,7 +283,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 139;
+            this.gridColumn5.Width = 146;
             // 
             // gridColumn6
             // 
@@ -265,24 +291,30 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 143;
+            this.gridColumn6.Width = 156;
             // 
             // groupControl3
             // 
-            this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl3.AutoSize = true;
             this.groupControl3.Controls.Add(this.gridControl2);
-            this.groupControl3.Location = new System.Drawing.Point(2, 324);
+            this.groupControl3.Location = new System.Drawing.Point(2, 334);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(565, 263);
+            this.groupControl3.Size = new System.Drawing.Size(565, 253);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Tất cả mặt hàng";
             // 
             // gridControl2
             // 
+            this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl2.Location = new System.Drawing.Point(6, 24);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(554, 234);
+            this.gridControl2.Size = new System.Drawing.Size(554, 224);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -349,7 +381,10 @@
             // 
             // groupControl4
             // 
-            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl4.AutoSize = true;
             this.groupControl4.Controls.Add(this.simpleButton5);
             this.groupControl4.Controls.Add(this.textEdit8);
             this.groupControl4.Controls.Add(this.textEdit7);
@@ -361,9 +396,9 @@
             this.groupControl4.Controls.Add(this.textEdit5);
             this.groupControl4.Controls.Add(this.labelControl6);
             this.groupControl4.Controls.Add(this.labelControl5);
-            this.groupControl4.Location = new System.Drawing.Point(573, 324);
+            this.groupControl4.Location = new System.Drawing.Point(573, 334);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(473, 263);
+            this.groupControl4.Size = new System.Drawing.Size(473, 280);
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Thông tin hóa đơn";
             // 
@@ -459,8 +494,10 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl1);
+            this.MinimumSize = new System.Drawing.Size(1065, 638);
             this.Name = "FormTransaction";
-            this.Text = " ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " Giao dịch";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -471,6 +508,7 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
@@ -484,6 +522,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -530,5 +569,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
     }
 }

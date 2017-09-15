@@ -56,6 +56,17 @@ namespace MyCare
             this.Hide();
             FormTransaction frmTransaction = new FormTransaction();
             frmTransaction.ShowDialog();
+            this.Show();
+        }
+
+        private void iExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

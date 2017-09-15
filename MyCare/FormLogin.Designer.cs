@@ -55,10 +55,11 @@ namespace MyCare
             this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.lbTaiKhoan = new DevExpress.XtraEditors.LabelControl();
             this.lbMatKhau = new DevExpress.XtraEditors.LabelControl();
-            this.cbGhiNhoMK = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.xafBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // xafBarManager
@@ -209,6 +210,9 @@ namespace MyCare
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.btnDangNhap.Image = global::MyCare.Properties.Resources._58950_2;
+            this.btnDangNhap.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             resources.ApplyResources(this.btnDangNhap, "btnDangNhap");
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -223,16 +227,17 @@ namespace MyCare
             resources.ApplyResources(this.lbMatKhau, "lbMatKhau");
             this.lbMatKhau.Name = "lbMatKhau";
             // 
-            // cbGhiNhoMK
+            // pictureBox1
             // 
-            resources.ApplyResources(this.cbGhiNhoMK, "cbGhiNhoMK");
-            this.cbGhiNhoMK.Name = "cbGhiNhoMK";
-            this.cbGhiNhoMK.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::MyCare.Properties.Resources.logo2;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.cbGhiNhoMK);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbMatKhau);
             this.Controls.Add(this.lbTaiKhoan);
             this.Controls.Add(this.btnDangNhap);
@@ -242,10 +247,15 @@ namespace MyCare
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormLogin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.xafBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,6 +282,6 @@ namespace MyCare
         private DevExpress.XtraEditors.SimpleButton btnDangNhap;
         private DevExpress.XtraEditors.TextEdit tePassword;
         private DevExpress.XtraEditors.TextEdit teUsername;
-        private System.Windows.Forms.CheckBox cbGhiNhoMK;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
