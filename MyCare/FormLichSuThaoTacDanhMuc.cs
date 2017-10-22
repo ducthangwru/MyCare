@@ -22,6 +22,9 @@ namespace MyCare
 
         private void FormLichSuThaoTacDanhMuc_Load(object sender, EventArgs e)
         {
+            luDM.Properties.DataSource = KhoThuocDB.DanhSachChonThuoc(Config.IDNhanVien);
+            luThaoTac.Properties.DataSource = ThaoTacDB.DanhSachChonThaoTac();
+
             grdLSThaoTacDM.DataSource = KhoThuocDB.LichSuThaoTacDanhMuc(Config.IDNhanVien, 0, 0);
         }
     }

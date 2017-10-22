@@ -35,16 +35,23 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lbControl = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSearchLSThaoTacThuoc = new DevExpress.XtraEditors.SimpleButton();
+            this.luThaoTac = new DevExpress.XtraEditors.LookUpEdit();
+            this.luDM = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grdLSThaoTacDM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLSThaoTacDM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luThaoTac.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luDM.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grdLSThaoTacDM
             // 
-            this.grdLSThaoTacDM.Location = new System.Drawing.Point(12, 13);
+            this.grdLSThaoTacDM.Location = new System.Drawing.Point(12, 64);
             this.grdLSThaoTacDM.MainView = this.gvLSThaoTacDM;
             this.grdLSThaoTacDM.Name = "grdLSThaoTacDM";
-            this.grdLSThaoTacDM.Size = new System.Drawing.Size(752, 418);
+            this.grdLSThaoTacDM.Size = new System.Drawing.Size(752, 367);
             this.grdLSThaoTacDM.TabIndex = 0;
             this.grdLSThaoTacDM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvLSThaoTacDM});
@@ -100,18 +107,75 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             // 
+            // lbControl
+            // 
+            this.lbControl.Location = new System.Drawing.Point(63, 29);
+            this.lbControl.Name = "lbControl";
+            this.lbControl.Size = new System.Drawing.Size(55, 13);
+            this.lbControl.TabIndex = 3;
+            this.lbControl.Text = "Chọn thuốc";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(312, 29);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(68, 13);
+            this.labelControl2.TabIndex = 4;
+            this.labelControl2.Text = "Chọn thao tác";
+            // 
+            // btnSearchLSThaoTacThuoc
+            // 
+            this.btnSearchLSThaoTacThuoc.Location = new System.Drawing.Point(577, 24);
+            this.btnSearchLSThaoTacThuoc.Name = "btnSearchLSThaoTacThuoc";
+            this.btnSearchLSThaoTacThuoc.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchLSThaoTacThuoc.TabIndex = 5;
+            this.btnSearchLSThaoTacThuoc.Text = "Tìm kiếm";
+            // 
+            // luThaoTac
+            // 
+            this.luThaoTac.Location = new System.Drawing.Point(400, 26);
+            this.luThaoTac.Name = "luThaoTac";
+            this.luThaoTac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luThaoTac.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Mã thao tác"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenThaoTac", "Tên thao tác")});
+            this.luThaoTac.Size = new System.Drawing.Size(100, 20);
+            this.luThaoTac.TabIndex = 7;
+            // 
+            // luDM
+            // 
+            this.luDM.EditValue = "0";
+            this.luDM.Location = new System.Drawing.Point(137, 26);
+            this.luDM.Name = "luDM";
+            this.luDM.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luDM.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Mã thuốc"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenThuoc", "Tên thuốc")});
+            this.luDM.Size = new System.Drawing.Size(100, 20);
+            this.luDM.TabIndex = 8;
+            // 
             // FormLichSuThaoTacDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 443);
+            this.Controls.Add(this.luDM);
+            this.Controls.Add(this.luThaoTac);
+            this.Controls.Add(this.btnSearchLSThaoTacThuoc);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.lbControl);
             this.Controls.Add(this.grdLSThaoTacDM);
             this.Name = "FormLichSuThaoTacDanhMuc";
             this.Text = "FormLichSuThaoTacDanhMuc";
             this.Load += new System.EventHandler(this.FormLichSuThaoTacDanhMuc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdLSThaoTacDM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLSThaoTacDM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luThaoTac.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luDM.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +188,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraEditors.LabelControl lbControl;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.SimpleButton btnSearchLSThaoTacThuoc;
+        private DevExpress.XtraEditors.LookUpEdit luThaoTac;
+        private DevExpress.XtraEditors.LookUpEdit luDM;
     }
 }

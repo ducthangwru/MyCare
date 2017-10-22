@@ -27,6 +27,21 @@ namespace MyCare.MyCareDataAccess.DataAcess
             }
         }
 
+        public static DataTable DanhSachChonThuoc(int idnhanvien)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachChonThuoc", new SqlParameter("@idnhanvien", idnhanvien)).Tables[0];
+                dt.Rows.Add("0", "Tất cả");
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
         public static DataTable LichSuThaoTacThuoc(int idnhanvien, int loctheothuoc, int loctheothaotac)
         {
             DataTable dt = new DataTable();
