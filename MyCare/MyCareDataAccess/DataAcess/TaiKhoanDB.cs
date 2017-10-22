@@ -43,5 +43,34 @@ namespace MyCare.MyCareDataAccess.DataAcess
 
             return db.ExecuteNonQuery("sp_MyCareDesktop_ThemLichSuDangNhap", param) > 0;
         }
+
+        public static DataTable LichSuDangNhap(int idnhanvien, int loctheonhanvien, int loctheotrangthai)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@idnhanvien", idnhanvien),
+                    new SqlParameter("@loctheonhanvien", loctheonhanvien),
+                    new SqlParameter("@loctheotrangthai", loctheotrangthai)
+                };
+
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_LichSuDangNhap", param).Tables[0];
+                dt.Columns.Add("TrangThai");
+                dt.Columns.Add("ThoiGian");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr["TrangThai"] = (int.Parse(dr["Type"].ToString()) == Config.DANG_NHAP) ? "Đăng nhập" : "Đăng xuất";
+                    dr["ThoiGian"] = DateTime.Parse(dr["NgayTao"].ToString()).ToString("dd/MM/yyyy HH:mm:ss");
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
     }
 }

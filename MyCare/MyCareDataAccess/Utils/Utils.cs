@@ -25,5 +25,24 @@ namespace MyCare.MyCareDataAccess.Utils
             return BitConverter.ToString(encryptData(data)).Replace("-", "").ToLower();
             //return data;
         }
+
+        public static string DinhDangTienTe(string Tien)
+        {
+            double tienTe = double.Parse(Tien);
+            string tien = string.Format("{0:0,0.##}", tienTe);
+            return tien;
+        }
+
+        public static bool CheckQuyenAdmin(int idnhanvien)
+        {
+            try
+            {
+                return bool.Parse(db.ExecuteScalar("select  [dbo].[f_CheckTaiKhoan](" + idnhanvien + ")").ToString());
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.mailGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -46,19 +47,17 @@
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.tabMain = new DevExpress.XtraTab.XtraTabControl();
             this.tabHoatDongGanDay = new DevExpress.XtraTab.XtraTabPage();
-            this.gridHoatDongGanDay = new DevExpress.XtraGrid.GridControl();
-            this.gridViewHoatDongGanDay = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NgayTao = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TenTaiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TenThaoTac = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TongTien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clXem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btXem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.TenDanhMuc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TenThuoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdLSHoaDon = new DevExpress.XtraGrid.GridControl();
+            this.gvLSHoaDon = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnXem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer(this.components);
@@ -107,6 +106,7 @@
             this.skinsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.helpRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.exitRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btXem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tabKho = new DevExpress.XtraTab.XtraTabPage();
             this.gridKhoThuoc = new DevExpress.XtraGrid.GridControl();
             this.gridViewKhoThuoc = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -126,9 +126,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabMain)).BeginInit();
             this.tabMain.SuspendLayout();
             this.tabHoatDongGanDay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridHoatDongGanDay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewHoatDongGanDay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btXem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdLSHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLSHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).BeginInit();
@@ -139,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btXem)).BeginInit();
             this.tabKho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridKhoThuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewKhoThuoc)).BeginInit();
@@ -281,161 +282,132 @@
             // 
             // tabHoatDongGanDay
             // 
-            this.tabHoatDongGanDay.Controls.Add(this.gridHoatDongGanDay);
+            this.tabHoatDongGanDay.Controls.Add(this.grdLSHoaDon);
             this.tabHoatDongGanDay.Name = "tabHoatDongGanDay";
             this.tabHoatDongGanDay.Size = new System.Drawing.Size(890, 516);
             this.tabHoatDongGanDay.Text = "Hoạt động gần đây";
             // 
-            // gridHoatDongGanDay
+            // grdLSHoaDon
             // 
-            this.gridHoatDongGanDay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grdLSHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             gridLevelNode1.RelationName = "Level1";
-            this.gridHoatDongGanDay.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            this.grdLSHoaDon.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridHoatDongGanDay.Location = new System.Drawing.Point(3, 3);
-            this.gridHoatDongGanDay.MainView = this.gridViewHoatDongGanDay;
-            this.gridHoatDongGanDay.MenuManager = this.ribbonControl;
-            this.gridHoatDongGanDay.Name = "gridHoatDongGanDay";
-            this.gridHoatDongGanDay.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btXem});
-            this.gridHoatDongGanDay.Size = new System.Drawing.Size(887, 510);
-            this.gridHoatDongGanDay.TabIndex = 0;
-            this.gridHoatDongGanDay.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewHoatDongGanDay});
+            this.grdLSHoaDon.Location = new System.Drawing.Point(3, 3);
+            this.grdLSHoaDon.MainView = this.gvLSHoaDon;
+            this.grdLSHoaDon.MenuManager = this.ribbonControl;
+            this.grdLSHoaDon.Name = "grdLSHoaDon";
+            this.grdLSHoaDon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btXem,
+            this.btnXem});
+            this.grdLSHoaDon.Size = new System.Drawing.Size(887, 510);
+            this.grdLSHoaDon.TabIndex = 0;
+            this.grdLSHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvLSHoaDon});
             // 
-            // gridViewHoatDongGanDay
+            // gvLSHoaDon
             // 
-            this.gridViewHoatDongGanDay.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.ID,
-            this.NgayTao,
-            this.TenTaiKhoan,
-            this.TenThaoTac,
-            this.SoLuong,
-            this.TongTien,
-            this.GhiChu,
-            this.clXem,
-            this.TenDanhMuc,
-            this.TenThuoc});
-            this.gridViewHoatDongGanDay.GridControl = this.gridHoatDongGanDay;
-            this.gridViewHoatDongGanDay.Name = "gridViewHoatDongGanDay";
-            this.gridViewHoatDongGanDay.OptionsBehavior.ReadOnly = true;
-            this.gridViewHoatDongGanDay.OptionsCustomization.AllowColumnResizing = false;
+            this.gvLSHoaDon.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn5,
+            this.gridColumn7,
+            this.gridColumn4,
+            this.gridColumn6,
+            this.gridColumn8});
+            this.gvLSHoaDon.GridControl = this.grdLSHoaDon;
+            this.gvLSHoaDon.Name = "gvLSHoaDon";
+            this.gvLSHoaDon.OptionsBehavior.ReadOnly = true;
+            this.gvLSHoaDon.OptionsCustomization.AllowColumnResizing = false;
             // 
-            // ID
+            // gridColumn1
             // 
-            this.ID.Caption = "ID";
-            this.ID.FieldName = "ID";
-            this.ID.Name = "ID";
-            this.ID.OptionsColumn.AllowEdit = false;
-            this.ID.Width = 20;
+            this.gridColumn1.Caption = "Mã hóa đơn";
+            this.gridColumn1.FieldName = "ID_HoaDon";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 69;
             // 
-            // NgayTao
+            // gridColumn2
             // 
-            this.NgayTao.Caption = "Thời gian";
-            this.NgayTao.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
-            this.NgayTao.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.NgayTao.FieldName = "NgayTao";
-            this.NgayTao.GroupFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
-            this.NgayTao.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.NgayTao.Name = "NgayTao";
-            this.NgayTao.OptionsColumn.AllowEdit = false;
-            this.NgayTao.OptionsColumn.ReadOnly = true;
-            this.NgayTao.Visible = true;
-            this.NgayTao.VisibleIndex = 0;
-            this.NgayTao.Width = 130;
+            this.gridColumn2.Caption = "Ngày lập";
+            this.gridColumn2.FieldName = "NgayLap";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 111;
             // 
-            // TenTaiKhoan
+            // gridColumn3
             // 
-            this.TenTaiKhoan.Caption = "Nhân viên";
-            this.TenTaiKhoan.FieldName = "TenTaiKhoan";
-            this.TenTaiKhoan.Name = "TenTaiKhoan";
-            this.TenTaiKhoan.OptionsColumn.AllowEdit = false;
-            this.TenTaiKhoan.OptionsColumn.ReadOnly = true;
-            this.TenTaiKhoan.Visible = true;
-            this.TenTaiKhoan.VisibleIndex = 1;
-            this.TenTaiKhoan.Width = 162;
+            this.gridColumn3.Caption = "Tên Nhân viên";
+            this.gridColumn3.FieldName = "TenTaiKhoan";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 111;
             // 
-            // TenThaoTac
+            // gridColumn5
             // 
-            this.TenThaoTac.Caption = "Thao tác";
-            this.TenThaoTac.FieldName = "TenThaoTac";
-            this.TenThaoTac.Name = "TenThaoTac";
-            this.TenThaoTac.OptionsColumn.AllowEdit = false;
-            this.TenThaoTac.Visible = true;
-            this.TenThaoTac.VisibleIndex = 4;
-            this.TenThaoTac.Width = 86;
+            this.gridColumn5.Caption = "Khách hàng";
+            this.gridColumn5.FieldName = "TenKhachHang";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 167;
             // 
-            // SoLuong
+            // gridColumn7
             // 
-            this.SoLuong.Caption = "Số lượng";
-            this.SoLuong.FieldName = "SoLuong";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.OptionsColumn.AllowEdit = false;
-            this.SoLuong.Visible = true;
-            this.SoLuong.VisibleIndex = 5;
-            this.SoLuong.Width = 71;
+            this.gridColumn7.Caption = "Thao tác";
+            this.gridColumn7.FieldName = "TenThaoTac";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 69;
             // 
-            // TongTien
+            // gridColumn4
             // 
-            this.TongTien.Caption = "Thành tiền";
-            this.TongTien.FieldName = "TongTien";
-            this.TongTien.Name = "TongTien";
-            this.TongTien.OptionsColumn.AllowEdit = false;
-            this.TongTien.Visible = true;
-            this.TongTien.VisibleIndex = 7;
-            this.TongTien.Width = 59;
+            this.gridColumn4.Caption = "Thành tiền";
+            this.gridColumn4.FieldName = "ThanhTien";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 111;
             // 
-            // GhiChu
+            // gridColumn6
             // 
-            this.GhiChu.Caption = "Ghi chú";
-            this.GhiChu.FieldName = "GhiChu";
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.OptionsColumn.AllowEdit = false;
-            this.GhiChu.Visible = true;
-            this.GhiChu.VisibleIndex = 6;
-            this.GhiChu.Width = 58;
+            this.gridColumn6.Caption = "Ghi chú";
+            this.gridColumn6.FieldName = "GhiChu";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 167;
             // 
-            // clXem
+            // gridColumn8
             // 
-            this.clXem.Caption = "Xem chi tiết";
-            this.clXem.ColumnEdit = this.btXem;
-            this.clXem.Name = "clXem";
-            this.clXem.OptionsColumn.AllowEdit = false;
-            this.clXem.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
-            this.clXem.Visible = true;
-            this.clXem.VisibleIndex = 8;
-            this.clXem.Width = 69;
+            this.gridColumn8.Caption = "Xem chi tiết";
+            this.gridColumn8.ColumnEdit = this.btnXem;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.Width = 64;
             // 
-            // btXem
+            // btnXem
             // 
-            this.btXem.AutoHeight = false;
-            this.btXem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.btXem.ContextImage = global::MyCare.Properties.Resources.join;
-            this.btXem.Name = "btXem";
-            this.btXem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // TenDanhMuc
-            // 
-            this.TenDanhMuc.Caption = "Danh mục";
-            this.TenDanhMuc.FieldName = "TenDanhMuc";
-            this.TenDanhMuc.Name = "TenDanhMuc";
-            this.TenDanhMuc.OptionsColumn.AllowEdit = false;
-            this.TenDanhMuc.Visible = true;
-            this.TenDanhMuc.VisibleIndex = 2;
-            this.TenDanhMuc.Width = 115;
-            // 
-            // TenThuoc
-            // 
-            this.TenThuoc.Caption = "Thuốc";
-            this.TenThuoc.FieldName = "TenThuoc";
-            this.TenThuoc.Name = "TenThuoc";
-            this.TenThuoc.OptionsColumn.AllowEdit = false;
-            this.TenThuoc.Visible = true;
-            this.TenThuoc.VisibleIndex = 3;
-            this.TenThuoc.Width = 116;
+            this.btnXem.AutoHeight = false;
+            this.btnXem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.about, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnXem.Name = "btnXem";
             // 
             // ribbonControl
             // 
@@ -616,27 +588,31 @@
             // 
             // bblsKho
             // 
-            this.bblsKho.Caption = "Lịch sử nhập xuất kho";
+            this.bblsKho.Caption = "Lịch sử thao tác bán hàng";
             this.bblsKho.Id = 74;
             this.bblsKho.Name = "bblsKho";
+            this.bblsKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bblsKho_ItemClick);
             // 
             // bblsDanhMuc
             // 
             this.bblsDanhMuc.Caption = "Lịch sử thao tác danh mục";
             this.bblsDanhMuc.Id = 75;
             this.bblsDanhMuc.Name = "bblsDanhMuc";
+            this.bblsDanhMuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bblsDanhMuc_ItemClick);
             // 
             // bblsThuoc
             // 
             this.bblsThuoc.Caption = "Lịch sử thao tác thuốc";
             this.bblsThuoc.Id = 76;
             this.bblsThuoc.Name = "bblsThuoc";
+            this.bblsThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bblsThuoc_ItemClick);
             // 
             // bblsDangNhap
             // 
             this.bblsDangNhap.Caption = "Lịch sử đăng nhập";
             this.bblsDangNhap.Id = 77;
             this.bblsDangNhap.Name = "bblsDangNhap";
+            this.bblsDangNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bblsDangNhap_ItemClick);
             // 
             // iBaoCao
             // 
@@ -926,6 +902,15 @@
             this.exitRibbonPageGroup.Name = "exitRibbonPageGroup";
             this.exitRibbonPageGroup.Text = "Thoát";
             // 
+            // btXem
+            // 
+            this.btXem.AutoHeight = false;
+            this.btXem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btXem.ContextImage = global::MyCare.Properties.Resources.join;
+            this.btXem.Name = "btXem";
+            this.btXem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // tabKho
             // 
             this.tabKho.Controls.Add(this.gridKhoThuoc);
@@ -984,7 +969,7 @@
             // clSoLuongCon
             // 
             this.clSoLuongCon.Caption = "Số lượng còn";
-            this.clSoLuongCon.FieldName = "SLCon";
+            this.clSoLuongCon.FieldName = "SoLuongCon";
             this.clSoLuongCon.Name = "clSoLuongCon";
             this.clSoLuongCon.OptionsColumn.AllowMove = false;
             this.clSoLuongCon.OptionsColumn.AllowSize = false;
@@ -1064,9 +1049,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabMain)).EndInit();
             this.tabMain.ResumeLayout(false);
             this.tabHoatDongGanDay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridHoatDongGanDay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewHoatDongGanDay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btXem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdLSHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLSHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).EndInit();
@@ -1077,6 +1062,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btXem)).EndInit();
             this.tabKho.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridKhoThuoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewKhoThuoc)).EndInit();
@@ -1152,17 +1138,9 @@
         private DevExpress.XtraTab.XtraTabControl tabMain;
         private DevExpress.XtraTab.XtraTabPage tabHoatDongGanDay;
         private DevExpress.XtraTab.XtraTabPage tabKho;
-        private DevExpress.XtraGrid.GridControl gridHoatDongGanDay;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewHoatDongGanDay;
-        private DevExpress.XtraGrid.Columns.GridColumn TenThaoTac;
-        private DevExpress.XtraGrid.Columns.GridColumn ID;
-        private DevExpress.XtraGrid.Columns.GridColumn clXem;
+        private DevExpress.XtraGrid.GridControl grdLSHoaDon;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvLSHoaDon;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btXem;
-        private DevExpress.XtraGrid.Columns.GridColumn NgayTao;
-        private DevExpress.XtraGrid.Columns.GridColumn TenTaiKhoan;
-        private DevExpress.XtraGrid.Columns.GridColumn SoLuong;
-        private DevExpress.XtraGrid.Columns.GridColumn TongTien;
-        private DevExpress.XtraGrid.Columns.GridColumn GhiChu;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridKhoThuoc;
@@ -1171,9 +1149,16 @@
         private DevExpress.XtraGrid.Columns.GridColumn clTenThuoc;
         private DevExpress.XtraGrid.Columns.GridColumn clSoLuongCon;
         private DevExpress.XtraGrid.Columns.GridColumn clGia;
-        private DevExpress.XtraGrid.Columns.GridColumn TenDanhMuc;
-        private DevExpress.XtraGrid.Columns.GridColumn TenThuoc;
         private DevExpress.XtraGrid.Columns.GridColumn clTacDung;
         private DevExpress.XtraGrid.Columns.GridColumn clDonVi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXem;
     }
 }

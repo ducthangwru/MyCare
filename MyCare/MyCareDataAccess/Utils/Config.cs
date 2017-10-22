@@ -10,5 +10,7 @@ namespace MyCare.MyCareDataAccess.Utils
     {
         public Config() { }
         public static int IDNhanVien = 0;
+        public const int DANG_NHAP = 1;
+        public const int DANG_XUAT = 2;
     }
 }

@@ -39,7 +39,7 @@ namespace MyCare
         {
             if(tabMain.SelectedTabPageIndex == 0)
             {
-                gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien);
+                grdLSHoaDon.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien);
             }
             else if(tabMain.SelectedTabPageIndex == 1)
             {
@@ -49,7 +49,7 @@ namespace MyCare
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            gridHoatDongGanDay.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(2);
+            grdLSHoaDon.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien);
         }
 
         private void iBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -62,13 +62,55 @@ namespace MyCare
 
         private void iExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TaiKhoanDB.LuuLichSuDangNhap(Config.IDNhanVien, 2);
+            TaiKhoanDB.LuuLichSuDangNhap(Config.IDNhanVien, Config.DANG_XUAT);
             this.Close();
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            TaiKhoanDB.LuuLichSuDangNhap(Config.IDNhanVien, 2);
+            TaiKhoanDB.LuuLichSuDangNhap(Config.IDNhanVien, Config.DANG_XUAT);
+        }
+
+        private void bblsKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormLichSuNhapXuatKho frm = new FormLichSuNhapXuatKho();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void bblsDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormLichSuDangNhap frm = new FormLichSuDangNhap();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void bblsThuoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Utils.CheckQuyenAdmin(Config.IDNhanVien))
+            {
+                this.Hide();
+                FormLichSuThaoTacThuoc frm = new FormLichSuThaoTacThuoc();
+                frm.ShowDialog();
+                this.Show();
+            }
+            else
+                MessageBox.Show("Bạn không có quyền truy cập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void bblsDanhMuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Utils.CheckQuyenAdmin(Config.IDNhanVien))
+            {
+                this.Hide();
+                FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
+                frm.ShowDialog();
+                this.Show();
+            }
+            else
+                MessageBox.Show("Bạn không có quyền truy cập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

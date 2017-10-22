@@ -26,5 +26,61 @@ namespace MyCare.MyCareDataAccess.DataAcess
                 return dt;
             }
         }
+
+        public static DataTable LichSuThaoTacThuoc(int idnhanvien, int loctheothuoc, int loctheothaotac)
+        {
+            DataTable dt = new DataTable();
+            
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+               {
+                    new SqlParameter("@idnhanvien", idnhanvien),
+                    new SqlParameter("@loctheothuoc", loctheothuoc),
+                    new SqlParameter("@loctheothaotac", loctheothaotac)
+               };
+
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_LichSuThaoTacThuoc", param).Tables[0];
+                dt.Columns.Add("NgayThaoTac");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr["NgayThaoTac"] = DateTime.Parse(dr["NgayTao"].ToString()).ToString("dd/MM/yyyy HH:mm:ss");
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
+        public static DataTable LichSuThaoTacDanhMuc(int idnhanvien, int loctheodanhmuc, int loctheothaotac)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+               {
+                    new SqlParameter("@idnhanvien", idnhanvien),
+                    new SqlParameter("@loctheodanhmuc", loctheodanhmuc),
+                    new SqlParameter("@loctheothaotac", loctheothaotac)
+               };
+
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_LichSuThaoTacDM", param).Tables[0];
+                dt.Columns.Add("NgayThaoTac");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr["NgayThaoTac"] = DateTime.Parse(dr["NgayTao"].ToString()).ToString("dd/MM/yyyy HH:mm:ss");
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
     }
 }

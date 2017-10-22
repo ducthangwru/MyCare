@@ -19,6 +19,14 @@ namespace MyCare.MyCareDataAccess.DataAcess
             try
             {
                 dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachHoatDongGanDay", new SqlParameter("@idnhanvien", idnhanvien)).Tables[0];
+                dt.Columns.Add("ThanhTien");
+                dt.Columns.Add("NgayLap");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr["ThanhTien"] = Utils.Utils.DinhDangTienTe(dr["TongTien"].ToString()) + " VNĐ";
+                    dr["NgayLap"] = DateTime.Parse(dr["NgayTaoHD"].ToString()).ToString("dd/MM/yyyy HH:mm:ss");
+                }
+
                 return dt;
             }
             catch(Exception ex)

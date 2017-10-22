@@ -89,6 +89,30 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormLichSuDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLichSuDangNhap.Designer.cs">
+      <DependentUpon>FormLichSuDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLichSuNhapXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLichSuNhapXuatKho.Designer.cs">
+      <DependentUpon>FormLichSuNhapXuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLichSuThaoTacDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLichSuThaoTacDanhMuc.Designer.cs">
+      <DependentUpon>FormLichSuThaoTacDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLichSuThaoTacThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLichSuThaoTacThuoc.Designer.cs">
+      <DependentUpon>FormLichSuThaoTacThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +139,18 @@
     <Compile Include="MyCareDataAccess\Utils\Utils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLichSuDangNhap.resx">
+      <DependentUpon>FormLichSuDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLichSuNhapXuatKho.resx">
+      <DependentUpon>FormLichSuNhapXuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLichSuThaoTacDanhMuc.resx">
+      <DependentUpon>FormLichSuThaoTacDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLichSuThaoTacThuoc.resx">
+      <DependentUpon>FormLichSuThaoTacThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,7 +171,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
