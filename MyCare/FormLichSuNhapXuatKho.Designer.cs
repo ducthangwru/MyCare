@@ -101,6 +101,7 @@
             // gcSoLuong
             // 
             this.gcSoLuong.Caption = "Thao tác";
+            this.gcSoLuong.FieldName = "TenThaoTac";
             this.gcSoLuong.Name = "gcSoLuong";
             this.gcSoLuong.Visible = true;
             this.gcSoLuong.VisibleIndex = 4;
@@ -108,6 +109,7 @@
             // gcGhiChu
             // 
             this.gcGhiChu.Caption = "Ghi chú";
+            this.gcGhiChu.FieldName = "GhiChu";
             this.gcGhiChu.Name = "gcGhiChu";
             this.gcGhiChu.Visible = true;
             this.gcGhiChu.VisibleIndex = 5;
@@ -115,6 +117,7 @@
             // gcThanhTien
             // 
             this.gcThanhTien.Caption = "Thành tiền";
+            this.gcThanhTien.FieldName = "ThanhTien";
             this.gcThanhTien.Name = "gcThanhTien";
             this.gcThanhTien.Visible = true;
             this.gcThanhTien.VisibleIndex = 6;
