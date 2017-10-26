@@ -67,7 +67,6 @@
             this.bbQlyKho = new DevExpress.XtraBars.BarButtonItem();
             this.bbQlyDanhMuc = new DevExpress.XtraBars.BarButtonItem();
             this.bbQlyThuoc = new DevExpress.XtraBars.BarButtonItem();
-            this.bbQlyKhachHang = new DevExpress.XtraBars.BarButtonItem();
             this.bbQlyNV = new DevExpress.XtraBars.BarButtonItem();
             this.iLichSu = new DevExpress.XtraBars.BarButtonItem();
             this.popupLichSu = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -75,10 +74,6 @@
             this.bblsDanhMuc = new DevExpress.XtraBars.BarButtonItem();
             this.bblsThuoc = new DevExpress.XtraBars.BarButtonItem();
             this.bblsDangNhap = new DevExpress.XtraBars.BarButtonItem();
-            this.iBaoCao = new DevExpress.XtraBars.BarButtonItem();
-            this.popupBaoCao = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.bbbcDoanhThu = new DevExpress.XtraBars.BarButtonItem();
-            this.bbbcTongHop = new DevExpress.XtraBars.BarButtonItem();
             this.iThongKe = new DevExpress.XtraBars.BarButtonItem();
             this.popupThongKe = new DevExpress.XtraBars.PopupMenu(this.components);
             this.bbtkTongHop = new DevExpress.XtraBars.BarButtonItem();
@@ -99,6 +94,9 @@
             this.iCenterTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.iRightTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.rgbiSkins = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.bbQlyKhachHang = new DevExpress.XtraBars.BarButtonItem();
+            this.bbbcDoanhThu = new DevExpress.XtraBars.BarButtonItem();
+            this.bbbcTongHop = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -118,6 +116,8 @@
             this.clTacDung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.popupBaoCao = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.iBaoCao = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -134,7 +134,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupQuanLy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupLichSu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupBaoCao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -145,6 +144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewKhoThuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupBaoCao)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl
@@ -423,7 +423,6 @@
             this.iBanHang,
             this.iQuanly,
             this.iThongKe,
-            this.iBaoCao,
             this.iLichSu,
             this.iExit,
             this.iHelp,
@@ -464,7 +463,6 @@
             this.ribbonControl.Toolbar.ItemLinks.Add(this.iBanHang);
             this.ribbonControl.Toolbar.ItemLinks.Add(this.iQuanly);
             this.ribbonControl.Toolbar.ItemLinks.Add(this.iLichSu);
-            this.ribbonControl.Toolbar.ItemLinks.Add(this.iBaoCao);
             this.ribbonControl.Toolbar.ItemLinks.Add(this.iThongKe);
             this.ribbonControl.Toolbar.ItemLinks.Add(this.iHelp);
             // 
@@ -474,7 +472,6 @@
             this.appMenu.ItemLinks.Add(this.iBanHang);
             this.appMenu.ItemLinks.Add(this.iQuanly);
             this.appMenu.ItemLinks.Add(this.iLichSu);
-            this.appMenu.ItemLinks.Add(this.iBaoCao);
             this.appMenu.ItemLinks.Add(this.iThongKe);
             this.appMenu.ItemLinks.Add(this.iHelp);
             this.appMenu.ItemLinks.Add(this.iAbout);
@@ -527,7 +524,6 @@
             this.popupQuanLy.ItemLinks.Add(this.bbQlyKho);
             this.popupQuanLy.ItemLinks.Add(this.bbQlyDanhMuc);
             this.popupQuanLy.ItemLinks.Add(this.bbQlyThuoc);
-            this.popupQuanLy.ItemLinks.Add(this.bbQlyKhachHang);
             this.popupQuanLy.ItemLinks.Add(this.bbQlyNV);
             this.popupQuanLy.Name = "popupQuanLy";
             this.popupQuanLy.Ribbon = this.ribbonControl;
@@ -544,24 +540,21 @@
             this.bbQlyDanhMuc.Caption = "Quản lý danh mục";
             this.bbQlyDanhMuc.Id = 70;
             this.bbQlyDanhMuc.Name = "bbQlyDanhMuc";
+            this.bbQlyDanhMuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbQlyDanhMuc_ItemClick);
             // 
             // bbQlyThuoc
             // 
             this.bbQlyThuoc.Caption = "Quản lý thuốc";
             this.bbQlyThuoc.Id = 71;
             this.bbQlyThuoc.Name = "bbQlyThuoc";
-            // 
-            // bbQlyKhachHang
-            // 
-            this.bbQlyKhachHang.Caption = "Quản lý khách hàng";
-            this.bbQlyKhachHang.Id = 72;
-            this.bbQlyKhachHang.Name = "bbQlyKhachHang";
+            this.bbQlyThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbQlyThuoc_ItemClick);
             // 
             // bbQlyNV
             // 
             this.bbQlyNV.Caption = "Quản lý nhân viên";
             this.bbQlyNV.Id = 73;
             this.bbQlyNV.Name = "bbQlyNV";
+            this.bbQlyNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbQlyNV_ItemClick);
             // 
             // iLichSu
             // 
@@ -613,39 +606,6 @@
             this.bblsDangNhap.Id = 77;
             this.bblsDangNhap.Name = "bblsDangNhap";
             this.bblsDangNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bblsDangNhap_ItemClick);
-            // 
-            // iBaoCao
-            // 
-            this.iBaoCao.ActAsDropDown = true;
-            this.iBaoCao.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.iBaoCao.Caption = "Báo cáo";
-            this.iBaoCao.Description = "Báo cáo";
-            this.iBaoCao.DropDownControl = this.popupBaoCao;
-            this.iBaoCao.Id = 15;
-            this.iBaoCao.ImageIndex = 3;
-            this.iBaoCao.ImageUri.Uri = "DayView";
-            this.iBaoCao.LargeImageIndex = 3;
-            this.iBaoCao.LargeWidth = 75;
-            this.iBaoCao.Name = "iBaoCao";
-            // 
-            // popupBaoCao
-            // 
-            this.popupBaoCao.ItemLinks.Add(this.bbbcDoanhThu);
-            this.popupBaoCao.ItemLinks.Add(this.bbbcTongHop);
-            this.popupBaoCao.Name = "popupBaoCao";
-            this.popupBaoCao.Ribbon = this.ribbonControl;
-            // 
-            // bbbcDoanhThu
-            // 
-            this.bbbcDoanhThu.Caption = "Báo cáo doanh thu";
-            this.bbbcDoanhThu.Id = 79;
-            this.bbbcDoanhThu.Name = "bbbcDoanhThu";
-            // 
-            // bbbcTongHop
-            // 
-            this.bbbcTongHop.Caption = "Báo cáo tổng hợp";
-            this.bbbcTongHop.Id = 80;
-            this.bbbcTongHop.Name = "bbbcTongHop";
             // 
             // iThongKe
             // 
@@ -835,6 +795,24 @@
             this.rgbiSkins.Id = 60;
             this.rgbiSkins.Name = "rgbiSkins";
             // 
+            // bbQlyKhachHang
+            // 
+            this.bbQlyKhachHang.Caption = "Quản lý khách hàng";
+            this.bbQlyKhachHang.Id = 72;
+            this.bbQlyKhachHang.Name = "bbQlyKhachHang";
+            // 
+            // bbbcDoanhThu
+            // 
+            this.bbbcDoanhThu.Caption = "Báo cáo doanh thu";
+            this.bbbcDoanhThu.Id = 79;
+            this.bbbcDoanhThu.Name = "bbbcDoanhThu";
+            // 
+            // bbbcTongHop
+            // 
+            this.bbbcTongHop.Caption = "Báo cáo tổng hợp";
+            this.bbbcTongHop.Id = 80;
+            this.bbbcTongHop.Name = "bbbcTongHop";
+            // 
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
@@ -864,7 +842,6 @@
             this.fileRibbonPageGroup.ItemLinks.Add(this.iBanHang);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iQuanly);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iThongKe);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iBaoCao);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iLichSu);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iKhachHang);
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
@@ -879,8 +856,8 @@
             this.iKhachHang.ImageIndex = 5;
             this.iKhachHang.LargeGlyph = global::MyCare.Properties.Resources.usesicon;
             this.iKhachHang.LargeImageIndex = 4;
-            this.iKhachHang.LargeWidth = 75;
             this.iKhachHang.Name = "iKhachHang";
+            this.iKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iKhachHang_ItemClick);
             // 
             // skinsRibbonPageGroup
             // 
@@ -1026,6 +1003,27 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
+            // popupBaoCao
+            // 
+            this.popupBaoCao.ItemLinks.Add(this.bbbcDoanhThu);
+            this.popupBaoCao.ItemLinks.Add(this.bbbcTongHop);
+            this.popupBaoCao.Name = "popupBaoCao";
+            this.popupBaoCao.Ribbon = this.ribbonControl;
+            // 
+            // iBaoCao
+            // 
+            this.iBaoCao.ActAsDropDown = true;
+            this.iBaoCao.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
+            this.iBaoCao.Caption = "Báo cáo";
+            this.iBaoCao.Description = "Báo cáo";
+            this.iBaoCao.DropDownControl = this.popupBaoCao;
+            this.iBaoCao.Id = 15;
+            this.iBaoCao.ImageIndex = 3;
+            this.iBaoCao.ImageUri.Uri = "DayView";
+            this.iBaoCao.LargeImageIndex = 3;
+            this.iBaoCao.LargeWidth = 75;
+            this.iBaoCao.Name = "iBaoCao";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1057,7 +1055,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupQuanLy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupLichSu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupBaoCao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
@@ -1068,6 +1065,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewKhoThuoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupBaoCao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1080,7 +1078,6 @@
         private DevExpress.XtraBars.BarButtonItem iBanHang;
         private DevExpress.XtraBars.BarButtonItem iQuanly;
         private DevExpress.XtraBars.BarButtonItem iThongKe;
-        private DevExpress.XtraBars.BarButtonItem iBaoCao;
         private DevExpress.XtraBars.BarButtonItem iLichSu;
         private DevExpress.XtraBars.BarButtonItem iKhachHang;
         private DevExpress.XtraBars.BarButtonItem iExit;
@@ -1160,5 +1157,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXem;
+        private DevExpress.XtraBars.BarButtonItem iBaoCao;
     }
 }

@@ -31,7 +31,10 @@ namespace MyCare
 
         private void bbQlyKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            this.Hide();
+            FormNhapKho frm = new FormNhapKho();
+            frm.ShowDialog();
+            this.Show();
         }
 
             
@@ -111,6 +114,43 @@ namespace MyCare
             }
             else
                 MessageBox.Show("Bạn không có quyền truy cập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void bbQlyDanhMuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormQuanLyDanhMuc frmQuanLYDanhMuc = new FormQuanLyDanhMuc();
+            //FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
+            frmQuanLYDanhMuc.ShowDialog();
+            this.Show();
+        }
+
+        private void bbQlyThuoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormQuanLyThuoc frm = new FormQuanLyThuoc();
+            //FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void bbQlyNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            this.Hide();
+            FormQuanLyNhanVien frm = new FormQuanLyNhanVien();
+            //FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void iKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormQuanLyKhachHang frm = new FormQuanLyKhachHang();
+            //FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }
