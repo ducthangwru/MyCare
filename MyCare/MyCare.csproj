@@ -156,6 +156,7 @@
     <Compile Include="FormTransaction.Designer.cs">
       <DependentUpon>FormTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCareDataAccess\DataAcess\DanhMucThuocDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\HoaDonDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\KhoThuocDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\LichSuNhapXuatKhoDB.cs" />

@@ -46,7 +46,7 @@ namespace MyCare
             }
             else if(tabMain.SelectedTabPageIndex == 1)
             {
-                gridKhoThuoc.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien);
+                gridKhoThuoc.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien, null);
             }
         }
 

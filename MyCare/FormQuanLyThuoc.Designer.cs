@@ -58,9 +58,11 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSearchThuoc = new DevExpress.XtraEditors.SimpleButton();
+            this.txbTimKiemQlyThuoc = new DevExpress.XtraEditors.TextEdit();
+            this.btnLRefreshThuoc = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.luDanhMuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoiDung.Properties)).BeginInit();
@@ -71,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayTao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdQuanLyThuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQuanLyThuoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTimKiemQlyThuoc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // radHetHieuLuc
@@ -255,11 +258,13 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "IDThuoc";
+            this.gridColumn1.FieldName = "IDThuoc";
             this.gridColumn1.Name = "gridColumn1";
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Tên thuốc";
+            this.gridColumn2.FieldName = "TenThuoc";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
@@ -268,6 +273,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Tên danh mục";
+            this.gridColumn3.FieldName = "TenDanhMuc";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
@@ -276,6 +282,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Đơn vị";
+            this.gridColumn4.FieldName = "TenDonVi";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
@@ -284,6 +291,7 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Nội dung";
+            this.gridColumn5.FieldName = "NoiDung";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
@@ -292,6 +300,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Trạng thái";
+            this.gridColumn6.FieldName = "TrangThai";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
@@ -300,6 +309,7 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Ngày tạo";
+            this.gridColumn7.FieldName = "NgayLap";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
@@ -308,6 +318,7 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Giá nhập";
+            this.gridColumn8.FieldName = "GiaNhap";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 3;
@@ -316,18 +327,11 @@
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Giá xuất";
+            this.gridColumn9.FieldName = "Gia";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 4;
             this.gridColumn9.Width = 78;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(611, 185);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(75, 23);
-            this.btnLamMoi.TabIndex = 13;
-            this.btnLamMoi.Text = "Làm mới";
             // 
             // btnSua
             // 
@@ -345,12 +349,42 @@
             this.btnThem.TabIndex = 11;
             this.btnThem.Text = "Thêm";
             // 
+            // btnSearchThuoc
+            // 
+            this.btnSearchThuoc.Image = global::MyCare.Properties.Resources.seach;
+            this.btnSearchThuoc.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSearchThuoc.Location = new System.Drawing.Point(569, 196);
+            this.btnSearchThuoc.Name = "btnSearchThuoc";
+            this.btnSearchThuoc.Size = new System.Drawing.Size(49, 23);
+            this.btnSearchThuoc.TabIndex = 26;
+            this.btnSearchThuoc.Click += new System.EventHandler(this.btnSearchThuoc_Click);
+            // 
+            // txbTimKiemQlyThuoc
+            // 
+            this.txbTimKiemQlyThuoc.Location = new System.Drawing.Point(458, 198);
+            this.txbTimKiemQlyThuoc.Name = "txbTimKiemQlyThuoc";
+            this.txbTimKiemQlyThuoc.Size = new System.Drawing.Size(100, 20);
+            this.txbTimKiemQlyThuoc.TabIndex = 25;
+            this.txbTimKiemQlyThuoc.EditValueChanged += new System.EventHandler(this.txbTimKiemQlyThuoc_EditValueChanged);
+            // 
+            // btnLRefreshThuoc
+            // 
+            this.btnLRefreshThuoc.Image = global::MyCare.Properties.Resources.update;
+            this.btnLRefreshThuoc.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnLRefreshThuoc.Location = new System.Drawing.Point(638, 196);
+            this.btnLRefreshThuoc.Name = "btnLRefreshThuoc";
+            this.btnLRefreshThuoc.Size = new System.Drawing.Size(48, 23);
+            this.btnLRefreshThuoc.TabIndex = 24;
+            this.btnLRefreshThuoc.Click += new System.EventHandler(this.btnLRefreshThuoc_Click);
+            // 
             // FormQuanLyThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 457);
-            this.Controls.Add(this.btnLamMoi);
+            this.Controls.Add(this.btnSearchThuoc);
+            this.Controls.Add(this.txbTimKiemQlyThuoc);
+            this.Controls.Add(this.btnLRefreshThuoc);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grdQuanLyThuoc);
@@ -376,6 +410,7 @@
             this.Name = "FormQuanLyThuoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Thuốc";
+            this.Load += new System.EventHandler(this.FormQuanLyThuoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.luDanhMuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoiDung.Properties)).EndInit();
@@ -386,6 +421,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayTao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdQuanLyThuoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQuanLyThuoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTimKiemQlyThuoc.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,8 +459,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraEditors.SimpleButton btnLamMoi;
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.SimpleButton btnSearchThuoc;
+        private DevExpress.XtraEditors.TextEdit txbTimKiemQlyThuoc;
+        private DevExpress.XtraEditors.SimpleButton btnLRefreshThuoc;
     }
 }

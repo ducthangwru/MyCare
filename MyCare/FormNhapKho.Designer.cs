@@ -58,8 +58,12 @@
             this.btnThemSoLuong = new DevExpress.XtraEditors.SimpleButton();
             this.txbSoLuongCon = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnSearchNhapKho = new DevExpress.XtraEditors.SimpleButton();
+            this.txbTimKiemNhapKho = new DevExpress.XtraEditors.TextEdit();
+            this.btnLRefreshNhapKho = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdQlyKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTimKiemNhapKho.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grdQlyKho
@@ -325,11 +329,42 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Số lượng còn";
             // 
+            // btnSearchNhapKho
+            // 
+            this.btnSearchNhapKho.Image = global::MyCare.Properties.Resources.seach;
+            this.btnSearchNhapKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSearchNhapKho.Location = new System.Drawing.Point(556, 243);
+            this.btnSearchNhapKho.Name = "btnSearchNhapKho";
+            this.btnSearchNhapKho.Size = new System.Drawing.Size(49, 23);
+            this.btnSearchNhapKho.TabIndex = 13;
+            this.btnSearchNhapKho.Click += new System.EventHandler(this.btnSearchNhapKho_Click);
+            // 
+            // txbTimKiemNhapKho
+            // 
+            this.txbTimKiemNhapKho.Location = new System.Drawing.Point(445, 245);
+            this.txbTimKiemNhapKho.Name = "txbTimKiemNhapKho";
+            this.txbTimKiemNhapKho.Size = new System.Drawing.Size(100, 20);
+            this.txbTimKiemNhapKho.TabIndex = 12;
+            this.txbTimKiemNhapKho.EditValueChanged += new System.EventHandler(this.txbTimKiemNhapKho_EditValueChanged);
+            // 
+            // btnLRefreshNhapKho
+            // 
+            this.btnLRefreshNhapKho.Image = global::MyCare.Properties.Resources.update;
+            this.btnLRefreshNhapKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnLRefreshNhapKho.Location = new System.Drawing.Point(625, 243);
+            this.btnLRefreshNhapKho.Name = "btnLRefreshNhapKho";
+            this.btnLRefreshNhapKho.Size = new System.Drawing.Size(48, 23);
+            this.btnLRefreshNhapKho.TabIndex = 11;
+            this.btnLRefreshNhapKho.Click += new System.EventHandler(this.btnLRefreshNhapKho_Click);
+            // 
             // FormNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 474);
+            this.Controls.Add(this.btnSearchNhapKho);
+            this.Controls.Add(this.txbTimKiemNhapKho);
+            this.Controls.Add(this.btnLRefreshNhapKho);
             this.Controls.Add(this.txbSoLuongCon);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnThemSoLuong);
@@ -357,6 +392,7 @@
             this.Load += new System.EventHandler(this.FormNhapKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdQlyKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTimKiemNhapKho.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,5 +430,8 @@
         private System.Windows.Forms.Label label9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraEditors.SimpleButton btnSearchNhapKho;
+        private DevExpress.XtraEditors.TextEdit txbTimKiemNhapKho;
+        private DevExpress.XtraEditors.SimpleButton btnLRefreshNhapKho;
     }
 }

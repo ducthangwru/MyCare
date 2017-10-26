@@ -23,9 +23,17 @@ namespace MyCare
 
         private void FormNhapKho_Load(object sender, EventArgs e)
         {
-            grdQlyKho.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien);
-            txtIDHoaDon.Text = HoaDonDB.GetIDHoaDon(Config.IDNhanVien);
-            idhoadon = int.Parse(txtIDHoaDon.Text);
+            DialogResult dialog = MessageBox.Show("Bạn có muốn tạo 1 hóa đơn nhập kho mới?", "Nhập kho", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(dialog == DialogResult.OK)
+            {
+                RefreshDataGridQlyKho(null);
+                txtIDHoaDon.Text = HoaDonDB.GetIDHoaDon(Config.IDNhanVien);
+                idhoadon = int.Parse(txtIDHoaDon.Text);
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void gvQLKho_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -56,7 +64,7 @@ namespace MyCare
                 if (soluongthem >= 0 && HoaDonDB.ThemChiTietHoaDonNhapKho(idthuoc, idhoadon, soluongthem, giaban, donvi, ghichu))
                 {
                     MessageBox.Show("Thêm số lượng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    grdQlyKho.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien);
+                    grdQlyKho.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien, null);
                 }
                 else
                     MessageBox.Show("Thêm số lượng không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -70,6 +78,26 @@ namespace MyCare
         private void FormNhapKho_FormClosed(object sender, FormClosedEventArgs e)
         {
             HoaDonDB.KiemTraChiTietHoaDon(idhoadon);
+        }
+
+        private void btnLRefreshNhapKho_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridQlyKho(null);
+        }
+
+        private void RefreshDataGridQlyKho(string timkiem)
+        {
+            grdQlyKho.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien, timkiem);
+        }
+
+        private void btnSearchNhapKho_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridQlyKho(txbTimKiemNhapKho.Text);
+        }
+
+        private void txbTimKiemNhapKho_EditValueChanged(object sender, EventArgs e)
+        {
+            RefreshDataGridQlyKho(txbTimKiemNhapKho.Text);
         }
     }
 }

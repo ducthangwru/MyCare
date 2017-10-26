@@ -35,7 +35,7 @@ namespace MyCare
             dtNew.Columns.Add("Gia");
             dtNew.Columns.Add("ThanhTien");
 
-            gridTatCaMatHang.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien);
+            gridTatCaMatHang.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien, null);
         }
 
         private void gridViewTatCaMatHang_DoubleClick(object sender, EventArgs e)
