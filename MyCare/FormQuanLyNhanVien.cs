@@ -24,6 +24,7 @@ namespace MyCare
 
         private void FormQuanLyNhanVien_Load(object sender, EventArgs e)
         {
+            radConHieuLuc.Checked = true;
             luQuyen.Properties.DataSource = TaiKhoanDB.DanhSachQuyen();
             GetDataGridQlyNhanVien(null);
         }
@@ -50,7 +51,7 @@ namespace MyCare
 
         private void gvQuanLyNhanVien_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            //luQuyen
+            luQuyen.EditValue = int.Parse(gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["ID_NhomTK"]).ToString());
             txtTenDangNhap.Text = gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["TenDangNhap"]).ToString();
             txtTenNhanVien.Text = gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["TenTaiKhoan"]).ToString();
             txtMatKhau.Text = gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["MatKhau"]).ToString();
@@ -74,7 +75,7 @@ namespace MyCare
                 }
 
                 obj.trangthai = (radConHieuLuc.Checked) ? 0 : 1;
-                obj.idnhomtk = 2;//int.Parse(luQuyen.Properties.ValueMember);
+                obj.idnhomtk = int.Parse(luQuyen.GetColumnValue("ID").ToString());
                 obj.tendangnhap = txtTenDangNhap.Text;
                 obj.tennhanvien = txtTenNhanVien.Text;
                 obj.matkhau = Utils.md5(txtMatKhau.Text);

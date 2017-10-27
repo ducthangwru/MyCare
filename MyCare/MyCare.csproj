@@ -159,10 +159,12 @@
     <Compile Include="MyCareDataAccess\DataAcess\DanhMucThuocDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\DonViDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\HoaDonDB.cs" />
+    <Compile Include="MyCareDataAccess\DataAcess\KhachHangDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\KhoThuocDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\LichSuNhapXuatKhoDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\TaiKhoanDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\ThaoTacDB.cs" />
+    <Compile Include="MyCareDataAccess\Object\KhachHangOBJ.cs" />
     <Compile Include="MyCareDataAccess\Object\NhanVienOBJ.cs" />
     <Compile Include="MyCareDataAccess\Object\ThuocOBJ.cs" />
     <Compile Include="MyCareDataAccess\Utils\Config.cs" />

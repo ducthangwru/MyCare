@@ -52,20 +52,19 @@ namespace MyCare
 
         private void gvQuanLyThuoc_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            //luDanhMuc.EditValue = luDanhMuc.Properties.GetKeyValueByDisplayText(gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["TenDanhMuc"]).ToString());
-            //luDanhMuc.Properties.ValueMember = gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["ID_DanhMuc"]).ToString();
-            //luDonVi.Properties.DisplayMember = gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["TenDonVi"]).ToString();
-            //luDonVi.Properties.ValueMember = gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["ID_DonVi"]).ToString();
+            luDanhMuc.EditValue = int.Parse(gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["ID_DanhMuc"]).ToString());
+            luDonVi.EditValue = int.Parse(gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["ID_DonVi"]).ToString());
             txtGiaNhap.Text = gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["GiaNhap"]).ToString();
             txtGiaXuat.Text = gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["Gia"]).ToString();
             txtNgayTao.Text = gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["NgayLap"]).ToString();
             txtNoiDung.Text = gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["NoiDung"]).ToString();
             txtTenThuoc.Text = gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["TenThuoc"]).ToString();
-
+            obj.TrangThai = bool.Parse(gvQuanLyThuoc.GetRowCellValue(gvQuanLyThuoc.FocusedRowHandle, gvQuanLyThuoc.Columns["TrangThaiXoa"]).ToString()) ? 1 : 0;
             if (obj.TrangThai == 1)
                 radHetHieuLuc.Checked = true;
             else
                 radConHieuLuc.Checked = true;
+            
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -73,8 +72,8 @@ namespace MyCare
             try
             {
                 obj.TrangThai = (radConHieuLuc.Checked) ? 0 : 1;
-                obj.IDDanhMuc = int.Parse(luDanhMuc.Properties.ValueMember);
-                obj.IDDonVi = int.Parse(luDonVi.Properties.ValueMember);
+                obj.IDDanhMuc = int.Parse(luDanhMuc.GetColumnValue("ID").ToString());
+                obj.IDDonVi = int.Parse(luDonVi.GetColumnValue("ID").ToString());
                 obj.GhiChu = txtGhiChu.Text;
                 obj.GiaNhap = double.Parse(txtGiaNhap.Text);
                 obj.GiaXuat = double.Parse(txtGiaXuat.Text);

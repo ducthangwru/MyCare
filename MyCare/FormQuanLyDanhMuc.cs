@@ -30,6 +30,7 @@ namespace MyCare
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            radConHieuLuc.Checked = true;
             GetDataGridQlyDanhMuc(null);
         }
 

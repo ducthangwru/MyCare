@@ -660,6 +660,7 @@
             this.iAbout.LargeImageIndex = 8;
             this.iAbout.LargeWidth = 75;
             this.iAbout.Name = "iAbout";
+            this.iAbout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iAbout_ItemClick);
             // 
             // iExit
             // 
