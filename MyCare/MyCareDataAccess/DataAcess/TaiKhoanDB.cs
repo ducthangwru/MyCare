@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MyCare.MyCareDataAccess.Utils;
 using System.Data.SqlClient;
 using System.Data;
+using MyCare.MyCareDataAccess.Object;
 
 namespace MyCare.MyCareDataAccess.DataAcess
 {
@@ -44,6 +45,59 @@ namespace MyCare.MyCareDataAccess.DataAcess
             return db.ExecuteNonQuery("sp_MyCareDesktop_ThemLichSuDangNhap", param) > 0;
         }
 
+        public static int ThemMoiTaiKhoan(int idnhanvien, NhanVienOBJ obj)
+        {
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@idnhanvien", idnhanvien),
+                    new SqlParameter("@tennhanvien", obj.tennhanvien),
+                    new SqlParameter("@tendangnhap", obj.tendangnhap),
+                    new SqlParameter("@trangthai", obj.trangthai),
+                    new SqlParameter("@matkhau", obj.matkhau),
+                    new SqlParameter("@idnhomtk", obj.idnhomtk)
+                };
+
+                return int.Parse(db.ExecuteScalar("sp_MyCareDesktop_ThemMoiTaiKhoan", param).ToString());
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public static int CapNhatTaiKhoan(int idnhanvien, NhanVienOBJ obj)
+        {
+            try
+            {
+                SqlParameter[] par = new SqlParameter[]
+                {
+                    new SqlParameter("@idtaikhoan", obj.idtaikhoan),
+                    new SqlParameter("@tendangnhap", obj.tendangnhap)
+                };
+
+                if (int.Parse(db.ExecuteScalar("sp_MyCare_KiemTraTenDangNhap", par).ToString()) == 0)
+                    return -1;
+
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@idnhanvien", idnhanvien),
+                    new SqlParameter("@idtaikhoan", obj.idtaikhoan),
+                    new SqlParameter("@tennhanvien", obj.tennhanvien),
+                    new SqlParameter("@trangthai", obj.trangthai),
+                    new SqlParameter("@matkhau", obj.matkhau),
+                    new SqlParameter("@idnhomtk", obj.idnhomtk)
+                };
+
+                return int.Parse(db.ExecuteScalar("sp_MyCareDesktop_CapNhatTaiKhoan", param).ToString());
+            }
+            catch(Exception ex)
+            {
+                return 0;
+            }
+        }
+
         public static DataTable LichSuDangNhap(int idnhanvien, int loctheonhanvien, int loctheotrangthai)
         {
             DataTable dt = new DataTable();
@@ -65,6 +119,48 @@ namespace MyCare.MyCareDataAccess.DataAcess
                     dr["ThoiGian"] = DateTime.Parse(dr["NgayTao"].ToString()).ToString("dd/MM/yyyy HH:mm:ss");
                 }
 
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
+        public static DataTable DanhSachNhanVien(string timkiem)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@timkiem", timkiem)
+                };
+
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachTaiKhoan", param).Tables[0];
+                dt.Columns.Add("TrangThai");
+                dt.Columns.Add("NgayLap");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr["TrangThai"] = (bool.Parse(dr["TrangThaiXoa"].ToString())) ? "Vô hiệu hóa" : "Kích hoạt";
+                    dr["NgayLap"] = DateTime.Parse(dr["NgayTao"].ToString()).ToString("dd/MM/yyyy HH:mm:ss");
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
+        public static DataTable DanhSachQuyen()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachQuyen").Tables[0];
+              
                 return dt;
             }
             catch (Exception ex)

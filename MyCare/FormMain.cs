@@ -52,6 +52,12 @@ namespace MyCare
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            if (!Utils.CheckQuyenAdmin(Config.IDNhanVien))
+            {
+                iQuanly.Enabled = false;
+                iThongKe.Enabled = false;
+            }
+
             grdLSHoaDon.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien);
         }
 
@@ -120,7 +126,6 @@ namespace MyCare
         {
             this.Hide();
             FormQuanLyDanhMuc frmQuanLYDanhMuc = new FormQuanLyDanhMuc();
-            //FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
             frmQuanLYDanhMuc.ShowDialog();
             this.Show();
         }
@@ -129,7 +134,6 @@ namespace MyCare
         {
             this.Hide();
             FormQuanLyThuoc frm = new FormQuanLyThuoc();
-            //FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
             frm.ShowDialog();
             this.Show();
         }
@@ -139,7 +143,6 @@ namespace MyCare
 
             this.Hide();
             FormQuanLyNhanVien frm = new FormQuanLyNhanVien();
-            //FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
             frm.ShowDialog();
             this.Show();
         }
@@ -148,9 +151,17 @@ namespace MyCare
         {
             this.Hide();
             FormQuanLyKhachHang frm = new FormQuanLyKhachHang();
-            //FormLichSuThaoTacDanhMuc frm = new FormLichSuThaoTacDanhMuc();
             frm.ShowDialog();
             this.Show();
+        }
+
+        private void iLichSu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!Utils.CheckQuyenAdmin(Config.IDNhanVien))
+            {
+                bblsDanhMuc.Enabled = false;
+                bblsThuoc.Enabled = false;
+            }
         }
     }
 }

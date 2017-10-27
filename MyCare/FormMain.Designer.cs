@@ -569,6 +569,7 @@
             this.iLichSu.LargeImageIndex = 4;
             this.iLichSu.LargeWidth = 75;
             this.iLichSu.Name = "iLichSu";
+            this.iLichSu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iLichSu_ItemClick);
             // 
             // popupLichSu
             // 

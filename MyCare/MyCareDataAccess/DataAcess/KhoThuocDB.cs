@@ -1,4 +1,5 @@
-﻿using MyCare.MyCareDataAccess.Utils;
+﻿using MyCare.MyCareDataAccess.Object;
+using MyCare.MyCareDataAccess.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -52,6 +53,57 @@ namespace MyCare.MyCareDataAccess.DataAcess
             catch (Exception ex)
             {
                 return dt;
+            }
+        }
+
+        public static int CapNhatThuoc(int idnhanvien, ThuocOBJ obj)
+        {
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@idnhanvien", idnhanvien),
+                    new SqlParameter("@idthuoc", obj.IDThuoc),
+                    new SqlParameter("@iddanhmuc", obj.IDDanhMuc), 
+                    new SqlParameter("@iddonvi", obj.IDDonVi),
+                    new SqlParameter("@giaban", obj.GiaXuat),
+                    new SqlParameter("@gianhap", obj.GiaNhap),
+                    new SqlParameter("@noidung", obj.NoiDung),
+                    new SqlParameter("@ghichu", obj.GhiChu),
+                    new SqlParameter("@trangthai", obj.TrangThai),
+                    new SqlParameter("@tenthuoc", obj.TenThuoc)
+                };
+
+                return int.Parse(db.ExecuteScalar("sp_MyCareDesktop_CapNhatThuoc", param).ToString());
+            }
+            catch(Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public static int ThemMoiThuoc(int idnhanvien, ThuocOBJ obj)
+        {
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@idnhanvien", idnhanvien),
+                    new SqlParameter("@iddanhmuc", obj.IDDanhMuc),
+                    new SqlParameter("@iddonvi", obj.IDDonVi),
+                    new SqlParameter("@giaban", obj.GiaXuat),
+                    new SqlParameter("@gianhap", obj.GiaNhap),
+                    new SqlParameter("@noidung", obj.NoiDung),
+                    new SqlParameter("@ghichu", obj.GhiChu),
+                    new SqlParameter("@trangthai", obj.TrangThai),
+                    new SqlParameter("@tenthuoc", obj.TenThuoc)
+                };
+
+                return int.Parse(db.ExecuteScalar("sp_MyCareDesktop_ThemMoiThuoc", param).ToString());
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
 

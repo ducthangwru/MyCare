@@ -140,6 +140,8 @@
             this.luThaoTac.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Mã thao tác"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenThaoTac", "Tên thao tác")});
+            this.luThaoTac.Properties.NullText = "Tất cả";
+            this.luThaoTac.Properties.NullValuePrompt = "0";
             this.luThaoTac.Size = new System.Drawing.Size(100, 20);
             this.luThaoTac.TabIndex = 7;
             // 
@@ -153,6 +155,10 @@
             this.luDM.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Mã thuốc"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenThuoc", "Tên thuốc")});
+            this.luDM.Properties.DisplayMember = "TenThuoc";
+            this.luDM.Properties.NullText = "Tất cả";
+            this.luDM.Properties.NullValuePrompt = "0";
+            this.luDM.Properties.ValueMember = "ID";
             this.luDM.Size = new System.Drawing.Size(100, 20);
             this.luDM.TabIndex = 8;
             // 

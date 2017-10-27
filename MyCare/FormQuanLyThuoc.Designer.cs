@@ -58,6 +58,9 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSearchThuoc = new DevExpress.XtraEditors.SimpleButton();
@@ -104,6 +107,12 @@
             this.luDanhMuc.Name = "luDanhMuc";
             this.luDanhMuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luDanhMuc.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenDanhMuc", "Tên danh mục")});
+            this.luDanhMuc.Properties.DisplayMember = "TenDanhMuc";
+            this.luDanhMuc.Properties.NullText = "";
+            this.luDanhMuc.Properties.ValueMember = "ID";
             this.luDanhMuc.Size = new System.Drawing.Size(202, 20);
             this.luDanhMuc.TabIndex = 1;
             // 
@@ -212,6 +221,12 @@
             this.luDonVi.Name = "luDonVi";
             this.luDonVi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luDonVi.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenDonVi", "Tên đơn vị")});
+            this.luDonVi.Properties.DisplayMember = "TenDonVi";
+            this.luDonVi.Properties.NullText = "";
+            this.luDonVi.Properties.ValueMember = "ID";
             this.luDonVi.Size = new System.Drawing.Size(202, 20);
             this.luDonVi.TabIndex = 6;
             // 
@@ -219,6 +234,7 @@
             // 
             this.txtNgayTao.Location = new System.Drawing.Point(473, 116);
             this.txtNgayTao.Name = "txtNgayTao";
+            this.txtNgayTao.Properties.ReadOnly = true;
             this.txtNgayTao.Size = new System.Drawing.Size(202, 20);
             this.txtNgayTao.TabIndex = 9;
             // 
@@ -251,9 +267,13 @@
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn8,
-            this.gridColumn9});
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12});
             this.gvQuanLyThuoc.GridControl = this.grdQuanLyThuoc;
             this.gvQuanLyThuoc.Name = "gvQuanLyThuoc";
+            this.gvQuanLyThuoc.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvQuanLyThuoc_RowClick);
             // 
             // gridColumn1
             // 
@@ -333,6 +353,24 @@
             this.gridColumn9.VisibleIndex = 4;
             this.gridColumn9.Width = 78;
             // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "ID_DanhMuc";
+            this.gridColumn10.FieldName = "ID_DanhMuc";
+            this.gridColumn10.Name = "gridColumn10";
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "ID_DonVi";
+            this.gridColumn11.FieldName = "ID_DonVi";
+            this.gridColumn11.Name = "gridColumn11";
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "Trạng thái xóa";
+            this.gridColumn12.FieldName = "TrangThaiXoa";
+            this.gridColumn12.Name = "gridColumn12";
+            // 
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(138, 185);
@@ -340,6 +378,7 @@
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 12;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -348,6 +387,7 @@
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 11;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSearchThuoc
             // 
@@ -464,5 +504,8 @@
         private DevExpress.XtraEditors.SimpleButton btnSearchThuoc;
         private DevExpress.XtraEditors.TextEdit txbTimKiemQlyThuoc;
         private DevExpress.XtraEditors.SimpleButton btnLRefreshThuoc;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

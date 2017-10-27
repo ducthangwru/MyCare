@@ -157,11 +157,14 @@
       <DependentUpon>FormTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="MyCareDataAccess\DataAcess\DanhMucThuocDB.cs" />
+    <Compile Include="MyCareDataAccess\DataAcess\DonViDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\HoaDonDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\KhoThuocDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\LichSuNhapXuatKhoDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\TaiKhoanDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\ThaoTacDB.cs" />
+    <Compile Include="MyCareDataAccess\Object\NhanVienOBJ.cs" />
+    <Compile Include="MyCareDataAccess\Object\ThuocOBJ.cs" />
     <Compile Include="MyCareDataAccess\Utils\Config.cs" />
     <Compile Include="MyCareDataAccess\Utils\SqlDataHelper.cs" />
     <Compile Include="MyCareDataAccess\Utils\Utils.cs" />
@@ -482,7 +485,39 @@
     <None Include="Resources\Voicemail-icon1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MyCareDataAccess\Object\" />
+    <Content Include="Images\Calendar_16x16.png" />
+    <Content Include="Images\Drafts_16x16.png" />
+    <Content Include="Images\Inbox_16x16.png" />
+    <Content Include="Images\Mail_16x16.png" />
+    <Content Include="Images\Organizer_16x16.png" />
+    <Content Include="Images\Outbox_16x16.png" />
+    <Content Include="Images\pharmacy.ico" />
+    <Content Include="Images\Ribbon_AlignCenter_16x16.png" />
+    <Content Include="Images\Ribbon_AlignLeft_16x16.png" />
+    <Content Include="Images\Ribbon_AlignRight_16x16.png" />
+    <Content Include="Images\Ribbon_Bold_16x16.png" />
+    <Content Include="Images\Ribbon_Close_16x16.png" />
+    <Content Include="Images\Ribbon_Close_32x32.png" />
+    <Content Include="Images\Ribbon_Content_16x16.png" />
+    <Content Include="Images\Ribbon_Content_32x32.png" />
+    <Content Include="Images\Ribbon_Exit_16x16.png" />
+    <Content Include="Images\Ribbon_Exit_32x32.png" />
+    <Content Include="Images\Ribbon_Find_16x16.png" />
+    <Content Include="Images\Ribbon_Find_32x32.png" />
+    <Content Include="Images\Ribbon_Info_16x16.png" />
+    <Content Include="Images\Ribbon_Info_32x32.png" />
+    <Content Include="Images\Ribbon_Italic_16x16.png" />
+    <Content Include="Images\Ribbon_New_16x16.png" />
+    <Content Include="Images\Ribbon_New_32x32.png" />
+    <Content Include="Images\Ribbon_Open_16x16.png" />
+    <Content Include="Images\Ribbon_Open_32x32.png" />
+    <Content Include="Images\Ribbon_SaveAs_16x16.png" />
+    <Content Include="Images\Ribbon_SaveAs_32x32.png" />
+    <Content Include="Images\Ribbon_Save_16x16.png" />
+    <Content Include="Images\Ribbon_Save_32x32.png" />
+    <Content Include="Images\Ribbon_Underline_16x16.png" />
+    <Content Include="Images\Tasks_16x16.png" />
+    <Content Include="Images\Trash_16x16.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\photo.jpg" />

@@ -36,6 +36,20 @@ namespace MyCare.MyCareDataAccess.DataAcess
             }
         }
 
+        public static DataTable DanhSachChonDanhMuc()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachChonDanhMuc").Tables[0];
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
         public static bool ThemMoiDanhMuc(int idnhanvien, string tendanhmuc, int trangthai, string ghichu)
         {
             try
