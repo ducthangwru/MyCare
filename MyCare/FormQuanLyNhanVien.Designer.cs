@@ -51,13 +51,13 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnResetPass = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnResetPass = new DevExpress.XtraEditors.SimpleButton();
             this.btnSearchQlyNV = new DevExpress.XtraEditors.SimpleButton();
             this.txbTimKiemNV = new DevExpress.XtraEditors.TextEdit();
             this.btnRefeshQlyNV = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.peXacNhanMK = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNhanVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
@@ -229,6 +229,7 @@
             this.gridColumn9});
             this.gvQuanLyNhanVien.GridControl = this.grdQuanLyNhanVien;
             this.gvQuanLyNhanVien.Name = "gvQuanLyNhanVien";
+            this.gvQuanLyNhanVien.OptionsBehavior.Editable = false;
             this.gvQuanLyNhanVien.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvQuanLyNhanVien_RowClick);
             // 
             // gridColumn1
@@ -282,15 +283,6 @@
             this.gridColumn6.VisibleIndex = 4;
             this.gridColumn6.Width = 208;
             // 
-            // btnResetPass
-            // 
-            this.btnResetPass.Location = new System.Drawing.Point(282, 186);
-            this.btnResetPass.Name = "btnResetPass";
-            this.btnResetPass.Size = new System.Drawing.Size(108, 23);
-            this.btnResetPass.TabIndex = 11;
-            this.btnResetPass.Text = "Đặt lại mật khẩu";
-            this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
-            // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Trạng thái xóa";
@@ -302,6 +294,21 @@
             this.gridColumn8.Caption = "Quyền ID";
             this.gridColumn8.FieldName = "ID_NhomTK";
             this.gridColumn8.Name = "gridColumn8";
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Mật khẩu";
+            this.gridColumn9.FieldName = "MatKhau";
+            this.gridColumn9.Name = "gridColumn9";
+            // 
+            // btnResetPass
+            // 
+            this.btnResetPass.Location = new System.Drawing.Point(282, 186);
+            this.btnResetPass.Name = "btnResetPass";
+            this.btnResetPass.Size = new System.Drawing.Size(108, 23);
+            this.btnResetPass.TabIndex = 11;
+            this.btnResetPass.Text = "Đặt lại mật khẩu";
+            this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
             // 
             // btnSearchQlyNV
             // 
@@ -330,12 +337,6 @@
             this.btnRefeshQlyNV.Size = new System.Drawing.Size(48, 23);
             this.btnRefeshQlyNV.TabIndex = 13;
             this.btnRefeshQlyNV.Click += new System.EventHandler(this.btnRefeshQlyNV_Click);
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Mật khẩu";
-            this.gridColumn9.FieldName = "MatKhau";
-            this.gridColumn9.Name = "gridColumn9";
             // 
             // peXacNhanMK
             // 

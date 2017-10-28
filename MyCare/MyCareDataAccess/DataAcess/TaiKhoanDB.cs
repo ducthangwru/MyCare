@@ -34,6 +34,24 @@ namespace MyCare.MyCareDataAccess.DataAcess
             return false;
         }
 
+        public static bool ResetMatKhau(int idtaikhoan, string matkhau)
+        {
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@idtaikhoan", idtaikhoan),
+                    new SqlParameter("@matkhau", matkhau)
+                };
+
+                return db.ExecuteNonQuery("sp_MyCareDesktop_ResetMatKhau", param) > 0;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
         public static bool LuuLichSuDangNhap(int idtaikhoan, int type)
         {
             SqlParameter[] param = new SqlParameter[]
@@ -167,6 +185,33 @@ namespace MyCare.MyCareDataAccess.DataAcess
             {
                 return dt;
             }
+        }
+
+        public static DataTable DanhSachChonNhanVien()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachChonTaiKhoan").Tables[0];
+                dt.Rows.Add("0", "Tất cả");
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
+        public static DataTable DanhSachChonTrangThaiNhanVien()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("TenTrangThai");
+            dt.Rows.Add(0, "Tất cả");
+            dt.Rows.Add(1, "Đăng nhập");
+            dt.Rows.Add(2, "Đăng xuất");
+
+            return dt;
         }
     }
 }

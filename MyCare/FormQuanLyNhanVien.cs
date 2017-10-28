@@ -26,6 +26,7 @@ namespace MyCare
         {
             radConHieuLuc.Checked = true;
             luQuyen.Properties.DataSource = TaiKhoanDB.DanhSachQuyen();
+            luQuyen.EditValue = 1;
             GetDataGridQlyNhanVien(null);
         }
 
@@ -51,6 +52,7 @@ namespace MyCare
 
         private void gvQuanLyNhanVien_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            obj.idtaikhoan = int.Parse(gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["IDTaiKhoan"]).ToString());
             luQuyen.EditValue = int.Parse(gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["ID_NhomTK"]).ToString());
             txtTenDangNhap.Text = gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["TenDangNhap"]).ToString();
             txtTenNhanVien.Text = gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["TenTaiKhoan"]).ToString();
@@ -119,7 +121,6 @@ namespace MyCare
                 obj.tendangnhap = txtTenDangNhap.Text;
                 obj.tennhanvien = txtTenNhanVien.Text;
                 obj.matkhau = Utils.md5(txtMatKhau.Text);
-                obj.idtaikhoan = int.Parse(gvQuanLyNhanVien.GetRowCellValue(gvQuanLyNhanVien.FocusedRowHandle, gvQuanLyNhanVien.Columns["IDTaiKhoan"]).ToString());
 
                 int result = TaiKhoanDB.CapNhatTaiKhoan(Config.IDNhanVien, obj);
                 if (result == -1)
@@ -145,7 +146,14 @@ namespace MyCare
 
         private void btnResetPass_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialog = MessageBox.Show("Bạn có chắc chắn muốn đặt lại mật khẩu cho tài khoản này với mật khẩu mặc định là: 12345678", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if(dialog == DialogResult.OK)
+            {
+                if (TaiKhoanDB.ResetMatKhau(obj.idtaikhoan, Utils.md5("12345678")))
+                    MessageBox.Show("Bạn đặt lại mật khẩu thành công! Mật khẩu mặc định: 12345678", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Bạn đặt lại mật khẩu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void txtXacNhanMK_EditValueChanged(object sender, EventArgs e)

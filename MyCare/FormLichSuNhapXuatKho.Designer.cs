@@ -38,16 +38,20 @@
             this.gcGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcThanhTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnSearchLSKho = new DevExpress.XtraEditors.SimpleButton();
+            this.txbTimKiemLSKho = new DevExpress.XtraEditors.TextEdit();
+            this.btnRefeshLSKho = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridLSNhapXuatKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLSNhapXuatKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTimKiemLSKho.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridLSNhapXuatKho
             // 
-            this.gridLSNhapXuatKho.Location = new System.Drawing.Point(12, 12);
+            this.gridLSNhapXuatKho.Location = new System.Drawing.Point(12, 62);
             this.gridLSNhapXuatKho.MainView = this.gridViewLSNhapXuatKho;
             this.gridLSNhapXuatKho.Name = "gridLSNhapXuatKho";
-            this.gridLSNhapXuatKho.Size = new System.Drawing.Size(789, 365);
+            this.gridLSNhapXuatKho.Size = new System.Drawing.Size(789, 315);
             this.gridLSNhapXuatKho.TabIndex = 0;
             this.gridLSNhapXuatKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLSNhapXuatKho});
@@ -129,17 +133,49 @@
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 7;
             // 
+            // btnSearchLSKho
+            // 
+            this.btnSearchLSKho.Image = global::MyCare.Properties.Resources.seach;
+            this.btnSearchLSKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSearchLSKho.Location = new System.Drawing.Point(685, 33);
+            this.btnSearchLSKho.Name = "btnSearchLSKho";
+            this.btnSearchLSKho.Size = new System.Drawing.Size(49, 23);
+            this.btnSearchLSKho.TabIndex = 18;
+            this.btnSearchLSKho.Click += new System.EventHandler(this.btnSearchLSKho_Click);
+            // 
+            // txbTimKiemLSKho
+            // 
+            this.txbTimKiemLSKho.Location = new System.Drawing.Point(574, 35);
+            this.txbTimKiemLSKho.Name = "txbTimKiemLSKho";
+            this.txbTimKiemLSKho.Size = new System.Drawing.Size(100, 20);
+            this.txbTimKiemLSKho.TabIndex = 17;
+            this.txbTimKiemLSKho.EditValueChanged += new System.EventHandler(this.txbTimKiemLSKho_EditValueChanged);
+            // 
+            // btnRefeshLSKho
+            // 
+            this.btnRefeshLSKho.Image = global::MyCare.Properties.Resources.update;
+            this.btnRefeshLSKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnRefeshLSKho.Location = new System.Drawing.Point(754, 33);
+            this.btnRefeshLSKho.Name = "btnRefeshLSKho";
+            this.btnRefeshLSKho.Size = new System.Drawing.Size(48, 23);
+            this.btnRefeshLSKho.TabIndex = 16;
+            this.btnRefeshLSKho.Click += new System.EventHandler(this.btnRefeshLSKho_Click);
+            // 
             // FormLichSuNhapXuatKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 389);
+            this.Controls.Add(this.btnSearchLSKho);
+            this.Controls.Add(this.txbTimKiemLSKho);
+            this.Controls.Add(this.btnRefeshLSKho);
             this.Controls.Add(this.gridLSNhapXuatKho);
             this.Name = "FormLichSuNhapXuatKho";
             this.Text = "FormLichSuNhapXuatKho";
             this.Load += new System.EventHandler(this.FormLichSuNhapXuatKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridLSNhapXuatKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLSNhapXuatKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTimKiemLSKho.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,5 +192,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcGhiChu;
         private DevExpress.XtraGrid.Columns.GridColumn gcThanhTien;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.SimpleButton btnSearchLSKho;
+        private DevExpress.XtraEditors.TextEdit txbTimKiemLSKho;
+        private DevExpress.XtraEditors.SimpleButton btnRefeshLSKho;
     }
 }

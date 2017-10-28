@@ -13,12 +13,18 @@ namespace MyCare.MyCareDataAccess.DataAcess
     {
         private static SqlDataHelper db = new SqlDataHelper();
         public LichSuNhapXuatKhoDB() { }
-        public static DataTable DanhSachHoatDongGanDay(int idnhanvien)
+        public static DataTable DanhSachHoatDongGanDay(int idnhanvien, string timkiem)
         {
             DataTable dt = new DataTable();
             try
             {
-                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachHoatDongGanDay", new SqlParameter("@idnhanvien", idnhanvien)).Tables[0];
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@idnhanvien", idnhanvien),
+                    new SqlParameter("@timkiem", timkiem)
+                };
+
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachHoatDongGanDay", param).Tables[0];
                 dt.Columns.Add("ThanhTien");
                 dt.Columns.Add("NgayLap");
                 foreach (DataRow dr in dt.Rows)

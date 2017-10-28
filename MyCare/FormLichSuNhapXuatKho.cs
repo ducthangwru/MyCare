@@ -22,7 +22,27 @@ namespace MyCare
 
         private void FormLichSuNhapXuatKho_Load(object sender, EventArgs e)
         {
-            gridLSNhapXuatKho.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien);
+            GetDataLSKho(null);
+        }
+
+        private void btnSearchLSKho_Click(object sender, EventArgs e)
+        {
+            GetDataLSKho(txbTimKiemLSKho.Text);
+        }
+
+        private void btnRefeshLSKho_Click(object sender, EventArgs e)
+        {
+            GetDataLSKho(null);
+        }
+
+        private void GetDataLSKho(string timkiem)
+        {
+            gridLSNhapXuatKho.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien, timkiem);
+        }
+
+        private void txbTimKiemLSKho_EditValueChanged(object sender, EventArgs e)
+        {
+            GetDataLSKho(txbTimKiemLSKho.Text);
         }
     }
 }

@@ -42,7 +42,7 @@ namespace MyCare
         {
             if(tabMain.SelectedTabPageIndex == 0)
             {
-                grdLSHoaDon.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien);
+                grdLSHoaDon.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien, null);
             }
             else if(tabMain.SelectedTabPageIndex == 1)
             {
@@ -58,7 +58,7 @@ namespace MyCare
                 iThongKe.Enabled = false;
             }
 
-            grdLSHoaDon.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien);
+            grdLSHoaDon.DataSource = LichSuNhapXuatKhoDB.DanhSachHoatDongGanDay(Config.IDNhanVien, null);
         }
 
         private void iBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
