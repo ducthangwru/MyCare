@@ -90,6 +90,18 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBieuDoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBieuDoDoanhThu.Designer.cs">
+      <DependentUpon>FormBieuDoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBieuDoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBieuDoHoaDon.Designer.cs">
+      <DependentUpon>FormBieuDoHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLichSuDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,12 +162,19 @@
     <Compile Include="FormQuanLyThuoc.Designer.cs">
       <DependentUpon>FormQuanLyThuoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongKeSanLuongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKeSanLuongNhanVien.Designer.cs">
+      <DependentUpon>FormThongKeSanLuongNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTransaction.Designer.cs">
       <DependentUpon>FormTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCareDataAccess\DataAcess\BieuDoDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\DanhMucThuocDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\DonViDB.cs" />
     <Compile Include="MyCareDataAccess\DataAcess\HoaDonDB.cs" />
@@ -178,6 +197,12 @@
     <Compile Include="QuanLyKhachHang.Designer.cs">
       <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormBieuDoDoanhThu.resx">
+      <DependentUpon>FormBieuDoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBieuDoHoaDon.resx">
+      <DependentUpon>FormBieuDoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLichSuDangNhap.resx">
       <DependentUpon>FormLichSuDangNhap.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -208,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyThuoc.resx">
       <DependentUpon>FormQuanLyThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKeSanLuongNhanVien.resx">
+      <DependentUpon>FormThongKeSanLuongNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTransaction.resx">
       <DependentUpon>FormTransaction.cs</DependentUpon>

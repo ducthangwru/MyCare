@@ -170,5 +170,29 @@ namespace MyCare
             System.Diagnostics.Process.Start("https://www.facebook.com/Luffy.s2.BoaHancock");
             MessageBox.Show("Bạn đang được chuyển hướng sang 2 kỹ thuật viên phần mềm! Liên hệ để hỗ trợ kỹ thuật!", "Chuyển hướng", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void bbtkHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormBieuDoHoaDon frm = new FormBieuDoHoaDon();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void bbtkDoanhThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormBieuDoDoanhThu frm = new FormBieuDoDoanhThu();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void bbtkSanLuongNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormThongKeSanLuongNhanVien frm = new FormThongKeSanLuongNhanVien();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -76,7 +76,7 @@
             this.bblsDangNhap = new DevExpress.XtraBars.BarButtonItem();
             this.iThongKe = new DevExpress.XtraBars.BarButtonItem();
             this.popupThongKe = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.bbtkTongHop = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtkHoaDon = new DevExpress.XtraBars.BarButtonItem();
             this.bbtkDoanhThu = new DevExpress.XtraBars.BarButtonItem();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
@@ -118,6 +118,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.popupBaoCao = new DevExpress.XtraBars.PopupMenu(this.components);
             this.iBaoCao = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtkSanLuongNV = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -449,11 +450,12 @@
             this.bblsDangNhap,
             this.bbbcDoanhThu,
             this.bbbcTongHop,
-            this.bbtkTongHop,
-            this.bbtkDoanhThu});
+            this.bbtkHoaDon,
+            this.bbtkDoanhThu,
+            this.bbtkSanLuongNV});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 83;
+            this.ribbonControl.MaxItemId = 84;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.iAbout);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -624,22 +626,25 @@
             // 
             // popupThongKe
             // 
-            this.popupThongKe.ItemLinks.Add(this.bbtkTongHop);
+            this.popupThongKe.ItemLinks.Add(this.bbtkHoaDon);
             this.popupThongKe.ItemLinks.Add(this.bbtkDoanhThu);
+            this.popupThongKe.ItemLinks.Add(this.bbtkSanLuongNV);
             this.popupThongKe.Name = "popupThongKe";
             this.popupThongKe.Ribbon = this.ribbonControl;
             // 
-            // bbtkTongHop
+            // bbtkHoaDon
             // 
-            this.bbtkTongHop.Caption = "Thống kê tổng hợp";
-            this.bbtkTongHop.Id = 81;
-            this.bbtkTongHop.Name = "bbtkTongHop";
+            this.bbtkHoaDon.Caption = "Thống kê hóa đơn";
+            this.bbtkHoaDon.Id = 81;
+            this.bbtkHoaDon.Name = "bbtkHoaDon";
+            this.bbtkHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkHoaDon_ItemClick);
             // 
             // bbtkDoanhThu
             // 
             this.bbtkDoanhThu.Caption = "Thống kê doanh thu";
             this.bbtkDoanhThu.Id = 82;
             this.bbtkDoanhThu.Name = "bbtkDoanhThu";
+            this.bbtkDoanhThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkDoanhThu_ItemClick);
             // 
             // iHelp
             // 
@@ -1026,6 +1031,13 @@
             this.iBaoCao.LargeWidth = 75;
             this.iBaoCao.Name = "iBaoCao";
             // 
+            // bbtkSanLuongNV
+            // 
+            this.bbtkSanLuongNV.Caption = "Thống kê sản lượng nhân viên";
+            this.bbtkSanLuongNV.Id = 83;
+            this.bbtkSanLuongNV.Name = "bbtkSanLuongNV";
+            this.bbtkSanLuongNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkSanLuongNV_ItemClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1132,7 +1144,7 @@
         private DevExpress.XtraBars.BarButtonItem bbbcDoanhThu;
         private DevExpress.XtraBars.BarButtonItem bbbcTongHop;
         private DevExpress.XtraBars.PopupMenu popupThongKe;
-        private DevExpress.XtraBars.BarButtonItem bbtkTongHop;
+        private DevExpress.XtraBars.BarButtonItem bbtkHoaDon;
         private DevExpress.XtraBars.BarButtonItem bbtkDoanhThu;
         private DevExpress.XtraTab.XtraTabControl tabMain;
         private DevExpress.XtraTab.XtraTabPage tabHoatDongGanDay;
@@ -1160,5 +1172,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXem;
         private DevExpress.XtraBars.BarButtonItem iBaoCao;
+        private DevExpress.XtraBars.BarButtonItem bbtkSanLuongNV;
     }
 }
