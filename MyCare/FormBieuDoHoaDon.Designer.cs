@@ -41,10 +41,10 @@
             // 
             // chartBieuDoHoaDon
             // 
-            this.chartBieuDoHoaDon.Location = new System.Drawing.Point(36, 90);
+            this.chartBieuDoHoaDon.Location = new System.Drawing.Point(3, 90);
             this.chartBieuDoHoaDon.Name = "chartBieuDoHoaDon";
             this.chartBieuDoHoaDon.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartBieuDoHoaDon.Size = new System.Drawing.Size(628, 430);
+            this.chartBieuDoHoaDon.Size = new System.Drawing.Size(695, 439);
             this.chartBieuDoHoaDon.TabIndex = 0;
             // 
             // deTuNgay
@@ -106,7 +106,8 @@
             this.Controls.Add(this.deTuNgay);
             this.Controls.Add(this.chartBieuDoHoaDon);
             this.Name = "FormBieuDoHoaDon";
-            this.Text = "FormBieuDoHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thống kê theo số hóa đơn";
             this.Load += new System.EventHandler(this.FormBieuDoHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartBieuDoHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTuNgay.Properties.CalendarTimeProperties)).EndInit();

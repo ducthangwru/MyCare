@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyDanhMuc));
             this.txtTenDanhMuc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.grdQuanLyDanhMuc = new DevExpress.XtraGrid.GridControl();
@@ -36,6 +37,8 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.radConHieuLuc = new System.Windows.Forms.RadioButton();
             this.radHetHieuLuc = new System.Windows.Forms.RadioButton();
@@ -46,8 +49,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txbTimKiemDanhMuc = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDanhMuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdQuanLyDanhMuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQuanLyDanhMuc)).BeginInit();
@@ -127,6 +128,21 @@
             this.gridColumn1.VisibleIndex = 2;
             this.gridColumn1.Width = 162;
             // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Trạng thái Xóa";
+            this.gridColumn5.FieldName = "TrangThaiXoa";
+            this.gridColumn5.Name = "gridColumn5";
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Ghi chú cuối";
+            this.gridColumn6.FieldName = "GhiChu";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 3;
+            this.gridColumn6.Width = 192;
+            // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(43, 80);
@@ -177,11 +193,11 @@
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Image = global::MyCare.Properties.Resources.update;
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnLamMoi.Location = new System.Drawing.Point(625, 152);
+            this.btnLamMoi.Location = new System.Drawing.Point(637, 152);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(48, 23);
+            this.btnLamMoi.Size = new System.Drawing.Size(36, 23);
             this.btnLamMoi.TabIndex = 6;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
@@ -210,27 +226,12 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Image = global::MyCare.Properties.Resources.seach;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.simpleButton1.Location = new System.Drawing.Point(556, 152);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(49, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(35, 23);
             this.simpleButton1.TabIndex = 8;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Trạng thái Xóa";
-            this.gridColumn5.FieldName = "TrangThaiXoa";
-            this.gridColumn5.Name = "gridColumn5";
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Ghi chú cuối";
-            this.gridColumn6.FieldName = "GhiChu";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 3;
-            this.gridColumn6.Width = 192;
             // 
             // FormQuanLyDanhMuc
             // 

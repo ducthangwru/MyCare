@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhapKho));
             this.grdQlyKho = new DevExpress.XtraGrid.GridControl();
             this.gvQLKho = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -331,11 +332,11 @@
             // 
             // btnSearchNhapKho
             // 
-            this.btnSearchNhapKho.Image = global::MyCare.Properties.Resources.seach;
+            this.btnSearchNhapKho.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchNhapKho.Image")));
             this.btnSearchNhapKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSearchNhapKho.Location = new System.Drawing.Point(556, 243);
             this.btnSearchNhapKho.Name = "btnSearchNhapKho";
-            this.btnSearchNhapKho.Size = new System.Drawing.Size(49, 23);
+            this.btnSearchNhapKho.Size = new System.Drawing.Size(37, 23);
             this.btnSearchNhapKho.TabIndex = 13;
             this.btnSearchNhapKho.Click += new System.EventHandler(this.btnSearchNhapKho_Click);
             // 
@@ -349,11 +350,11 @@
             // 
             // btnLRefreshNhapKho
             // 
-            this.btnLRefreshNhapKho.Image = global::MyCare.Properties.Resources.update;
+            this.btnLRefreshNhapKho.Image = ((System.Drawing.Image)(resources.GetObject("btnLRefreshNhapKho.Image")));
             this.btnLRefreshNhapKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnLRefreshNhapKho.Location = new System.Drawing.Point(625, 243);
+            this.btnLRefreshNhapKho.Location = new System.Drawing.Point(631, 243);
             this.btnLRefreshNhapKho.Name = "btnLRefreshNhapKho";
-            this.btnLRefreshNhapKho.Size = new System.Drawing.Size(48, 23);
+            this.btnLRefreshNhapKho.Size = new System.Drawing.Size(42, 23);
             this.btnLRefreshNhapKho.TabIndex = 11;
             this.btnLRefreshNhapKho.Click += new System.EventHandler(this.btnLRefreshNhapKho_Click);
             // 

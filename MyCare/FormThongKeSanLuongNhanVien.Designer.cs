@@ -41,15 +41,15 @@
             // 
             // chartSanLuongNV
             // 
-            this.chartSanLuongNV.Location = new System.Drawing.Point(199, 131);
+            this.chartSanLuongNV.Location = new System.Drawing.Point(12, 75);
             this.chartSanLuongNV.Name = "chartSanLuongNV";
             this.chartSanLuongNV.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartSanLuongNV.Size = new System.Drawing.Size(417, 404);
+            this.chartSanLuongNV.Size = new System.Drawing.Size(529, 418);
             this.chartSanLuongNV.TabIndex = 0;
             // 
             // btnSearchBieuDoSanLuong
             // 
-            this.btnSearchBieuDoSanLuong.Location = new System.Drawing.Point(569, 63);
+            this.btnSearchBieuDoSanLuong.Location = new System.Drawing.Point(407, 24);
             this.btnSearchBieuDoSanLuong.Name = "btnSearchBieuDoSanLuong";
             this.btnSearchBieuDoSanLuong.Size = new System.Drawing.Size(75, 23);
             this.btnSearchBieuDoSanLuong.TabIndex = 9;
@@ -59,7 +59,7 @@
             // deDenNgay
             // 
             this.deDenNgay.EditValue = null;
-            this.deDenNgay.Location = new System.Drawing.Point(399, 66);
+            this.deDenNgay.Location = new System.Drawing.Point(208, 27);
             this.deDenNgay.Name = "deDenNgay";
             this.deDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -79,7 +79,7 @@
             // deTuNgay
             // 
             this.deTuNgay.EditValue = null;
-            this.deTuNgay.Location = new System.Drawing.Point(199, 66);
+            this.deTuNgay.Location = new System.Drawing.Point(65, 27);
             this.deTuNgay.Name = "deTuNgay";
             this.deTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -100,13 +100,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 547);
+            this.ClientSize = new System.Drawing.Size(553, 505);
             this.Controls.Add(this.btnSearchBieuDoSanLuong);
             this.Controls.Add(this.deDenNgay);
             this.Controls.Add(this.deTuNgay);
             this.Controls.Add(this.chartSanLuongNV);
             this.Name = "FormThongKeSanLuongNhanVien";
-            this.Text = "FormThongKeSanLuongNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thống kê doanh thu nhân viên";
             this.Load += new System.EventHandler(this.FormThongKeSanLuongNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartSanLuongNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDenNgay.Properties.CalendarTimeProperties)).EndInit();

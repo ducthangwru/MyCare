@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyKhachHang));
             this.grdQuanLyKhachHang = new DevExpress.XtraGrid.GridControl();
             this.gvQuanLyKhachHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -239,17 +240,17 @@
             // 
             // btnSearchQlyKH
             // 
-            this.btnSearchQlyKH.Image = global::MyCare.Properties.Resources.seach;
+            this.btnSearchQlyKH.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchQlyKH.Image")));
             this.btnSearchQlyKH.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSearchQlyKH.Location = new System.Drawing.Point(612, 156);
+            this.btnSearchQlyKH.Location = new System.Drawing.Point(618, 155);
             this.btnSearchQlyKH.Name = "btnSearchQlyKH";
-            this.btnSearchQlyKH.Size = new System.Drawing.Size(49, 23);
+            this.btnSearchQlyKH.Size = new System.Drawing.Size(28, 23);
             this.btnSearchQlyKH.TabIndex = 19;
             this.btnSearchQlyKH.Click += new System.EventHandler(this.btnSearchQlyKH_Click);
             // 
             // txbTimKiemKH
             // 
-            this.txbTimKiemKH.Location = new System.Drawing.Point(496, 158);
+            this.txbTimKiemKH.Location = new System.Drawing.Point(512, 158);
             this.txbTimKiemKH.Name = "txbTimKiemKH";
             this.txbTimKiemKH.Size = new System.Drawing.Size(100, 20);
             this.txbTimKiemKH.TabIndex = 18;
@@ -257,11 +258,11 @@
             // 
             // btnRefeshQlyKH
             // 
-            this.btnRefeshQlyKH.Image = global::MyCare.Properties.Resources.update;
+            this.btnRefeshQlyKH.Image = ((System.Drawing.Image)(resources.GetObject("btnRefeshQlyKH.Image")));
             this.btnRefeshQlyKH.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRefeshQlyKH.Location = new System.Drawing.Point(681, 156);
+            this.btnRefeshQlyKH.Location = new System.Drawing.Point(695, 156);
             this.btnRefeshQlyKH.Name = "btnRefeshQlyKH";
-            this.btnRefeshQlyKH.Size = new System.Drawing.Size(48, 23);
+            this.btnRefeshQlyKH.Size = new System.Drawing.Size(34, 23);
             this.btnRefeshQlyKH.TabIndex = 17;
             this.btnRefeshQlyKH.Click += new System.EventHandler(this.btnRefeshQlyKH_Click);
             // 

@@ -174,7 +174,8 @@
             this.Controls.Add(this.lbControl);
             this.Controls.Add(this.grdLSThaoTacDM);
             this.Name = "FormLichSuThaoTacDanhMuc";
-            this.Text = "FormLichSuThaoTacDanhMuc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lịch sử thao tác danh mục";
             this.Load += new System.EventHandler(this.FormLichSuThaoTacDanhMuc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdLSThaoTacDM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLSThaoTacDM)).EndInit();

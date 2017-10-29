@@ -182,7 +182,8 @@
             this.Controls.Add(this.lbControl);
             this.Controls.Add(this.grdLSThaoTacThuoc);
             this.Name = "FormLichSuThaoTacThuoc";
-            this.Text = "FormLichSuThaoTacThuoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lịch sử thao tác thuốc";
             this.Load += new System.EventHandler(this.FormLichSuThaoTacThuoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdLSThaoTacThuoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLSThaoTacThuoc)).EndInit();

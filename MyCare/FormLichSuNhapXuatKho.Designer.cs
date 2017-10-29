@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLichSuNhapXuatKho));
             this.gridLSNhapXuatKho = new DevExpress.XtraGrid.GridControl();
             this.gridViewLSNhapXuatKho = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -135,11 +136,11 @@
             // 
             // btnSearchLSKho
             // 
-            this.btnSearchLSKho.Image = global::MyCare.Properties.Resources.seach;
+            this.btnSearchLSKho.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchLSKho.Image")));
             this.btnSearchLSKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSearchLSKho.Location = new System.Drawing.Point(685, 33);
             this.btnSearchLSKho.Name = "btnSearchLSKho";
-            this.btnSearchLSKho.Size = new System.Drawing.Size(49, 23);
+            this.btnSearchLSKho.Size = new System.Drawing.Size(29, 23);
             this.btnSearchLSKho.TabIndex = 18;
             this.btnSearchLSKho.Click += new System.EventHandler(this.btnSearchLSKho_Click);
             // 
@@ -153,11 +154,11 @@
             // 
             // btnRefeshLSKho
             // 
-            this.btnRefeshLSKho.Image = global::MyCare.Properties.Resources.update;
+            this.btnRefeshLSKho.Image = ((System.Drawing.Image)(resources.GetObject("btnRefeshLSKho.Image")));
             this.btnRefeshLSKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRefeshLSKho.Location = new System.Drawing.Point(754, 33);
+            this.btnRefeshLSKho.Location = new System.Drawing.Point(762, 33);
             this.btnRefeshLSKho.Name = "btnRefeshLSKho";
-            this.btnRefeshLSKho.Size = new System.Drawing.Size(48, 23);
+            this.btnRefeshLSKho.Size = new System.Drawing.Size(40, 23);
             this.btnRefeshLSKho.TabIndex = 16;
             this.btnRefeshLSKho.Click += new System.EventHandler(this.btnRefeshLSKho_Click);
             // 
@@ -171,7 +172,8 @@
             this.Controls.Add(this.btnRefeshLSKho);
             this.Controls.Add(this.gridLSNhapXuatKho);
             this.Name = "FormLichSuNhapXuatKho";
-            this.Text = "FormLichSuNhapXuatKho";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lịch sử xuất nhập kho";
             this.Load += new System.EventHandler(this.FormLichSuNhapXuatKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridLSNhapXuatKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLSNhapXuatKho)).EndInit();

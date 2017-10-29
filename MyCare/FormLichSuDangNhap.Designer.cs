@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLichSuDangNhap));
             this.grdLSDangNhap = new DevExpress.XtraGrid.GridControl();
             this.gvLSDangNhap = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -94,21 +95,21 @@
             // 
             // btnRefeshLSDangNhap
             // 
-            this.btnRefeshLSDangNhap.Image = global::MyCare.Properties.Resources.update;
+            this.btnRefeshLSDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnRefeshLSDangNhap.Image")));
             this.btnRefeshLSDangNhap.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRefeshLSDangNhap.Location = new System.Drawing.Point(701, 46);
+            this.btnRefeshLSDangNhap.Location = new System.Drawing.Point(709, 46);
             this.btnRefeshLSDangNhap.Name = "btnRefeshLSDangNhap";
-            this.btnRefeshLSDangNhap.Size = new System.Drawing.Size(48, 23);
+            this.btnRefeshLSDangNhap.Size = new System.Drawing.Size(40, 23);
             this.btnRefeshLSDangNhap.TabIndex = 16;
             this.btnRefeshLSDangNhap.Click += new System.EventHandler(this.btnRefeshLSDangNhap_Click);
             // 
             // btnSearchLSDangNhap
             // 
-            this.btnSearchLSDangNhap.Image = global::MyCare.Properties.Resources.seach;
+            this.btnSearchLSDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchLSDangNhap.Image")));
             this.btnSearchLSDangNhap.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSearchLSDangNhap.Location = new System.Drawing.Point(627, 46);
             this.btnSearchLSDangNhap.Name = "btnSearchLSDangNhap";
-            this.btnSearchLSDangNhap.Size = new System.Drawing.Size(49, 23);
+            this.btnSearchLSDangNhap.Size = new System.Drawing.Size(36, 23);
             this.btnSearchLSDangNhap.TabIndex = 18;
             this.btnSearchLSDangNhap.Click += new System.EventHandler(this.btnSearchLSDangNhap_Click);
             // 
@@ -170,7 +171,8 @@
             this.Controls.Add(this.btnRefeshLSDangNhap);
             this.Controls.Add(this.grdLSDangNhap);
             this.Name = "FormLichSuDangNhap";
-            this.Text = "FormLichSuDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lịch sử đăng nhập";
             this.Load += new System.EventHandler(this.FormLichSuDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdLSDangNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLSDangNhap)).EndInit();

@@ -93,7 +93,7 @@
             this.chartBieuDoDoanhThu.Location = new System.Drawing.Point(12, 83);
             this.chartBieuDoDoanhThu.Name = "chartBieuDoDoanhThu";
             this.chartBieuDoDoanhThu.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartBieuDoDoanhThu.Size = new System.Drawing.Size(767, 436);
+            this.chartBieuDoDoanhThu.Size = new System.Drawing.Size(780, 436);
             this.chartBieuDoDoanhThu.TabIndex = 7;
             // 
             // FormBieuDoDoanhThu
@@ -106,7 +106,8 @@
             this.Controls.Add(this.deDenNgay);
             this.Controls.Add(this.deTuNgay);
             this.Name = "FormBieuDoDoanhThu";
-            this.Text = "FormBieuDoDoanhThu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thống kê doanh thu cửa hàng";
             this.Load += new System.EventHandler(this.FormBieuDoDoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deDenNgay.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDenNgay.Properties)).EndInit();

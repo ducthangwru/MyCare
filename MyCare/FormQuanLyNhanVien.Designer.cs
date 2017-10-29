@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyNhanVien));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtTenNhanVien = new DevExpress.XtraEditors.TextEdit();
             this.txtTenDangNhap = new DevExpress.XtraEditors.TextEdit();
@@ -312,11 +313,11 @@
             // 
             // btnSearchQlyNV
             // 
-            this.btnSearchQlyNV.Image = global::MyCare.Properties.Resources.seach;
+            this.btnSearchQlyNV.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchQlyNV.Image")));
             this.btnSearchQlyNV.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSearchQlyNV.Location = new System.Drawing.Point(644, 186);
             this.btnSearchQlyNV.Name = "btnSearchQlyNV";
-            this.btnSearchQlyNV.Size = new System.Drawing.Size(49, 23);
+            this.btnSearchQlyNV.Size = new System.Drawing.Size(35, 23);
             this.btnSearchQlyNV.TabIndex = 15;
             this.btnSearchQlyNV.Click += new System.EventHandler(this.btnSearchQlyNV_Click);
             // 
@@ -330,17 +331,17 @@
             // 
             // btnRefeshQlyNV
             // 
-            this.btnRefeshQlyNV.Image = global::MyCare.Properties.Resources.update;
+            this.btnRefeshQlyNV.Image = ((System.Drawing.Image)(resources.GetObject("btnRefeshQlyNV.Image")));
             this.btnRefeshQlyNV.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRefeshQlyNV.Location = new System.Drawing.Point(713, 186);
+            this.btnRefeshQlyNV.Location = new System.Drawing.Point(722, 186);
             this.btnRefeshQlyNV.Name = "btnRefeshQlyNV";
-            this.btnRefeshQlyNV.Size = new System.Drawing.Size(48, 23);
+            this.btnRefeshQlyNV.Size = new System.Drawing.Size(39, 23);
             this.btnRefeshQlyNV.TabIndex = 13;
             this.btnRefeshQlyNV.Click += new System.EventHandler(this.btnRefeshQlyNV_Click);
             // 
             // peXacNhanMK
             // 
-            this.peXacNhanMK.EditValue = global::MyCare.Properties.Resources.cancel;
+            this.peXacNhanMK.EditValue = ((object)(resources.GetObject("peXacNhanMK.EditValue")));
             this.peXacNhanMK.Location = new System.Drawing.Point(363, 147);
             this.peXacNhanMK.Name = "peXacNhanMK";
             this.peXacNhanMK.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
