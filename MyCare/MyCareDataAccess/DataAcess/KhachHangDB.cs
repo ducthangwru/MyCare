@@ -37,6 +37,21 @@ namespace MyCare.MyCareDataAccess.DataAcess
             }
         }
 
+        public static DataTable DanhSachChonKhachHang(string timkiem)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("select * from v_DanhSachChonKhachHang").Tables[0];
+                dt.Rows.Add(0, "Khách hàng mới", "", "");
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
         public static int CapNhatKhachHang(KhachHangOBJ obj)
         {
             try
@@ -53,6 +68,25 @@ namespace MyCare.MyCareDataAccess.DataAcess
                 return db.ExecuteNonQuery("sp_MyCareDesktop_CapNhatKhachHang", param);
             }
             catch(Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public static int ThemMoiKhachHang(string tenkhachhang, string diachi, string sdt)
+        {
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@tenkhachhang", tenkhachhang),
+                    new SqlParameter("@diachi", diachi),
+                    new SqlParameter("@sdt", sdt)
+                };
+
+                return int.Parse(db.ExecuteScalar("sp_MyCareDesktop_ThemMoiKhachHang", param).ToString());
+            }
+            catch (Exception ex)
             {
                 return 0;
             }

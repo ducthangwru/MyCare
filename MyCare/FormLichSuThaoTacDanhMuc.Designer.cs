@@ -140,8 +140,10 @@
             this.luThaoTac.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Mã thao tác"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenThaoTac", "Tên thao tác")});
+            this.luThaoTac.Properties.DisplayMember = "ID";
             this.luThaoTac.Properties.NullText = "Tất cả";
             this.luThaoTac.Properties.NullValuePrompt = "0";
+            this.luThaoTac.Properties.ValueMember = "TenThaoTac";
             this.luThaoTac.Size = new System.Drawing.Size(100, 20);
             this.luThaoTac.TabIndex = 7;
             // 

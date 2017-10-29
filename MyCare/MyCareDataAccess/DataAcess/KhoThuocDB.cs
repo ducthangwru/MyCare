@@ -56,6 +56,18 @@ namespace MyCare.MyCareDataAccess.DataAcess
             }
         }
 
+        public static bool KiemTraSoLuongThuoc(int idthuoc, int soluong)
+        {
+            try
+            {
+                return bool.Parse(db.ExecuteScalar(string.Format("select [dbo].[f_CheckSoLuongThuoc] ({0}, {1})", idthuoc, soluong)).ToString());
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
         public static int CapNhatThuoc(int idnhanvien, ThuocOBJ obj)
         {
             try

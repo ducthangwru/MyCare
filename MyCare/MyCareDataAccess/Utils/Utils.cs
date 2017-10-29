@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,11 +39,45 @@ namespace MyCare.MyCareDataAccess.Utils
         {
             try
             {
-                return bool.Parse(db.ExecuteScalar("select  [dbo].[f_CheckTaiKhoan](" + idnhanvien + ")").ToString());
+                SqlDataHelper dba = new SqlDataHelper();
+                return bool.Parse(dba.ExecuteScalar("select  [dbo].[f_CheckTaiKhoan]("+ 2 + ")").ToString());
             }
             catch(Exception ex)
             {
                 return false;
+            }
+        }
+
+        public static int DocFileConfig()
+        {
+            if (!System.IO.File.Exists("config.txt"))
+            {
+                System.IO.File.Create("config.txt");
+            }
+
+            // doc va hien thi du lieu trong textfile.txt
+            string line = "";
+            using (StreamReader sr = new StreamReader("config.txt"))
+            {
+                while (!string.IsNullOrEmpty(line = sr.ReadLine()))
+                {
+                    Config.CONNECTION_STRING = line;
+                }
+
+                if (string.IsNullOrEmpty(Config.CONNECTION_STRING))
+                {
+                    return -1;
+                }
+
+                try
+                {
+                    SqlDataHelper db = new SqlDataHelper();
+                    return 1;
+                }
+                catch (Exception ex)
+                {
+                    return 0;
+                }
             }
         }
     }

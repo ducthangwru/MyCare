@@ -102,6 +102,12 @@
     <Compile Include="FormBieuDoHoaDon.Designer.cs">
       <DependentUpon>FormBieuDoHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConfigConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigConnect.Designer.cs">
+      <DependentUpon>FormConfigConnect.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLichSuDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBieuDoHoaDon.resx">
       <DependentUpon>FormBieuDoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigConnect.resx">
+      <DependentUpon>FormConfigConnect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLichSuDangNhap.resx">
       <DependentUpon>FormLichSuDangNhap.cs</DependentUpon>
