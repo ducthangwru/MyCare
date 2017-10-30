@@ -78,6 +78,7 @@
             this.popupThongKe = new DevExpress.XtraBars.PopupMenu(this.components);
             this.bbtkHoaDon = new DevExpress.XtraBars.BarButtonItem();
             this.bbtkDoanhThu = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtkSanLuongNV = new DevExpress.XtraBars.BarButtonItem();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
@@ -118,7 +119,9 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.popupBaoCao = new DevExpress.XtraBars.PopupMenu(this.components);
             this.iBaoCao = new DevExpress.XtraBars.BarButtonItem();
-            this.bbtkSanLuongNV = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.iDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -452,10 +455,13 @@
             this.bbbcTongHop,
             this.bbtkHoaDon,
             this.bbtkDoanhThu,
-            this.bbtkSanLuongNV});
+            this.bbtkSanLuongNV,
+            this.barButtonItem1,
+            this.ribbonGalleryBarItem1,
+            this.iDoiMatKhau});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 84;
+            this.ribbonControl.MaxItemId = 87;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.iAbout);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -645,6 +651,13 @@
             this.bbtkDoanhThu.Id = 82;
             this.bbtkDoanhThu.Name = "bbtkDoanhThu";
             this.bbtkDoanhThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkDoanhThu_ItemClick);
+            // 
+            // bbtkSanLuongNV
+            // 
+            this.bbtkSanLuongNV.Caption = "Thống kê sản lượng nhân viên";
+            this.bbtkSanLuongNV.Id = 83;
+            this.bbtkSanLuongNV.Name = "bbtkSanLuongNV";
+            this.bbtkSanLuongNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkSanLuongNV_ItemClick);
             // 
             // iHelp
             // 
@@ -877,6 +890,7 @@
             // 
             this.helpRibbonPageGroup.ItemLinks.Add(this.iHelp);
             this.helpRibbonPageGroup.ItemLinks.Add(this.iAbout);
+            this.helpRibbonPageGroup.ItemLinks.Add(this.iDoiMatKhau);
             this.helpRibbonPageGroup.Name = "helpRibbonPageGroup";
             this.helpRibbonPageGroup.Text = "Hỗ trợ";
             // 
@@ -1031,12 +1045,26 @@
             this.iBaoCao.LargeWidth = 75;
             this.iBaoCao.Name = "iBaoCao";
             // 
-            // bbtkSanLuongNV
+            // barButtonItem1
             // 
-            this.bbtkSanLuongNV.Caption = "Thống kê sản lượng nhân viên";
-            this.bbtkSanLuongNV.Id = 83;
-            this.bbtkSanLuongNV.Name = "bbtkSanLuongNV";
-            this.bbtkSanLuongNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkSanLuongNV_ItemClick);
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 84;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+            this.ribbonGalleryBarItem1.Id = 85;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
+            // iDoiMatKhau
+            // 
+            this.iDoiMatKhau.Caption = "Đổi mật khẩu";
+            this.iDoiMatKhau.Id = 86;
+            this.iDoiMatKhau.ImageUri.Uri = "Replace";
+            this.iDoiMatKhau.LargeWidth = 75;
+            this.iDoiMatKhau.Name = "iDoiMatKhau";
+            this.iDoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDoiMatKhau_ItemClick);
             // 
             // FormMain
             // 
@@ -1173,5 +1201,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXem;
         private DevExpress.XtraBars.BarButtonItem iBaoCao;
         private DevExpress.XtraBars.BarButtonItem bbtkSanLuongNV;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarButtonItem iDoiMatKhau;
     }
 }

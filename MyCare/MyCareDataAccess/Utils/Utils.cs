@@ -40,7 +40,7 @@ namespace MyCare.MyCareDataAccess.Utils
             try
             {
                 SqlDataHelper dba = new SqlDataHelper();
-                return bool.Parse(dba.ExecuteScalar("select  [dbo].[f_CheckTaiKhoan]("+ 2 + ")").ToString());
+                return bool.Parse(dba.ExecuteScalar("select  [dbo].[f_CheckTaiKhoan]("+ idnhanvien + ")").ToString());
             }
             catch(Exception ex)
             {

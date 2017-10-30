@@ -63,6 +63,25 @@ namespace MyCare.MyCareDataAccess.DataAcess
             return db.ExecuteNonQuery("sp_MyCareDesktop_ThemLichSuDangNhap", param) > 0;
         }
 
+        public static int DoiMatKhau(int idnhanvien, string matkhaucu, string matkhaumoi)
+        {
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@idtaikhoan", idnhanvien),
+                    new SqlParameter("@matkhaucu", matkhaucu),
+                    new SqlParameter("@matkhaumoi", matkhaumoi)
+                };
+
+                return int.Parse(db.ExecuteScalar("sp_MyCareDesktop_DoiMatKhau", param).ToString());
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
         public static int ThemMoiTaiKhoan(int idnhanvien, NhanVienOBJ obj)
         {
             try

@@ -194,5 +194,13 @@ namespace MyCare
             frm.ShowDialog();
             this.Show();
         }
+
+        private void iDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormDoiMatKhau frm = new FormDoiMatKhau();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }
