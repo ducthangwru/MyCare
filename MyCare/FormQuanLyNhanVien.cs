@@ -146,6 +146,12 @@ namespace MyCare
 
         private void btnResetPass_Click(object sender, EventArgs e)
         {
+            if(obj.idtaikhoan == 0)
+            {
+                MessageBox.Show("Chưa có tài khoản nào được chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             DialogResult dialog = MessageBox.Show("Bạn có chắc chắn muốn đặt lại mật khẩu cho tài khoản này với mật khẩu mặc định là: 12345678", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if(dialog == DialogResult.OK)
             {

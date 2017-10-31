@@ -397,7 +397,7 @@
             this.Name = "FormNhapKho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhập Kho";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormNhapKho_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormNhapKho_FormClosing);
             this.Load += new System.EventHandler(this.FormNhapKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdQlyKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLKho)).EndInit();

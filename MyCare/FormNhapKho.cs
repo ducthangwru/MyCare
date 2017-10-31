@@ -90,11 +90,6 @@ namespace MyCare
             }
         }
 
-        private void FormNhapKho_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            HoaDonDB.KiemTraChiTietHoaDon(idhoadon);
-        }
-
         private void btnLRefreshNhapKho_Click(object sender, EventArgs e)
         {
             RefreshDataGridQlyKho(null);
@@ -113,6 +108,12 @@ namespace MyCare
         private void txbTimKiemNhapKho_EditValueChanged(object sender, EventArgs e)
         {
             RefreshDataGridQlyKho(txbTimKiemNhapKho.Text);
+        }
+
+        private void FormNhapKho_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            HoaDonDB.KiemTraChiTietHoaDon(idhoadon);
+            e.Cancel = false;
         }
     }
 }
