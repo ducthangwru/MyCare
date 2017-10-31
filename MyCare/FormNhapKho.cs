@@ -53,6 +53,7 @@ namespace MyCare
                 if(string.IsNullOrEmpty(txbDanhMuc.Text))
                 {
                     MessageBox.Show("Trường thông tin rỗng không thể thêm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
                 idhoadon = int.Parse(txtIDHoaDon.Text);
