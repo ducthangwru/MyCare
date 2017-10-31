@@ -66,6 +66,20 @@ namespace MyCare
                 {
                     MessageBox.Show("Thêm số lượng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     grdQlyKho.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien, null);
+
+                    DialogResult dialog = MessageBox.Show("Bạn có muốn tạo 1 hóa đơn nhập kho mới?", "Nhập kho", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.OK)
+                    {
+                        RefreshDataGridQlyKho(null);
+                        txtIDHoaDon.Text = HoaDonDB.GetIDHoaDon(Config.IDNhanVien);
+                        txbSoLuongNhap.Text = "";
+                        txbGhiChu.Text = "";
+                        idhoadon = int.Parse(txtIDHoaDon.Text);
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
                 else
                     MessageBox.Show("Thêm số lượng không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
