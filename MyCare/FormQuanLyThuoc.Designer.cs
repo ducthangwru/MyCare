@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyThuoc));
             this.radHetHieuLuc = new System.Windows.Forms.RadioButton();
             this.radConHieuLuc = new System.Windows.Forms.RadioButton();
             this.luDanhMuc = new DevExpress.XtraEditors.LookUpEdit();
@@ -447,6 +448,7 @@
             this.Controls.Add(this.txtGiaXuat);
             this.Controls.Add(this.txtGiaNhap);
             this.Controls.Add(this.txtTenThuoc);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormQuanLyThuoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBieuDoDoanhThu));
             this.btnSearchBieuDoDoanhThu = new DevExpress.XtraEditors.SimpleButton();
             this.deDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.deTuNgay = new DevExpress.XtraEditors.DateEdit();
@@ -126,6 +127,7 @@
             this.Controls.Add(this.deDenNgay);
             this.Controls.Add(this.deTuNgay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormBieuDoDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

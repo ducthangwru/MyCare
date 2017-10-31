@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThongKeSanLuongNhanVien));
             this.chartSanLuongNV = new DevExpress.XtraCharts.ChartControl();
             this.btnSearchBieuDoSanLuong = new DevExpress.XtraEditors.SimpleButton();
             this.deDenNgay = new DevExpress.XtraEditors.DateEdit();
@@ -125,6 +126,7 @@
             this.Controls.Add(this.deDenNgay);
             this.Controls.Add(this.deTuNgay);
             this.Controls.Add(this.chartSanLuongNV);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormThongKeSanLuongNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

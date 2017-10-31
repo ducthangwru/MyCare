@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLichSuThaoTacDanhMuc));
             this.grdLSThaoTacDM = new DevExpress.XtraGrid.GridControl();
             this.gvLSThaoTacDM = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -176,6 +177,7 @@
             this.Controls.Add(this.lbControl);
             this.Controls.Add(this.grdLSThaoTacDM);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormLichSuThaoTacDanhMuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
