@@ -217,5 +217,10 @@ namespace MyCare
             frm.ShowDialog();
             this.Show();
         }
+
+        private void iHelp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show("Liên hệ hotline 09 6666 2850 (Thắng) để được hỗ trợ!", "Hỗ trợ", MessageBoxButtons.OK, MessageBoxIcon.None);
+        }
     }
 }

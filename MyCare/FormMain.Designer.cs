@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.mailGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -78,6 +78,7 @@
             this.bbtkHoaDon = new DevExpress.XtraBars.BarButtonItem();
             this.bbtkDoanhThu = new DevExpress.XtraBars.BarButtonItem();
             this.bbtkSanLuongNV = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtkTienLai = new DevExpress.XtraBars.BarButtonItem();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
@@ -120,7 +121,6 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.popupBaoCao = new DevExpress.XtraBars.PopupMenu(this.components);
             this.iBaoCao = new DevExpress.XtraBars.BarButtonItem();
-            this.bbtkTienLai = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -294,9 +294,9 @@
             this.grdLSHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.grdLSHoaDon.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.grdLSHoaDon.Location = new System.Drawing.Point(3, 3);
             this.grdLSHoaDon.MainView = this.gvLSHoaDon;
             this.grdLSHoaDon.MenuManager = this.ribbonControl;
@@ -407,7 +407,7 @@
             // 
             this.btnXem.AutoHeight = false;
             this.btnXem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnXem.Name = "btnXem";
             this.btnXem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXem_ButtonClick);
@@ -660,6 +660,13 @@
             this.bbtkSanLuongNV.Name = "bbtkSanLuongNV";
             this.bbtkSanLuongNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkSanLuongNV_ItemClick);
             // 
+            // bbtkTienLai
+            // 
+            this.bbtkTienLai.Caption = "Thống kê tiền lãi";
+            this.bbtkTienLai.Id = 87;
+            this.bbtkTienLai.Name = "bbtkTienLai";
+            this.bbtkTienLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkTienLai_ItemClick);
+            // 
             // iHelp
             // 
             this.iHelp.Caption = "Hỗ trợ";
@@ -669,6 +676,7 @@
             this.iHelp.LargeImageIndex = 7;
             this.iHelp.LargeWidth = 75;
             this.iHelp.Name = "iHelp";
+            this.iHelp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iHelp_ItemClick);
             // 
             // iAbout
             // 
@@ -1063,13 +1071,6 @@
             this.iBaoCao.LargeImageIndex = 3;
             this.iBaoCao.LargeWidth = 75;
             this.iBaoCao.Name = "iBaoCao";
-            // 
-            // bbtkTienLai
-            // 
-            this.bbtkTienLai.Caption = "Thống kê tiền lãi";
-            this.bbtkTienLai.Id = 87;
-            this.bbtkTienLai.Name = "bbtkTienLai";
-            this.bbtkTienLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkTienLai_ItemClick);
             // 
             // FormMain
             // 
