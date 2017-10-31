@@ -125,6 +125,7 @@
             this.Controls.Add(this.deDenNgay);
             this.Controls.Add(this.deTuNgay);
             this.Controls.Add(this.chartBieuDoHoaDon);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormBieuDoHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê theo số hóa đơn";

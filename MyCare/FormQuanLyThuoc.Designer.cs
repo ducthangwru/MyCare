@@ -447,6 +447,7 @@
             this.Controls.Add(this.txtGiaXuat);
             this.Controls.Add(this.txtGiaNhap);
             this.Controls.Add(this.txtTenThuoc);
+            this.MaximizeBox = false;
             this.Name = "FormQuanLyThuoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Thuốc";

@@ -175,6 +175,8 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.lbControl);
             this.Controls.Add(this.grdLSThaoTacDM);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormLichSuThaoTacDanhMuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lịch sử thao tác danh mục";

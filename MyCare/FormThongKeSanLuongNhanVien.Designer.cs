@@ -125,6 +125,7 @@
             this.Controls.Add(this.deDenNgay);
             this.Controls.Add(this.deTuNgay);
             this.Controls.Add(this.chartSanLuongNV);
+            this.MaximizeBox = false;
             this.Name = "FormThongKeSanLuongNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê doanh thu nhân viên";

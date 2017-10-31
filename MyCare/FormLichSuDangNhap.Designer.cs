@@ -97,7 +97,7 @@
             // 
             this.btnRefeshLSDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnRefeshLSDangNhap.Image")));
             this.btnRefeshLSDangNhap.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRefeshLSDangNhap.Location = new System.Drawing.Point(709, 46);
+            this.btnRefeshLSDangNhap.Location = new System.Drawing.Point(610, 29);
             this.btnRefeshLSDangNhap.Name = "btnRefeshLSDangNhap";
             this.btnRefeshLSDangNhap.Size = new System.Drawing.Size(40, 23);
             this.btnRefeshLSDangNhap.TabIndex = 16;
@@ -107,7 +107,7 @@
             // 
             this.btnSearchLSDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchLSDangNhap.Image")));
             this.btnSearchLSDangNhap.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSearchLSDangNhap.Location = new System.Drawing.Point(627, 46);
+            this.btnSearchLSDangNhap.Location = new System.Drawing.Point(528, 29);
             this.btnSearchLSDangNhap.Name = "btnSearchLSDangNhap";
             this.btnSearchLSDangNhap.Size = new System.Drawing.Size(36, 23);
             this.btnSearchLSDangNhap.TabIndex = 18;
@@ -115,7 +115,7 @@
             // 
             // luNhanVien
             // 
-            this.luNhanVien.Location = new System.Drawing.Point(315, 49);
+            this.luNhanVien.Location = new System.Drawing.Point(216, 32);
             this.luNhanVien.Name = "luNhanVien";
             this.luNhanVien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -131,7 +131,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(227, 51);
+            this.label1.Location = new System.Drawing.Point(128, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 21;
@@ -140,7 +140,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(424, 51);
+            this.label2.Location = new System.Drawing.Point(325, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 22;
@@ -148,7 +148,7 @@
             // 
             // luTrangThai
             // 
-            this.luTrangThai.Location = new System.Drawing.Point(512, 49);
+            this.luTrangThai.Location = new System.Drawing.Point(413, 32);
             this.luTrangThai.Name = "luTrangThai";
             this.luTrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -170,6 +170,8 @@
             this.Controls.Add(this.btnSearchLSDangNhap);
             this.Controls.Add(this.btnRefeshLSDangNhap);
             this.Controls.Add(this.grdLSDangNhap);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormLichSuDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lịch sử đăng nhập";

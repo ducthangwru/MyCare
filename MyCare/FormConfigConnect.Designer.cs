@@ -80,6 +80,8 @@
             this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txbConfig);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormConfigConnect";
             this.Text = "FormConfigConnect";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormConfigConnect_FormClosing);

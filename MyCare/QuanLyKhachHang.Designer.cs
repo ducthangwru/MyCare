@@ -53,6 +53,7 @@
             this.btnSearchQlyKH = new DevExpress.XtraEditors.SimpleButton();
             this.txbTimKiemKH = new DevExpress.XtraEditors.TextEdit();
             this.btnRefeshQlyKH = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdQuanLyKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQuanLyKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
@@ -231,7 +232,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(13, 142);
+            this.btnSua.Location = new System.Drawing.Point(37, 142);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 8;
@@ -266,6 +267,15 @@
             this.btnRefeshQlyKH.TabIndex = 17;
             this.btnRefeshQlyKH.Click += new System.EventHandler(this.btnRefeshQlyKH_Click);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(188, 142);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(99, 23);
+            this.simpleButton1.TabIndex = 8;
+            this.simpleButton1.Text = "Lịch sử giao dịch";
+            this.simpleButton1.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // FormQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +284,7 @@
             this.Controls.Add(this.btnSearchQlyKH);
             this.Controls.Add(this.txbTimKiemKH);
             this.Controls.Add(this.btnRefeshQlyKH);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtNgayTao);
@@ -287,6 +298,8 @@
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtTenKhachHang);
             this.Controls.Add(this.grdQuanLyKhachHang);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormQuanLyKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Khách Hàng";
@@ -329,5 +342,6 @@
         private DevExpress.XtraEditors.TextEdit txbTimKiemKH;
         private DevExpress.XtraEditors.SimpleButton btnRefeshQlyKH;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

@@ -171,6 +171,8 @@
             this.Controls.Add(this.txbTimKiemLSKho);
             this.Controls.Add(this.btnRefeshLSKho);
             this.Controls.Add(this.gridLSNhapXuatKho);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormLichSuNhapXuatKho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lịch sử xuất nhập kho";

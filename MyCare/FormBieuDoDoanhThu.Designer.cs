@@ -125,6 +125,8 @@
             this.Controls.Add(this.btnSearchBieuDoDoanhThu);
             this.Controls.Add(this.deDenNgay);
             this.Controls.Add(this.deTuNgay);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormBieuDoDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê doanh thu cửa hàng";
