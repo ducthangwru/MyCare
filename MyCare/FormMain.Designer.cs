@@ -98,6 +98,9 @@
             this.bbQlyKhachHang = new DevExpress.XtraBars.BarButtonItem();
             this.bbbcDoanhThu = new DevExpress.XtraBars.BarButtonItem();
             this.bbbcTongHop = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.iDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -119,9 +122,6 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.popupBaoCao = new DevExpress.XtraBars.PopupMenu(this.components);
             this.iBaoCao = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
-            this.iDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -410,7 +410,7 @@
             // 
             this.btnXem.AutoHeight = false;
             this.btnXem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.about, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.about, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnXem.Name = "btnXem";
             // 
             // ribbonControl
@@ -833,6 +833,27 @@
             this.bbbcTongHop.Id = 80;
             this.bbbcTongHop.Name = "bbbcTongHop";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 84;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+            this.ribbonGalleryBarItem1.Id = 85;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
+            // iDoiMatKhau
+            // 
+            this.iDoiMatKhau.Caption = "Đổi mật khẩu";
+            this.iDoiMatKhau.Id = 86;
+            this.iDoiMatKhau.ImageUri.Uri = "Replace";
+            this.iDoiMatKhau.LargeWidth = 75;
+            this.iDoiMatKhau.Name = "iDoiMatKhau";
+            this.iDoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDoiMatKhau_ItemClick);
+            // 
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
@@ -1044,27 +1065,6 @@
             this.iBaoCao.LargeImageIndex = 3;
             this.iBaoCao.LargeWidth = 75;
             this.iBaoCao.Name = "iBaoCao";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 84;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // ribbonGalleryBarItem1
-            // 
-            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
-            this.ribbonGalleryBarItem1.Id = 85;
-            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
-            // 
-            // iDoiMatKhau
-            // 
-            this.iDoiMatKhau.Caption = "Đổi mật khẩu";
-            this.iDoiMatKhau.Id = 86;
-            this.iDoiMatKhau.ImageUri.Uri = "Replace";
-            this.iDoiMatKhau.LargeWidth = 75;
-            this.iDoiMatKhau.Name = "iDoiMatKhau";
-            this.iDoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iDoiMatKhau_ItemClick);
             // 
             // FormMain
             // 

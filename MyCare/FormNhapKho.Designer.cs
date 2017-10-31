@@ -160,8 +160,6 @@
             this.gridColumn9.Caption = "IDDonVi";
             this.gridColumn9.FieldName = "ID_DonVi";
             this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 7;
             // 
             // label1
             // 
