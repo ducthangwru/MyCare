@@ -32,6 +32,8 @@
             this.deDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.deTuNgay = new DevExpress.XtraEditors.DateEdit();
             this.chartBieuDoDoanhThu = new DevExpress.XtraCharts.ChartControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.deDenNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDenNgay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTuNgay.Properties.CalendarTimeProperties)).BeginInit();
@@ -96,11 +98,29 @@
             this.chartBieuDoDoanhThu.Size = new System.Drawing.Size(780, 436);
             this.chartBieuDoDoanhThu.TabIndex = 7;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(127, 34);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(44, 13);
+            this.labelControl1.TabIndex = 8;
+            this.labelControl1.Text = "Từ ngày:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(327, 34);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(51, 13);
+            this.labelControl2.TabIndex = 9;
+            this.labelControl2.Text = "Đến ngày:";
+            // 
             // FormBieuDoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 531);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.chartBieuDoDoanhThu);
             this.Controls.Add(this.btnSearchBieuDoDoanhThu);
             this.Controls.Add(this.deDenNgay);
@@ -115,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.deTuNgay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBieuDoDoanhThu)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +145,7 @@
         private DevExpress.XtraEditors.DateEdit deDenNgay;
         private DevExpress.XtraEditors.DateEdit deTuNgay;
         private DevExpress.XtraCharts.ChartControl chartBieuDoDoanhThu;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

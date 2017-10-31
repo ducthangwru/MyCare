@@ -32,6 +32,8 @@
             this.btnSearchBieuDoSanLuong = new DevExpress.XtraEditors.SimpleButton();
             this.deDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.deTuNgay = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.chartSanLuongNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDenNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDenNgay.Properties)).BeginInit();
@@ -59,7 +61,7 @@
             // deDenNgay
             // 
             this.deDenNgay.EditValue = null;
-            this.deDenNgay.Location = new System.Drawing.Point(208, 27);
+            this.deDenNgay.Location = new System.Drawing.Point(276, 27);
             this.deDenNgay.Name = "deDenNgay";
             this.deDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -79,7 +81,7 @@
             // deTuNgay
             // 
             this.deTuNgay.EditValue = null;
-            this.deTuNgay.Location = new System.Drawing.Point(65, 27);
+            this.deTuNgay.Location = new System.Drawing.Point(77, 27);
             this.deTuNgay.Name = "deTuNgay";
             this.deTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -96,11 +98,29 @@
             this.deTuNgay.Size = new System.Drawing.Size(100, 20);
             this.deTuNgay.TabIndex = 7;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(27, 30);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(44, 13);
+            this.labelControl1.TabIndex = 10;
+            this.labelControl1.Text = "Từ ngày:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(217, 29);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(51, 13);
+            this.labelControl2.TabIndex = 11;
+            this.labelControl2.Text = "Đến ngày:";
+            // 
             // FormThongKeSanLuongNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 505);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnSearchBieuDoSanLuong);
             this.Controls.Add(this.deDenNgay);
             this.Controls.Add(this.deTuNgay);
@@ -115,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.deTuNgay.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTuNgay.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +145,7 @@
         private DevExpress.XtraEditors.SimpleButton btnSearchBieuDoSanLuong;
         private DevExpress.XtraEditors.DateEdit deDenNgay;
         private DevExpress.XtraEditors.DateEdit deTuNgay;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
