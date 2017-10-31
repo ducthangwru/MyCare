@@ -136,6 +136,7 @@
             this.btnSearchLSThaoTacThuoc.Size = new System.Drawing.Size(75, 23);
             this.btnSearchLSThaoTacThuoc.TabIndex = 5;
             this.btnSearchLSThaoTacThuoc.Text = "Tìm kiếm";
+            this.btnSearchLSThaoTacThuoc.Click += new System.EventHandler(this.btnSearchLSThaoTacThuoc_Click);
             // 
             // luThaoTac
             // 
@@ -146,10 +147,10 @@
             this.luThaoTac.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Mã thao tác"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenThaoTac", "Tên thao tác")});
-            this.luThaoTac.Properties.DisplayMember = "ID";
+            this.luThaoTac.Properties.DisplayMember = "TenThaoTac";
             this.luThaoTac.Properties.NullText = "Tất cả";
             this.luThaoTac.Properties.NullValuePrompt = "0";
-            this.luThaoTac.Properties.ValueMember = "TenThaoTac";
+            this.luThaoTac.Properties.ValueMember = "ID";
             this.luThaoTac.Size = new System.Drawing.Size(100, 20);
             this.luThaoTac.TabIndex = 7;
             // 

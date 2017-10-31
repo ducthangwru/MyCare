@@ -24,8 +24,14 @@ namespace MyCare
         {
             luDM.Properties.DataSource = KhoThuocDB.DanhSachChonThuoc(Config.IDNhanVien);
             luThaoTac.Properties.DataSource = ThaoTacDB.DanhSachChonThaoTac();
-
+            luDM.EditValue = 0;
+            luThaoTac.EditValue = 0;
             grdLSThaoTacDM.DataSource = KhoThuocDB.LichSuThaoTacDanhMuc(Config.IDNhanVien, 0, 0);
+        }
+
+        private void btnSearchLSThaoTacThuoc_Click(object sender, EventArgs e)
+        {
+            grdLSThaoTacDM.DataSource = KhoThuocDB.LichSuThaoTacDanhMuc(Config.IDNhanVien, int.Parse(luDM.GetColumnValue("ID").ToString()), int.Parse(luThaoTac.GetColumnValue("ID").ToString()));
         }
     }
 }
