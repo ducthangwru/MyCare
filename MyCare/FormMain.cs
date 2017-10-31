@@ -209,5 +209,13 @@ namespace MyCare
             FormChiTietHoaDon frm = new FormChiTietHoaDon(idhoadon);
             frm.ShowDialog();
         }
+
+        private void bbtkTienLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            FormBieuDoTienLai frm = new FormBieuDoTienLai();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

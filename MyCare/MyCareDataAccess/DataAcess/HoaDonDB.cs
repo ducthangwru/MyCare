@@ -121,6 +121,7 @@ namespace MyCare.MyCareDataAccess.DataAcess
                 return dt;
             }
         }
+
         public static DataTable XemHoaDonTheoKhachHang(int idkhachhang)
         {
             DataTable dt = new DataTable();
@@ -143,8 +144,7 @@ namespace MyCare.MyCareDataAccess.DataAcess
                 return dt;
             }
         }
-
-
+   
         public static DataTable XemChiTietHoaDon(int idhoadon)
         {
             DataTable dt = new DataTable();

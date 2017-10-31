@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.mailGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -120,6 +120,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.popupBaoCao = new DevExpress.XtraBars.PopupMenu(this.components);
             this.iBaoCao = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtkTienLai = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -293,9 +294,9 @@
             this.grdLSHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.grdLSHoaDon.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.grdLSHoaDon.Location = new System.Drawing.Point(3, 3);
             this.grdLSHoaDon.MainView = this.gvLSHoaDon;
             this.grdLSHoaDon.MenuManager = this.ribbonControl;
@@ -406,7 +407,7 @@
             // 
             this.btnXem.AutoHeight = false;
             this.btnXem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnXem.Name = "btnXem";
             this.btnXem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXem_ButtonClick);
@@ -456,10 +457,11 @@
             this.bbtkSanLuongNV,
             this.barButtonItem1,
             this.ribbonGalleryBarItem1,
-            this.iDoiMatKhau});
+            this.iDoiMatKhau,
+            this.bbtkTienLai});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 87;
+            this.ribbonControl.MaxItemId = 88;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.iAbout);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -633,6 +635,7 @@
             this.popupThongKe.ItemLinks.Add(this.bbtkHoaDon);
             this.popupThongKe.ItemLinks.Add(this.bbtkDoanhThu);
             this.popupThongKe.ItemLinks.Add(this.bbtkSanLuongNV);
+            this.popupThongKe.ItemLinks.Add(this.bbtkTienLai);
             this.popupThongKe.Name = "popupThongKe";
             this.popupThongKe.Ribbon = this.ribbonControl;
             // 
@@ -957,6 +960,7 @@
             this.clDanhMuc.Caption = "Danh Mục";
             this.clDanhMuc.FieldName = "TenDanhMuc";
             this.clDanhMuc.Name = "clDanhMuc";
+            this.clDanhMuc.OptionsColumn.AllowEdit = false;
             this.clDanhMuc.OptionsColumn.AllowMove = false;
             this.clDanhMuc.OptionsColumn.AllowSize = false;
             this.clDanhMuc.Visible = true;
@@ -968,6 +972,7 @@
             this.clTenThuoc.Caption = "Thuốc";
             this.clTenThuoc.FieldName = "TenThuoc";
             this.clTenThuoc.Name = "clTenThuoc";
+            this.clTenThuoc.OptionsColumn.AllowEdit = false;
             this.clTenThuoc.OptionsColumn.AllowMove = false;
             this.clTenThuoc.OptionsColumn.AllowSize = false;
             this.clTenThuoc.Visible = true;
@@ -979,6 +984,7 @@
             this.clSoLuongCon.Caption = "Số lượng còn";
             this.clSoLuongCon.FieldName = "SoLuongCon";
             this.clSoLuongCon.Name = "clSoLuongCon";
+            this.clSoLuongCon.OptionsColumn.AllowEdit = false;
             this.clSoLuongCon.OptionsColumn.AllowMove = false;
             this.clSoLuongCon.OptionsColumn.AllowSize = false;
             this.clSoLuongCon.Visible = true;
@@ -990,6 +996,7 @@
             this.clDonVi.Caption = "Đơn vị";
             this.clDonVi.FieldName = "TenDonVi";
             this.clDonVi.Name = "clDonVi";
+            this.clDonVi.OptionsColumn.AllowEdit = false;
             this.clDonVi.OptionsColumn.AllowMove = false;
             this.clDonVi.OptionsColumn.AllowSize = false;
             this.clDonVi.Visible = true;
@@ -1001,6 +1008,7 @@
             this.clGia.Caption = "Giá";
             this.clGia.FieldName = "Gia";
             this.clGia.Name = "clGia";
+            this.clGia.OptionsColumn.AllowEdit = false;
             this.clGia.OptionsColumn.AllowMove = false;
             this.clGia.OptionsColumn.AllowSize = false;
             this.clGia.Visible = true;
@@ -1012,6 +1020,7 @@
             this.clTacDung.Caption = "Tác dụng";
             this.clTacDung.FieldName = "NoiDung";
             this.clTacDung.Name = "clTacDung";
+            this.clTacDung.OptionsColumn.AllowEdit = false;
             this.clTacDung.OptionsColumn.AllowMove = false;
             this.clTacDung.OptionsColumn.AllowSize = false;
             this.clTacDung.Visible = true;
@@ -1054,6 +1063,13 @@
             this.iBaoCao.LargeImageIndex = 3;
             this.iBaoCao.LargeWidth = 75;
             this.iBaoCao.Name = "iBaoCao";
+            // 
+            // bbtkTienLai
+            // 
+            this.bbtkTienLai.Caption = "Thống kê tiền lãi";
+            this.bbtkTienLai.Id = 87;
+            this.bbtkTienLai.Name = "bbtkTienLai";
+            this.bbtkTienLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtkTienLai_ItemClick);
             // 
             // FormMain
             // 
@@ -1191,5 +1207,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
         private DevExpress.XtraBars.BarButtonItem iDoiMatKhau;
+        private DevExpress.XtraBars.BarButtonItem bbtkTienLai;
     }
 }

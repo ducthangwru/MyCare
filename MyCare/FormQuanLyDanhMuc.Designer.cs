@@ -106,6 +106,7 @@
             this.gridColumn3.Caption = "Tên Danh Mục";
             this.gridColumn3.FieldName = "TenDanhMuc";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
             this.gridColumn3.Width = 158;
@@ -115,6 +116,7 @@
             this.gridColumn4.Caption = "Trạng Thái";
             this.gridColumn4.FieldName = "TrangThai";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
             this.gridColumn4.Width = 158;
@@ -124,6 +126,7 @@
             this.gridColumn1.Caption = "Ngày Tạo";
             this.gridColumn1.FieldName = "NgayLap";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
             this.gridColumn1.Width = 162;
@@ -139,6 +142,7 @@
             this.gridColumn6.Caption = "Ghi chú cuối";
             this.gridColumn6.FieldName = "GhiChu";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
             this.gridColumn6.Width = 192;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTransaction));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -120,6 +119,7 @@
             this.txbSDT.Name = "txbSDT";
             this.txbSDT.Size = new System.Drawing.Size(259, 20);
             this.txbSDT.TabIndex = 0;
+            this.txbSDT.EditValueChanged += new System.EventHandler(this.txbSDT_EditValueChanged);
             // 
             // labelControl2
             // 
@@ -180,7 +180,6 @@
             this.gridDSMatHang.TabIndex = 0;
             this.gridDSMatHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDSMatHang});
-            this.gridDSMatHang.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridViewDSMatHang
             // 
@@ -344,6 +343,7 @@
             this.clTenDanhMuc.Caption = "Danh mục";
             this.clTenDanhMuc.FieldName = "TenDanhMuc";
             this.clTenDanhMuc.Name = "clTenDanhMuc";
+            this.clTenDanhMuc.OptionsColumn.AllowEdit = false;
             this.clTenDanhMuc.Visible = true;
             this.clTenDanhMuc.VisibleIndex = 0;
             this.clTenDanhMuc.Width = 73;
@@ -353,6 +353,7 @@
             this.clThuoc.Caption = "Tên thuốc";
             this.clThuoc.FieldName = "TenThuoc";
             this.clThuoc.Name = "clThuoc";
+            this.clThuoc.OptionsColumn.AllowEdit = false;
             this.clThuoc.Visible = true;
             this.clThuoc.VisibleIndex = 1;
             this.clThuoc.Width = 73;
@@ -362,6 +363,7 @@
             this.clSoLuongCon.Caption = "Số lượng còn";
             this.clSoLuongCon.FieldName = "SoLuongCon";
             this.clSoLuongCon.Name = "clSoLuongCon";
+            this.clSoLuongCon.OptionsColumn.AllowEdit = false;
             this.clSoLuongCon.Visible = true;
             this.clSoLuongCon.VisibleIndex = 2;
             this.clSoLuongCon.Width = 73;
@@ -371,6 +373,7 @@
             this.clGia.Caption = "Đơn giá";
             this.clGia.FieldName = "Gia";
             this.clGia.Name = "clGia";
+            this.clGia.OptionsColumn.AllowEdit = false;
             this.clGia.Visible = true;
             this.clGia.VisibleIndex = 3;
             this.clGia.Width = 73;
@@ -380,6 +383,7 @@
             this.grclDonVi.Caption = "Đơn vị";
             this.grclDonVi.FieldName = "TenDonVi";
             this.grclDonVi.Name = "grclDonVi";
+            this.grclDonVi.OptionsColumn.AllowEdit = false;
             this.grclDonVi.Visible = true;
             this.grclDonVi.VisibleIndex = 4;
             this.grclDonVi.Width = 73;

@@ -35,6 +35,7 @@
             this.btnSearchBieuDoHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.chartBieuDoHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTuNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTuNgay.Properties)).BeginInit();
@@ -53,7 +54,7 @@
             // deTuNgay
             // 
             this.deTuNgay.EditValue = null;
-            this.deTuNgay.Location = new System.Drawing.Point(150, 34);
+            this.deTuNgay.Location = new System.Drawing.Point(155, 53);
             this.deTuNgay.Name = "deTuNgay";
             this.deTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -73,7 +74,7 @@
             // deDenNgay
             // 
             this.deDenNgay.EditValue = null;
-            this.deDenNgay.Location = new System.Drawing.Point(350, 34);
+            this.deDenNgay.Location = new System.Drawing.Point(355, 53);
             this.deDenNgay.Name = "deDenNgay";
             this.deDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -92,7 +93,7 @@
             // 
             // btnSearchBieuDoHoaDon
             // 
-            this.btnSearchBieuDoHoaDon.Location = new System.Drawing.Point(520, 31);
+            this.btnSearchBieuDoHoaDon.Location = new System.Drawing.Point(525, 50);
             this.btnSearchBieuDoHoaDon.Name = "btnSearchBieuDoHoaDon";
             this.btnSearchBieuDoHoaDon.Size = new System.Drawing.Size(75, 23);
             this.btnSearchBieuDoHoaDon.TabIndex = 3;
@@ -101,7 +102,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(100, 36);
+            this.labelControl1.Location = new System.Drawing.Point(92, 56);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(44, 13);
             this.labelControl1.TabIndex = 9;
@@ -109,17 +110,27 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(293, 37);
+            this.labelControl2.Location = new System.Drawing.Point(298, 56);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(51, 13);
             this.labelControl2.TabIndex = 10;
             this.labelControl2.Text = "Đến ngày:";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Location = new System.Drawing.Point(210, 12);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(245, 23);
+            this.labelControl3.TabIndex = 11;
+            this.labelControl3.Text = "Biểu đồ thống kê hóa đơn";
             // 
             // FormBieuDoHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 532);
+            this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnSearchBieuDoHoaDon);
@@ -150,5 +161,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSearchBieuDoHoaDon;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

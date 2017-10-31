@@ -17,7 +17,7 @@ namespace MyCare.MyCareDataAccess.DataAcess
             DataTable dt = new DataTable();
             try
             {
-                dt = db.ExecuteDataSet("select * from DonVi").Tables[0];
+                dt = db.ExecuteDataSet("select * from v_DanhSachChonDonVi").Tables[0];
                 return dt;
             }
             catch (Exception ex)

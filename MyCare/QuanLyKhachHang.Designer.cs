@@ -104,6 +104,7 @@
             this.gridColumn2.Caption = "Tên khách hàng";
             this.gridColumn2.FieldName = "TenKhachHang";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
             // 
@@ -112,6 +113,7 @@
             this.gridColumn3.Caption = "Địa chỉ";
             this.gridColumn3.FieldName = "DiaChi";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
             // 
@@ -120,6 +122,7 @@
             this.gridColumn4.Caption = "Số điện thoại";
             this.gridColumn4.FieldName = "SDT";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
             // 
@@ -128,6 +131,7 @@
             this.gridColumn5.Caption = "Trạng thái";
             this.gridColumn5.FieldName = "TrangThai";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
             // 
@@ -136,6 +140,7 @@
             this.gridColumn6.Caption = "Ngày tạo";
             this.gridColumn6.FieldName = "NgayLap";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
             // 

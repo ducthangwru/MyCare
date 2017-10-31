@@ -30,6 +30,10 @@
         {
             this.gridChiTietHoaDon = new DevExpress.XtraGrid.GridControl();
             this.gvChiTietHoaDon = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txbMaHoaDon = new DevExpress.XtraEditors.TextEdit();
             this.txbTenNV = new DevExpress.XtraEditors.TextEdit();
@@ -43,10 +47,6 @@
             this.txbGhiChu = new DevExpress.XtraEditors.TextEdit();
             this.txbNgayTao = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridChiTietHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTietHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbMaHoaDon.Properties)).BeginInit();
@@ -76,6 +76,42 @@
             this.gridColumn4});
             this.gvChiTietHoaDon.GridControl = this.gridChiTietHoaDon;
             this.gvChiTietHoaDon.Name = "gvChiTietHoaDon";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Tên Thuốc";
+            this.gridColumn1.FieldName = "TenThuoc";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Số lượng";
+            this.gridColumn2.FieldName = "SoLuong";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Tổng tiền";
+            this.gridColumn3.FieldName = "ThanhTien";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Đơn vị";
+            this.gridColumn4.FieldName = "TenDonVi";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
             // 
             // label1
             // 
@@ -187,38 +223,6 @@
             this.labelControl1.Size = new System.Drawing.Size(153, 23);
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "Chi tiết hóa đơn";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Tên Thuốc";
-            this.gridColumn1.FieldName = "TenThuoc";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Số lượng";
-            this.gridColumn2.FieldName = "SoLuong";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Tổng tiền";
-            this.gridColumn3.FieldName = "ThanhTien";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Đơn vị";
-            this.gridColumn4.FieldName = "TenDonVi";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
             // 
             // FormChiTietHoaDon
             // 

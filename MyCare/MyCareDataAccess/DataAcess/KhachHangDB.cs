@@ -20,7 +20,7 @@ namespace MyCare.MyCareDataAccess.DataAcess
             DataTable dt = new DataTable();
             try
             {
-                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachKhachHang", new SqlParameter("timkiem", timkiem)).Tables[0];
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachKhachHang", new SqlParameter("@timkiem", timkiem)).Tables[0];
                 dt.Columns.Add("TrangThai");
                 dt.Columns.Add("NgayLap");
                 foreach (DataRow dr in dt.Rows)
@@ -29,6 +29,20 @@ namespace MyCare.MyCareDataAccess.DataAcess
                     dr["NgayLap"] = DateTime.Parse(dr["NgayTao"].ToString()).ToString("dd/MM/yyyy HH:mm:ss");
                 }
 
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
+        public static DataTable DanhSachGoiYKhachHang(string sdt)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_DanhSachGoiYKhachHang", new SqlParameter("@sdt", sdt)).Tables[0];
                 return dt;
             }
             catch (Exception ex)

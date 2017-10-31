@@ -81,6 +81,7 @@
             this.ID.Caption = "Mã hóa đơn";
             this.ID.FieldName = "ID_HoaDon";
             this.ID.Name = "ID";
+            this.ID.OptionsColumn.AllowEdit = false;
             this.ID.Visible = true;
             this.ID.VisibleIndex = 0;
             // 
@@ -89,6 +90,7 @@
             this.gcThoiGian.Caption = "Ngày lập";
             this.gcThoiGian.FieldName = "NgayLap";
             this.gcThoiGian.Name = "gcThoiGian";
+            this.gcThoiGian.OptionsColumn.AllowEdit = false;
             this.gcThoiGian.Visible = true;
             this.gcThoiGian.VisibleIndex = 1;
             // 
@@ -97,6 +99,7 @@
             this.gcTenNV.Caption = "Tên nhân viên";
             this.gcTenNV.FieldName = "TenTaiKhoan";
             this.gcTenNV.Name = "gcTenNV";
+            this.gcTenNV.OptionsColumn.AllowEdit = false;
             this.gcTenNV.Visible = true;
             this.gcTenNV.VisibleIndex = 2;
             // 
@@ -105,6 +108,7 @@
             this.gcThuoc.Caption = "Tên khách hàng";
             this.gcThuoc.FieldName = "TenKhachHang";
             this.gcThuoc.Name = "gcThuoc";
+            this.gcThuoc.OptionsColumn.AllowEdit = false;
             this.gcThuoc.Visible = true;
             this.gcThuoc.VisibleIndex = 3;
             // 
@@ -113,6 +117,7 @@
             this.gcSoLuong.Caption = "Thao tác";
             this.gcSoLuong.FieldName = "TenThaoTac";
             this.gcSoLuong.Name = "gcSoLuong";
+            this.gcSoLuong.OptionsColumn.AllowEdit = false;
             this.gcSoLuong.Visible = true;
             this.gcSoLuong.VisibleIndex = 4;
             // 
@@ -121,6 +126,7 @@
             this.gcGhiChu.Caption = "Ghi chú";
             this.gcGhiChu.FieldName = "GhiChu";
             this.gcGhiChu.Name = "gcGhiChu";
+            this.gcGhiChu.OptionsColumn.AllowEdit = false;
             this.gcGhiChu.Visible = true;
             this.gcGhiChu.VisibleIndex = 5;
             // 
@@ -129,6 +135,7 @@
             this.gcThanhTien.Caption = "Thành tiền";
             this.gcThanhTien.FieldName = "ThanhTien";
             this.gcThanhTien.Name = "gcThanhTien";
+            this.gcThanhTien.OptionsColumn.AllowEdit = false;
             this.gcThanhTien.Visible = true;
             this.gcThanhTien.VisibleIndex = 6;
             // 

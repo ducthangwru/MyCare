@@ -102,6 +102,12 @@
     <Compile Include="FormBieuDoHoaDon.Designer.cs">
       <DependentUpon>FormBieuDoHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBieuDoTienLai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBieuDoTienLai.Designer.cs">
+      <DependentUpon>FormBieuDoTienLai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBieuDoHoaDon.resx">
       <DependentUpon>FormBieuDoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBieuDoTienLai.resx">
+      <DependentUpon>FormBieuDoTienLai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChiTietHoaDon.resx">
       <DependentUpon>FormChiTietHoaDon.cs</DependentUpon>

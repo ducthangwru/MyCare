@@ -17,28 +17,15 @@ namespace MyCare
     {
         DataTable dtNew = new DataTable();
         public double tongtien = 0;
+        public int idkhachhang = 0;
         public FormTransaction()
         {
             InitializeComponent();
         }
 
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormTransaction_Load(object sender, EventArgs e)
         {
-            dtNew.Columns.Add("ID");
-            dtNew.Columns.Add("ID_DonVi");
-            dtNew.Columns.Add("TenDanhMuc");
-            dtNew.Columns.Add("TenThuoc");
-            dtNew.Columns.Add("SoLuong");
-            dtNew.Columns.Add("TenDonVi");
-            dtNew.Columns.Add("Gia");
-            dtNew.Columns.Add("ThanhTien");
-
-            gridTatCaMatHang.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien, null);
+            ResetData();
             //luKhachHang.Properties.DataSource = KhachHangDB.DanhSachChonKhachHang(null);
 
             //luKhachHang.EditValue = 0;
@@ -125,16 +112,23 @@ namespace MyCare
         {
             try
             {
-                int idkhachhang = 0;
-                //if (int.Parse(luKhachHang.GetColumnValue("ID_KhachHang").ToString()) == 0)
-                //{
-                //    idkhachhang = KhachHangDB.ThemMoiKhachHang(txbTenKhach.Text, txbDiaChi.Text, txbSDT.Text);
-                //}
-                //else
-                //{
-                //    idkhachhang = int.Parse(luKhachHang.GetColumnValue("ID_KhachHang").ToString());
+                if(gridViewDSMatHang.DataRowCount == 0)
+                {
+                    MessageBox.Show("Không có mặt hàng nào được chọn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                //}
+                if(string.IsNullOrEmpty(txbTenKhach.Text))
+                {
+                    MessageBox.Show("Tên khách hàng đang trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (idkhachhang == 0)
+                {
+                    idkhachhang = KhachHangDB.ThemMoiKhachHang(txbTenKhach.Text, txbDiaChi.Text, txbSDT.Text);
+                }
+              
 
                 int idhoadon = HoaDonDB.ThemHoaDon(Config.IDNhanVien, idkhachhang, tongtien, txbGhiChu.Text);
                 for (int i = 0; i < gridViewDSMatHang.DataRowCount; i++)
@@ -150,11 +144,54 @@ namespace MyCare
 
 
                 MessageBox.Show("Bán hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ResetData();
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Bán hàng không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void txbSDT_EditValueChanged(object sender, EventArgs e)
+        {
+            DataTable dt = KhachHangDB.DanhSachGoiYKhachHang(txbSDT.Text);
+            if(dt.Rows.Count > 0)
+            {
+                txbTenKhach.ReadOnly = true;
+                txbDiaChi.ReadOnly = true;
+                txbTenKhach.Text = dt.Rows[0]["TenKhachHang"].ToString();
+                txbDiaChi.Text = dt.Rows[0]["DiaChi"].ToString();
+                idkhachhang = int.Parse(dt.Rows[0]["ID_KhachHang"].ToString());
+            }
+            else
+            {
+                txbTenKhach.Text = "";
+                txbDiaChi.Text = "";
+                txbTenKhach.ReadOnly = false;
+                txbDiaChi.ReadOnly = false;
+            }
+        }
+
+        private void ResetData()
+        {
+            dtNew = new DataTable();
+            dtNew.Columns.Add("ID");
+            dtNew.Columns.Add("ID_DonVi");
+            dtNew.Columns.Add("TenDanhMuc");
+            dtNew.Columns.Add("TenThuoc");
+            dtNew.Columns.Add("SoLuong");
+            dtNew.Columns.Add("TenDonVi");
+            dtNew.Columns.Add("Gia");
+            dtNew.Columns.Add("ThanhTien");
+
+            gridDSMatHang.DataSource = dtNew;
+            txbTenKhach.Text = "";
+            txbDiaChi.Text = "";
+            txbSDT.Text = "";
+            txbTongTien.Text = "0 VNĐ";
+            txbGhiChu.Text = "";
+            gridTatCaMatHang.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien, null);
         }
     }
 }
