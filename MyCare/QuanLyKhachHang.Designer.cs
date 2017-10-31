@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyKhachHang));
             this.grdQuanLyKhachHang = new DevExpress.XtraGrid.GridControl();
             this.gvQuanLyKhachHang = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -38,6 +39,8 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnLichSu = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -53,9 +56,9 @@
             this.btnSearchQlyKH = new DevExpress.XtraEditors.SimpleButton();
             this.txbTimKiemKH = new DevExpress.XtraEditors.TextEdit();
             this.btnRefeshQlyKH = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdQuanLyKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQuanLyKhachHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLichSu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenKhachHang.Properties)).BeginInit();
@@ -68,6 +71,8 @@
             this.grdQuanLyKhachHang.Location = new System.Drawing.Point(12, 184);
             this.grdQuanLyKhachHang.MainView = this.gvQuanLyKhachHang;
             this.grdQuanLyKhachHang.Name = "grdQuanLyKhachHang";
+            this.grdQuanLyKhachHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnLichSu});
             this.grdQuanLyKhachHang.Size = new System.Drawing.Size(717, 187);
             this.grdQuanLyKhachHang.TabIndex = 0;
             this.grdQuanLyKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -82,7 +87,8 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7});
+            this.gridColumn7,
+            this.gridColumn8});
             this.gvQuanLyKhachHang.GridControl = this.grdQuanLyKhachHang;
             this.gvQuanLyKhachHang.Name = "gvQuanLyKhachHang";
             this.gvQuanLyKhachHang.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvQuanLyKhachHang_RowClick);
@@ -138,6 +144,23 @@
             this.gridColumn7.Caption = "Trạng thái xóa";
             this.gridColumn7.FieldName = "TrangThaiXoa";
             this.gridColumn7.Name = "gridColumn7";
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Lịch sử";
+            this.gridColumn8.ColumnEdit = this.btnLichSu;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 5;
+            // 
+            // btnLichSu
+            // 
+            this.btnLichSu.AutoHeight = false;
+            this.btnLichSu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnLichSu.Name = "btnLichSu";
+            this.btnLichSu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnLichSu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnLichSu_ButtonClick);
             // 
             // labelControl3
             // 
@@ -267,15 +290,6 @@
             this.btnRefeshQlyKH.TabIndex = 17;
             this.btnRefeshQlyKH.Click += new System.EventHandler(this.btnRefeshQlyKH_Click);
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(188, 142);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(99, 23);
-            this.simpleButton1.TabIndex = 8;
-            this.simpleButton1.Text = "Lịch sử giao dịch";
-            this.simpleButton1.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // FormQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,7 +298,6 @@
             this.Controls.Add(this.btnSearchQlyKH);
             this.Controls.Add(this.txbTimKiemKH);
             this.Controls.Add(this.btnRefeshQlyKH);
-            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtNgayTao);
@@ -307,6 +320,7 @@
             this.Load += new System.EventHandler(this.FormQuanLyKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdQuanLyKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvQuanLyKhachHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLichSu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenKhachHang.Properties)).EndInit();
@@ -343,6 +357,7 @@
         private DevExpress.XtraEditors.TextEdit txbTimKiemKH;
         private DevExpress.XtraEditors.SimpleButton btnRefeshQlyKH;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnLichSu;
     }
 }

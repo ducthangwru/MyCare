@@ -1,6 +1,7 @@
 ﻿using MyCare.MyCareDataAccess.Utils;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -107,5 +108,62 @@ namespace MyCare.MyCareDataAccess.DataAcess
             }
         }
 
+        public static DataTable XemHoaDon(int idhoadon)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("sp_MyCareDesktop_XemHoaDon", new SqlParameter("@idhoadon", idhoadon)).Tables[0];
+                return dt;
+            }
+            catch(Exception ex)
+            {
+                return dt;
+            }
+        }
+        public static DataTable XemHoaDonTheoKhachHang(int idkhachhang)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("select * from [dbo].f_XemHoaDonTheoKhachHang(" + idkhachhang + ")").Tables[0];
+                dt.Columns.Add("ThanhTien");
+                dt.Columns.Add("NgayLap");
+
+                foreach(DataRow dr in dt.Rows)
+                {
+                    dr["ThanhTien"] = Utils.Utils.DinhDangTienTe(dr["TongTien"].ToString()) + " VNĐ";
+                    dr["NgayLap"] = DateTime.Parse(dr["NgayTao"].ToString()).ToString("dd/MM/yyyy HH:mm:ss");
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
+
+
+        public static DataTable XemChiTietHoaDon(int idhoadon)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = db.ExecuteDataSet("select * from [dbo].f_XemChiTietHoaDon(" + idhoadon + ")").Tables[0];
+                dt.Columns.Add("ThanhTien");
+
+                foreach(DataRow dr in dt.Rows)
+                {
+                    dr["ThanhTien"] = Utils.Utils.DinhDangTienTe(dr["TongTien"].ToString()) + " VNĐ";
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return dt;
+            }
+        }
     }
 }

@@ -202,5 +202,12 @@ namespace MyCare
             frm.ShowDialog();
             this.Show();
         }
+
+        private void btnXem_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int idhoadon = int.Parse(gvLSHoaDon.GetRowCellValue(gvLSHoaDon.FocusedRowHandle, gvLSHoaDon.Columns["ID_HoaDon"]).ToString());
+            FormChiTietHoaDon frm = new FormChiTietHoaDon(idhoadon);
+            frm.ShowDialog();
+        }
     }
 }

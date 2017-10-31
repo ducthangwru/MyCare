@@ -71,12 +71,27 @@ namespace MyCare
 
         private void gvQuanLyKhachHang_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            GetDataRow();
+        }
+
+        private void btnLichSu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            GetDataRow();
+            FormLichSuGiaoDich frm = new FormLichSuGiaoDich(obj);
+            frm.ShowDialog();
+        }
+
+        private void GetDataRow()
+        {
             txtDiaChi.Text = gvQuanLyKhachHang.GetRowCellValue(gvQuanLyKhachHang.FocusedRowHandle, gvQuanLyKhachHang.Columns["DiaChi"]).ToString();
             txtNgayTao.Text = gvQuanLyKhachHang.GetRowCellValue(gvQuanLyKhachHang.FocusedRowHandle, gvQuanLyKhachHang.Columns["NgayLap"]).ToString();
             txtSDT.Text = gvQuanLyKhachHang.GetRowCellValue(gvQuanLyKhachHang.FocusedRowHandle, gvQuanLyKhachHang.Columns["SDT"]).ToString();
             txtTenKhachHang.Text = gvQuanLyKhachHang.GetRowCellValue(gvQuanLyKhachHang.FocusedRowHandle, gvQuanLyKhachHang.Columns["TenKhachHang"]).ToString();
             obj.idkhachhang = int.Parse(gvQuanLyKhachHang.GetRowCellValue(gvQuanLyKhachHang.FocusedRowHandle, gvQuanLyKhachHang.Columns["ID_KhachHang"]).ToString());
             obj.trangthai = bool.Parse(gvQuanLyKhachHang.GetRowCellValue(gvQuanLyKhachHang.FocusedRowHandle, gvQuanLyKhachHang.Columns["TrangThaiXoa"]).ToString()) ? 1 : 0;
+            obj.diachi = txtDiaChi.Text;
+            obj.sdt = txtSDT.Text;
+            obj.tenkhachhang = txtTenKhachHang.Text;
             if (obj.trangthai == 1)
                 radHetHieuLuc.Checked = true;
             else

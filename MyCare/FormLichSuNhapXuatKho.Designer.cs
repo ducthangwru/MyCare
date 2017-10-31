@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLichSuNhapXuatKho));
             this.gridLSNhapXuatKho = new DevExpress.XtraGrid.GridControl();
             this.gridViewLSNhapXuatKho = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -39,11 +40,13 @@
             this.gcGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcThanhTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnXemChiTiet = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnSearchLSKho = new DevExpress.XtraEditors.SimpleButton();
             this.txbTimKiemLSKho = new DevExpress.XtraEditors.TextEdit();
             this.btnRefeshLSKho = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridLSNhapXuatKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLSNhapXuatKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXemChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbTimKiemLSKho.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +55,8 @@
             this.gridLSNhapXuatKho.Location = new System.Drawing.Point(12, 62);
             this.gridLSNhapXuatKho.MainView = this.gridViewLSNhapXuatKho;
             this.gridLSNhapXuatKho.Name = "gridLSNhapXuatKho";
+            this.gridLSNhapXuatKho.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnXemChiTiet});
             this.gridLSNhapXuatKho.Size = new System.Drawing.Size(789, 315);
             this.gridLSNhapXuatKho.TabIndex = 0;
             this.gridLSNhapXuatKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -130,9 +135,19 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Xem chi tiết";
+            this.gridColumn1.ColumnEdit = this.btnXemChiTiet;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 7;
+            // 
+            // btnXemChiTiet
+            // 
+            this.btnXemChiTiet.AutoHeight = false;
+            this.btnXemChiTiet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnXemChiTiet.Name = "btnXemChiTiet";
+            this.btnXemChiTiet.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnXemChiTiet.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXemChiTiet_ButtonClick);
             // 
             // btnSearchLSKho
             // 
@@ -180,6 +195,7 @@
             this.Load += new System.EventHandler(this.FormLichSuNhapXuatKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridLSNhapXuatKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLSNhapXuatKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXemChiTiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbTimKiemLSKho.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -200,5 +216,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSearchLSKho;
         private DevExpress.XtraEditors.TextEdit txbTimKiemLSKho;
         private DevExpress.XtraEditors.SimpleButton btnRefeshLSKho;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXemChiTiet;
     }
 }

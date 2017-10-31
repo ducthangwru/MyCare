@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.mailGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -108,7 +107,6 @@
             this.skinsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.helpRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.exitRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btXem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tabKho = new DevExpress.XtraTab.XtraTabPage();
             this.gridKhoThuoc = new DevExpress.XtraGrid.GridControl();
             this.gridViewKhoThuoc = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -142,7 +140,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btXem)).BeginInit();
             this.tabKho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridKhoThuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewKhoThuoc)).BeginInit();
@@ -304,7 +301,6 @@
             this.grdLSHoaDon.MenuManager = this.ribbonControl;
             this.grdLSHoaDon.Name = "grdLSHoaDon";
             this.grdLSHoaDon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btXem,
             this.btnXem});
             this.grdLSHoaDon.Size = new System.Drawing.Size(887, 510);
             this.grdLSHoaDon.TabIndex = 0;
@@ -410,8 +406,10 @@
             // 
             this.btnXem.AutoHeight = false;
             this.btnXem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.about, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnXem.Name = "btnXem";
+            this.btnXem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnXem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXem_ButtonClick);
             // 
             // ribbonControl
             // 
@@ -921,15 +919,6 @@
             this.exitRibbonPageGroup.Name = "exitRibbonPageGroup";
             this.exitRibbonPageGroup.Text = "Thoát";
             // 
-            // btXem
-            // 
-            this.btXem.AutoHeight = false;
-            this.btXem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::MyCare.Properties.Resources.join, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.btXem.ContextImage = global::MyCare.Properties.Resources.join;
-            this.btXem.Name = "btXem";
-            this.btXem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // tabKho
             // 
             this.tabKho.Controls.Add(this.gridKhoThuoc);
@@ -1101,7 +1090,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btXem)).EndInit();
             this.tabKho.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridKhoThuoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewKhoThuoc)).EndInit();
@@ -1179,7 +1167,6 @@
         private DevExpress.XtraTab.XtraTabPage tabKho;
         private DevExpress.XtraGrid.GridControl grdLSHoaDon;
         private DevExpress.XtraGrid.Views.Grid.GridView gvLSHoaDon;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btXem;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridKhoThuoc;

@@ -44,5 +44,20 @@ namespace MyCare
         {
             GetDataLSKho(txbTimKiemLSKho.Text);
         }
+
+        private void btnXemChiTiet_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                int idhoadon = int.Parse(gridViewLSNhapXuatKho.GetRowCellValue(gridViewLSNhapXuatKho.FocusedRowHandle, gridViewLSNhapXuatKho.Columns["ID_HoaDon"]).ToString());
+                FormChiTietHoaDon frm = new FormChiTietHoaDon(idhoadon);
+                frm.ShowDialog();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
