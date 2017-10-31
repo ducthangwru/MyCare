@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTransaction));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.luKhachHang = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txbSDT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -70,7 +69,6 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.luKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbTenKhach.Properties)).BeginInit();
@@ -94,8 +92,6 @@
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Controls.Add(this.labelControl9);
-            this.groupControl1.Controls.Add(this.luKhachHang);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.txbSDT);
             this.groupControl1.Controls.Add(this.labelControl2);
@@ -107,33 +103,6 @@
             this.groupControl1.Size = new System.Drawing.Size(471, 237);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin khách hàng";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl9.Location = new System.Drawing.Point(8, 47);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(83, 13);
-            this.labelControl9.TabIndex = 3;
-            this.labelControl9.Text = "Chọn khách hàng";
-            // 
-            // luKhachHang
-            // 
-            this.luKhachHang.Location = new System.Drawing.Point(97, 44);
-            this.luKhachHang.Name = "luKhachHang";
-            this.luKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luKhachHang.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID_KhachHang", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenKhachHang", "Tên khách hàng"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DiaChi", "Địa chỉ"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SDT", "Số điện thoại")});
-            this.luKhachHang.Properties.DisplayMember = "TenKhachHang";
-            this.luKhachHang.Properties.NullText = "";
-            this.luKhachHang.Properties.ValueMember = "ID_KhachHang";
-            this.luKhachHang.Size = new System.Drawing.Size(365, 20);
-            this.luKhachHang.TabIndex = 2;
-            this.luKhachHang.EditValueChanged += new System.EventHandler(this.luKhachHang_EditValueChanged);
             // 
             // labelControl3
             // 
@@ -226,7 +195,7 @@
             this.gridColumn2});
             this.gridViewDSMatHang.GridControl = this.gridDSMatHang;
             this.gridViewDSMatHang.Name = "gridViewDSMatHang";
-            this.gridViewDSMatHang.OptionsFind.AlwaysVisible = true;
+            this.gridViewDSMatHang.OptionsFind.AllowFindPanel = false;
             this.gridViewDSMatHang.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm...";
             this.gridViewDSMatHang.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewDSMatHang_CellValueChanged);
             // 
@@ -360,6 +329,8 @@
             this.gridColumn3});
             this.gridViewTatCaMatHang.GridControl = this.gridTatCaMatHang;
             this.gridViewTatCaMatHang.Name = "gridViewTatCaMatHang";
+            this.gridViewTatCaMatHang.OptionsFind.AlwaysVisible = true;
+            this.gridViewTatCaMatHang.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm...";
             this.gridViewTatCaMatHang.DoubleClick += new System.EventHandler(this.gridViewTatCaMatHang_DoubleClick);
             // 
             // clID
@@ -507,7 +478,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.luKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbTenKhach.Properties)).EndInit();
@@ -566,8 +536,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn clID;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btthem;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LookUpEdit luKhachHang;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }

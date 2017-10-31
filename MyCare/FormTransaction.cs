@@ -39,9 +39,9 @@ namespace MyCare
             dtNew.Columns.Add("ThanhTien");
 
             gridTatCaMatHang.DataSource = KhoThuocDB.DanhSachKhoThuoc(Config.IDNhanVien, null);
-            luKhachHang.Properties.DataSource = KhachHangDB.DanhSachChonKhachHang(null);
+            //luKhachHang.Properties.DataSource = KhachHangDB.DanhSachChonKhachHang(null);
 
-            luKhachHang.EditValue = 0;
+            //luKhachHang.EditValue = 0;
         }
 
         private void gridViewTatCaMatHang_DoubleClick(object sender, EventArgs e)
@@ -99,42 +99,42 @@ namespace MyCare
             { }
         }
 
-        private void luKhachHang_EditValueChanged(object sender, EventArgs e)
-        {
-            if(int.Parse(luKhachHang.GetColumnValue("ID_KhachHang").ToString()) == 0)
-            {
-                txbTenKhach.ReadOnly = false;
-                txbSDT.ReadOnly = false;
-                txbDiaChi.ReadOnly = false;
-                txbTenKhach.Text = "";
-                txbDiaChi.Text = "";
-                txbSDT.Text = "";
-            }
-            else
-            {
-                txbTenKhach.ReadOnly = true;
-                txbSDT.ReadOnly = true;
-                txbDiaChi.ReadOnly = true;
-                txbTenKhach.Text = luKhachHang.GetColumnValue("TenKhachHang").ToString();
-                txbDiaChi.Text = luKhachHang.GetColumnValue("DiaChi").ToString();
-                txbSDT.Text = luKhachHang.GetColumnValue("SDT").ToString();
-            }
-        }
+        //private void luKhachHang_EditValueChanged(object sender, EventArgs e)
+        //{
+        //    if(int.Parse(luKhachHang.GetColumnValue("ID_KhachHang").ToString()) == 0)
+        //    {
+        //        txbTenKhach.ReadOnly = false;
+        //        txbSDT.ReadOnly = false;
+        //        txbDiaChi.ReadOnly = false;
+        //        txbTenKhach.Text = "";
+        //        txbDiaChi.Text = "";
+        //        txbSDT.Text = "";
+        //    }
+        //    else
+        //    {
+        //        txbTenKhach.ReadOnly = true;
+        //        txbSDT.ReadOnly = true;
+        //        txbDiaChi.ReadOnly = true;
+        //        txbTenKhach.Text = luKhachHang.GetColumnValue("TenKhachHang").ToString();
+        //        txbDiaChi.Text = luKhachHang.GetColumnValue("DiaChi").ToString();
+        //        txbSDT.Text = luKhachHang.GetColumnValue("SDT").ToString();
+        //    }
+        //}
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             try
             {
                 int idkhachhang = 0;
-                if (int.Parse(luKhachHang.GetColumnValue("ID_KhachHang").ToString()) == 0)
-                {
-                    idkhachhang = KhachHangDB.ThemMoiKhachHang(txbTenKhach.Text, txbDiaChi.Text, txbSDT.Text);
-                }
-                else
-                {
-                    idkhachhang = int.Parse(luKhachHang.GetColumnValue("ID_KhachHang").ToString());
+                //if (int.Parse(luKhachHang.GetColumnValue("ID_KhachHang").ToString()) == 0)
+                //{
+                //    idkhachhang = KhachHangDB.ThemMoiKhachHang(txbTenKhach.Text, txbDiaChi.Text, txbSDT.Text);
+                //}
+                //else
+                //{
+                //    idkhachhang = int.Parse(luKhachHang.GetColumnValue("ID_KhachHang").ToString());
 
-                }
+                //}
 
                 int idhoadon = HoaDonDB.ThemHoaDon(Config.IDNhanVien, idkhachhang, tongtien, txbGhiChu.Text);
                 for (int i = 0; i < gridViewDSMatHang.DataRowCount; i++)
