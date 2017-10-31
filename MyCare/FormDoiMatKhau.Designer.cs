@@ -131,7 +131,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDoiMatKhau";
+            this.Text = "Đổi mật khẩu";
             ((System.ComponentModel.ISupportInitialize)(this.txbMatKhauCu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbMatKhauMoi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbXacNhanMK.Properties)).EndInit();

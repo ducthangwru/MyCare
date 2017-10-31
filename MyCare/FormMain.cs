@@ -167,7 +167,7 @@ namespace MyCare
         private void iAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/ducthangwru");
-            System.Diagnostics.Process.Start("https://www.facebook.com/Luffy.s2.BoaHancock");
+            System.Diagnostics.Process.Start("https://www.facebook.com/hanhieu97");
             MessageBox.Show("Bạn đang được chuyển hướng sang 2 kỹ thuật viên phần mềm! Liên hệ để hỗ trợ kỹ thuật!", "Chuyển hướng", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
